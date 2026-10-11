@@ -20,6 +20,10 @@ export const REMOTE_IMAGES = {
     src: `${COMMONS_THUMB}/3/32/Sciurus_stramineus_375134649.jpg/1280px-Sciurus_stramineus_375134649.jpg`,
     credit: 'Emily Turteltaub Nelson · CC BY 4.0 · Wikimedia Commons',
   },
+  amotapeTrail: {
+    src: `${COMMONS}/7/72/Bocana_Carrillos_Parque_Nacional_Cerros_de_Amotape_%289106226052%29.jpg`,
+    credit: 'Vladimir Terán Altamirano · CC BY 2.0 · Wikimedia Commons',
+  },
   amotapeVisit: {
     src: `${COMMONS}/7/71/Escolares_visitan_Parque_Nacional_Cerros_de_Amotape_%289103995583%29.jpg`,
     credit: 'Vladimir Terán Altamirano · CC BY 2.0 · Wikimedia Commons',

@@ -15,6 +15,8 @@ import {
   listDepartments,
   spacesIn,
 } from '../lib/departments';
+import { FALLBACK_COVERS } from '../data/fallbackCovers';
+import { coverFor } from '../lib/cover';
 import styles from './AssociationsSection.module.css';
 
 export default function AssociationsSection() {
@@ -60,13 +62,19 @@ export default function AssociationsSection() {
       {visible.length > 0 && (
         <ul className={styles.grid}>
           {visible.map((association) => {
-            const cover = pickCover(association.spaces.flatMap((s) => s.media));
+            const uploaded = pickCover(association.spaces.flatMap((s) => s.media));
+            const cover = coverFor(
+              association.name,
+              uploaded && mediaUrl(uploaded.storage_path),
+              FALLBACK_COVERS,
+            );
             return (
               <li key={association.id}>
                 <Link to={`/asociaciones/${association.slug}`} className={styles.card}>
                   <div className={styles.photo}>
                     <ImagePlaceholder
-                      src={cover && mediaUrl(cover.storage_path)}
+                      src={cover?.src}
+                      credit={cover?.credit}
                       alt={association.name}
                       label={association.name}
                     />
