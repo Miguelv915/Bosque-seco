@@ -1,0 +1,46 @@
+:root {
+  --color-bg: #ffffff;
+  --color-ink: #201e1e;
+  --color-ink-soft: #3a3733;
+  --color-muted: #6b6459;
+  --color-sand: #f4f1e0;
+  --color-green: #00a550;
+  --color-forest: #245237;
+  --color-sky: #5ecbf5;
+  --color-line: #201e1e22;
+
+  --font-body: 'Manrope', system-ui, sans-serif;
+  --font-display: 'Unbounded', 'Manrope', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --gutter: clamp(20px, 4vw, 56px);
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--color-forest); text-decoration: none; }
+button { font: inherit; }
+
+h1, h2, h3, p { margin: 0; }
+
+:focus-visible { outline: 2px solid var(--color-forest); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* Páginas secundarias aún sin diseño (debajo del nav fijo). */
+.page-stub { padding: 120px var(--gutter) 60px; }
