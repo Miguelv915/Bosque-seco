@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { lazy, Suspense, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { createRequest } from '../../../services/changeRequests.service';
 import { collectPayload } from '../lib/formData';
@@ -6,6 +6,9 @@ import { useSubmitRequest } from '../hooks/useSubmitRequest';
 import FormFeedback from './FormFeedback';
 import { copy } from '../lib/copy';
 import styles from '../admin.module.css';
+
+// El mapa (Leaflet) pesa: solo se descarga cuando el formulario lo necesita.
+const LocationPicker = lazy(() => import('./LocationPicker'));
 
 function Field({ field, t, error }) {
   const {
@@ -22,6 +25,14 @@ function Field({ field, t, error }) {
   } = field;
   const label = t(labelKey);
   const describedBy = hint || error ? `${name}-help` : undefined;
+
+  if (type === 'location') {
+    return (
+      <Suspense fallback={<p className={styles.hint}>{t('common.loading')}</p>}>
+        <LocationPicker label={label} error={error} />
+      </Suspense>
+    );
+  }
 
   if (type === 'checkboxes') {
     return (
@@ -99,6 +110,8 @@ export default function CreateEntityForm({
   const { t } = useTranslation();
   const { busy, result, run } = useSubmitRequest();
   const [errors, setErrors] = useState({});
+  // Cambiar la clave vacía el formulario, incluido el mapa.
+  const [formKey, setFormKey] = useState(0);
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -115,7 +128,8 @@ export default function CreateEntityForm({
         nextErrors[field.name] = errorKey;
         continue;
       }
-      payload[field.name] = field.transform ? field.transform(value) : value;
+      if (field.type === 'location') Object.assign(payload, value);
+      else payload[field.name] = field.transform ? field.transform(value) : value;
     }
 
     setErrors(nextErrors);
@@ -125,13 +139,13 @@ export default function CreateEntityForm({
       createRequest({ associationId, entityType, action: 'create', payload }),
     );
     if (ok) {
-      form.reset();
+      setFormKey((key) => key + 1);
       onSent();
     }
   }
 
   return (
-    <form className={styles.card} onSubmit={handleSubmit}>
+    <form key={formKey} className={styles.card} onSubmit={handleSubmit}>
       <h3 className={styles.cardTitle}>{title}</h3>
       {description && <p className={styles.hint}>{description}</p>}
       <div className={styles.row}>
