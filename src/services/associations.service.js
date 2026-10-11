@@ -17,7 +17,7 @@ export async function listAssociations() {
     .from('associations')
     .select(
       'id, slug, name, acronym, summary_es, summary_en, ' +
-        'spaces(id, departments, sort_order, media(storage_path, is_cover, sort_order))',
+        'spaces(id, name, departments, sort_order, media(storage_path, is_cover, sort_order))',
     )
     .eq('is_active', true)
     .order('name');

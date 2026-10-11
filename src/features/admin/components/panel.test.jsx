@@ -23,7 +23,7 @@ describe('ReadinessSummary', () => {
     const onGoTo = vi.fn();
     render(<ReadinessSummary tree={{}} onGoTo={onGoTo} />);
 
-    expect(screen.getByText('0 de 7 requisitos listos')).toBeTruthy();
+    expect(screen.getByText('0 de 6 requisitos listos')).toBeTruthy();
 
     const fixButtons = screen.getAllByRole('button', { name: 'Completar' });
     fireEvent.click(fixButtons[0]);

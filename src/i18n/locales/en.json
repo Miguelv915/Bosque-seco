@@ -207,6 +207,8 @@
       "descriptionEn": "Description (EN)",
       "phone": "Phone",
       "whatsapp": "WhatsApp",
+      "contactWhatsapp": "Association contact WhatsApp (optional)",
+      "contactWhatsappHint": "If you fill it in, visitors will see a button to message the association and arrange the visit. Each guide keeps their own number. Use a number you are happy to make public.",
       "submit": "Send changes",
       "acronym": "Acronym",
       "region": "Region",
@@ -489,6 +491,7 @@
     "translateHint": "Descriptions are written in Spanish by each association. To read them in English, right-click the page and choose “Translate to English”."
   },
   "associations": {
+    "contactWhatsapp": "Arrange your visit on WhatsApp",
     "eyebrow": "ASSOCIATIONS",
     "titleA": "Those who look after",
     "titleB": "the forest.",

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useAsync } from '../../../lib/useAsync';
 import { getAssociationTree } from '../../../services/associations.service';
+import { features } from '../../../config/features';
 import { listRequests } from '../../../services/changeRequests.service';
 import {
   activityFields,
@@ -176,7 +177,7 @@ export default function LeaderPanel({ associationId }) {
             </>
           )}
 
-          {section === 'routes' && (
+          {features.routes && section === 'routes' && (
             <>
               <Registered
                 title={t('admin.sections.routes')}
@@ -239,7 +240,7 @@ export default function LeaderPanel({ associationId }) {
             </>
           )}
 
-          {section === 'rewards' && (
+          {features.routes && section === 'rewards' && (
             <>
               <Registered
                 title={t('admin.sections.rewards')}

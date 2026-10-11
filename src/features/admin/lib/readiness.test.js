@@ -15,6 +15,7 @@ const completeTree = () => ({
   rewards: [{ name_es: 'Polo' }],
 });
 
+const withRoutes = { includeRoutes: true };
 const itemById = (result, id) => result.items.find((item) => item.id === id);
 
 describe('computeReadiness', () => {
@@ -54,10 +55,24 @@ describe('computeReadiness', () => {
     expect(itemById(computeReadiness(tree), 'phones').ok).toBe(true);
   });
 
+  it('sin rutas activadas no pide puntos ni productos', () => {
+    const result = computeReadiness({});
+    const ids = result.items.map((item) => item.id);
+    expect(ids).not.toContain('route');
+    expect(ids).not.toContain('rewards');
+    expect(result.requiredTotal).toBe(6);
+  });
+
+  it('con rutas activadas exige al menos un punto', () => {
+    const empty = computeReadiness({}, withRoutes);
+    expect(empty.requiredTotal).toBe(7);
+    expect(itemById(computeReadiness(completeTree(), withRoutes), 'route').ok).toBe(true);
+  });
+
   it('GPS y foto son recomendados, no bloquean', () => {
     const tree = completeTree();
     tree.routes = [{ route_points: [point({ lat: null, lon: null, photo_path: null })] }];
-    const result = computeReadiness(tree);
+    const result = computeReadiness(tree, withRoutes);
     expect(itemById(result, 'pointsGps')).toMatchObject({ ok: false, required: false });
     expect(itemById(result, 'pointsPhoto')).toMatchObject({ ok: false, required: false });
     expect(result.complete).toBe(true);

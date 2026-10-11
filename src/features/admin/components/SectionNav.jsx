@@ -9,9 +9,10 @@ import {
   Route,
   Trees,
 } from 'lucide-react';
+import { features } from '../../../config/features';
 import styles from '../admin.module.css';
 
-const SECTIONS = [
+const ALL_SECTIONS = [
   ['summary', LayoutDashboard],
   ['association', Trees],
   ['spaces', MapPinned],
@@ -21,6 +22,10 @@ const SECTIONS = [
   ['gallery', Image],
   ['requests', ClipboardList],
 ];
+
+const SECTIONS = ALL_SECTIONS.filter(
+  ([section]) => features.routes || (section !== 'routes' && section !== 'rewards'),
+);
 
 /** Navegación por secciones del panel del líder. */
 export default function SectionNav({ current, onChange, pendingCount }) {

@@ -1,3 +1,4 @@
+import { features } from '../../../config/features';
 import { isValidPhone } from './validation';
 
 const filled = (value) => typeof value === 'string' && value.trim() !== '';
@@ -6,8 +7,9 @@ const filled = (value) => typeof value === 'string' && value.trim() !== '';
  * Qué falta para que la app móvil funcione con datos reales.
  * Recibe el árbol de la asociación (publicado) y devuelve la lista de
  * requisitos con su estado. Los cambios pendientes de aprobación no cuentan.
+ * Los requisitos de rutas y productos solo cuentan si `includeRoutes` está activo.
  */
-export function computeReadiness(tree) {
+export function computeReadiness(tree, { includeRoutes = features.routes } = {}) {
   const spaces = tree.spaces ?? [];
   const providers = (tree.providers ?? []).filter((p) => p.is_active);
   const routes = tree.routes ?? [];
@@ -32,21 +34,26 @@ export function computeReadiness(tree) {
       section: 'providers',
       ok: providers.length > 0 && providers.every((p) => isValidPhone(p.whatsapp)),
     },
-    { id: 'route', required: true, section: 'routes', ok: points.length > 0 },
-    {
-      id: 'pointsGps',
-      required: false,
-      section: 'routes',
-      ok: points.length > 0 && points.every((p) => p.lat != null && p.lon != null),
-    },
-    {
-      id: 'pointsPhoto',
-      required: false,
-      section: 'routes',
-      ok: points.length > 0 && points.every((p) => filled(p.photo_path)),
-    },
-    { id: 'rewards', required: false, section: 'rewards', ok: (tree.rewards ?? []).length > 0 },
   ];
+
+  if (includeRoutes) {
+    items.push(
+      { id: 'route', required: true, section: 'routes', ok: points.length > 0 },
+      {
+        id: 'pointsGps',
+        required: false,
+        section: 'routes',
+        ok: points.length > 0 && points.every((p) => p.lat != null && p.lon != null),
+      },
+      {
+        id: 'pointsPhoto',
+        required: false,
+        section: 'routes',
+        ok: points.length > 0 && points.every((p) => filled(p.photo_path)),
+      },
+      { id: 'rewards', required: false, section: 'rewards', ok: (tree.rewards ?? []).length > 0 },
+    );
+  }
 
   const required = items.filter((item) => item.required);
   const requiredDone = required.filter((item) => item.ok).length;

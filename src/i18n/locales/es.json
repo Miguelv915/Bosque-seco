@@ -207,6 +207,8 @@
       "descriptionEn": "Descripción (EN)",
       "phone": "Teléfono",
       "whatsapp": "WhatsApp",
+      "contactWhatsapp": "WhatsApp de contacto de la asociación (opcional)",
+      "contactWhatsappHint": "Si lo completas, el turista verá un botón para escribir a la asociación y coordinar la visita. Cada guía conserva su propio número. Usa un número que quieras hacer público.",
       "submit": "Enviar cambios",
       "acronym": "Siglas",
       "region": "Región",
@@ -489,6 +491,7 @@
     "translateHint": "Las descripciones las escribe cada asociación en español."
   },
   "associations": {
+    "contactWhatsapp": "Coordinar la visita por WhatsApp",
     "eyebrow": "ASOCIACIONES",
     "titleA": "Quienes cuidan",
     "titleB": "el bosque.",

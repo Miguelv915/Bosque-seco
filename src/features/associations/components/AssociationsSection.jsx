@@ -8,21 +8,22 @@ import { useAsync } from '../../../lib/useAsync';
 import { pickCover } from '../../../lib/media';
 import { listAssociations, mediaUrl } from '../../../services/associations.service';
 import TranslateHint from '../../../components/shared/TranslateHint';
+import {
+  ALL_DEPARTMENTS as ALL,
+  departmentsOf,
+  filterByDepartment,
+  listDepartments,
+  spacesIn,
+} from '../lib/departments';
 import styles from './AssociationsSection.module.css';
-
-const ALL = 'all';
-
-const departmentsOf = (association) => association.spaces.flatMap((s) => s.departments);
 
 export default function AssociationsSection() {
   const { t } = useTranslation();
   const { data, error, loading } = useAsync(listAssociations);
   const [department, setDepartment] = useState(ALL);
 
-  const departments = data ? [...new Set(data.flatMap(departmentsOf))].sort() : [];
-  const visible = data
-    ? data.filter((a) => department === ALL || departmentsOf(a).includes(department))
-    : [];
+  const departments = data ? listDepartments(data) : [];
+  const visible = data ? filterByDepartment(data, department) : [];
 
   return (
     <section id="asociaciones" className={styles.section} aria-labelledby="associations-title">
@@ -72,7 +73,12 @@ export default function AssociationsSection() {
                   </div>
                   <div className={styles.body}>
                     <h3 className={styles.name}>{association.name}</h3>
-                    <p className={styles.regions}>{[...new Set(departmentsOf(association))].join(' · ')}</p>
+                    <p className={styles.regions}>{departmentsOf(association).join(' · ')}</p>
+                    <p className={styles.spaces}>
+                      {spacesIn(association, department)
+                        .map((space) => space.name)
+                        .join(' · ')}
+                    </p>
                     <p className={styles.summary}>
                       {esText(association, 'summary')}
                     </p>
