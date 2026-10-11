@@ -5,7 +5,7 @@ import { listAllRequests } from '../../../services/changeRequests.service';
 import { spacesByDepartment, summarizeContent, summarizeRequests } from '../lib/analytics';
 import { computeReadiness } from '../lib/readiness';
 import ContentStats from './analytics/ContentStats';
-import VisitsNotice from './analytics/VisitsNotice';
+import VisitsDemo from './analytics/VisitsDemo';
 import { BarList } from './analytics/Widgets';
 import { DataTable } from './Registered';
 import styles from '../admin.module.css';
@@ -82,7 +82,7 @@ export default function AdminAnalytics() {
         />
       </section>
 
-      <VisitsNotice />
+      <VisitsDemo seed="red" scale={Math.max(1, associations.length)} />
     </>
   );
 }

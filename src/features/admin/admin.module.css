@@ -365,3 +365,17 @@
   color: var(--color-ink-soft);
   font-size: 14px;
 }
+
+.demoBlock { display: grid; gap: 16px; margin-top: 24px; }
+.demoHeader { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.demoHeader .cardTitle { margin: 0; }
+.demoBadge {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--color-accent);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}

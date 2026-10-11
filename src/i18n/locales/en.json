@@ -414,12 +414,18 @@
       "association": "Association",
       "noData": "No data yet.",
       "visitsTitle": "Visits and visitors",
-      "visitsNotice": "Visits, age ranges and trip duration are recorded by the mobile app. They will appear here once the app syncs its data.",
       "unit": {
         "min": "{{value}} min",
         "h": "{{value}} h",
         "d": "{{value}} d"
-      }
+      },
+      "demoBadge": "Sample data",
+      "demoNotice": "Fictional figures to preview the layout. They will be replaced by real ones once the mobile app syncs its data.",
+      "visits": "Visits",
+      "visitors": "Visitors",
+      "avgDuration": "Average trip duration",
+      "visitsByMonth": "Visits per month",
+      "visitorsByAge": "Visitors by age range"
     },
     "readiness": {
       "title": "Is the app ready?",

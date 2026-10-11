@@ -414,12 +414,18 @@
       "association": "Asociación",
       "noData": "Aún no hay datos.",
       "visitsTitle": "Visitas y visitantes",
-      "visitsNotice": "Las visitas, los rangos de edad y el tiempo de recorrido los registra la app móvil. Se mostrarán aquí cuando la app sincronice sus datos.",
       "unit": {
         "min": "{{value}} min",
         "h": "{{value}} h",
         "d": "{{value}} d"
-      }
+      },
+      "demoBadge": "Datos de ejemplo",
+      "demoNotice": "Cifras ficticias para ver cómo quedará. Se reemplazarán por las reales cuando la app móvil sincronice sus datos.",
+      "visits": "Visitas",
+      "visitors": "Visitantes",
+      "avgDuration": "Duración media del recorrido",
+      "visitsByMonth": "Visitas por mes",
+      "visitorsByAge": "Visitantes por rango de edad"
     },
     "readiness": {
       "title": "¿Está lista la app?",
