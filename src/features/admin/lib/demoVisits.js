@@ -36,7 +36,7 @@ function lastMonths(now) {
  * Visitas ficticias de una asociación (o del conjunto, con una semilla fija).
  * `scale` aproxima el tamaño: una asociación ~1, la red ~ cuántas hay.
  */
-export function demoVisits(seed, { scale = 1, now = new Date() } = {}) {
+export function demoVisits(seed, { scale = 1, spaces = [], now = new Date() } = {}) {
   const random = randomFrom(seed);
 
   const byMonth = lastMonths(now).map((month) => ({
@@ -57,5 +57,69 @@ export function demoVisits(seed, { scale = 1, now = new Date() } = {}) {
   const top = byAge.reduce((best, row) => (row.value > best.value ? row : best));
   top.value += gap;
 
-  return { visits, visitors, avgMinutes: Math.round(95 + random() * 110), byMonth, byAge };
+  return {
+    visits,
+    visitors,
+    avgMinutes: Math.round(95 + random() * 110),
+    byMonth,
+    byAge,
+    bySpace: splitAcross(spaces, visits, random),
+  };
+}
+
+/** Reparte `total` entre los espacios con pesos al azar; la suma es exacta. */
+function splitAcross(spaces, total, random) {
+  if (spaces.length === 0) return [];
+  const weights = spaces.map(() => 0.3 + random());
+  const weightTotal = weights.reduce((sum, w) => sum + w, 0);
+  const rows = spaces.map((space, i) => ({
+    id: space.id,
+    label: space.name,
+    value: Math.round((weights[i] / weightTotal) * total),
+  }));
+  const gap = total - rows.reduce((sum, row) => sum + row.value, 0);
+  const top = rows.reduce((best, row) => (row.value > best.value ? row : best));
+  top.value = Math.max(0, top.value + gap);
+  return rows;
+}
+
+/**
+ * Suma las visitas de ejemplo de todas las asociaciones. Cada una usa su id
+ * como semilla, así que el total y el detalle por asociación cuadran.
+ */
+export function demoNetworkVisits(associations, { now = new Date() } = {}) {
+  const parts = associations.map((association) => ({
+    association,
+    data: demoVisits(association.id, { spaces: association.spaces ?? [], now }),
+  }));
+
+  const sumRows = (pick) => {
+    const first = parts.length ? pick(parts[0].data) : [];
+    return first.map((row, i) => ({
+      ...row,
+      value: parts.reduce((sum, part) => sum + pick(part.data)[i].value, 0),
+    }));
+  };
+
+  const visits = parts.reduce((sum, part) => sum + part.data.visits, 0);
+  const visitors = parts.reduce((sum, part) => sum + part.data.visitors, 0);
+  const avgMinutes = parts.length
+    ? Math.round(parts.reduce((sum, part) => sum + part.data.avgMinutes, 0) / parts.length)
+    : 0;
+
+  return {
+    visits,
+    visitors,
+    avgMinutes,
+    byMonth: sumRows((data) => data.byMonth),
+    byAge: sumRows((data) => data.byAge),
+    bySpace: parts
+      .flatMap(({ association, data }) =>
+        data.bySpace.map((row) => ({ ...row, label: `${row.label} · ${association.name}` })),
+      )
+      .sort((a, b) => b.value - a.value),
+    byAssociation: Object.fromEntries(
+      parts.map(({ association, data }) => [association.id, data.visits]),
+    ),
+  };
 }

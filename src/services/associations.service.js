@@ -98,7 +98,7 @@ export async function listAssociationsForAnalytics() {
     .from('associations')
     .select(
       'id, name, is_active, summary_es, ' +
-        'spaces(id, departments, location_es, signal_es, access_es, subspaces(id)), ' +
+        'spaces(id, name, departments, location_es, signal_es, access_es, subspaces(id)), ' +
         'providers(kind, is_active, whatsapp), activities(id), payment_methods(id), media(category)',
     )
     .order('name');

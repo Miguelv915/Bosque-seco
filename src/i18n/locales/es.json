@@ -429,7 +429,9 @@
       "visitors": "Visitantes",
       "avgDuration": "Duración media del recorrido",
       "visitsByMonth": "Visitas por mes",
-      "visitorsByAge": "Visitantes por rango de edad"
+      "visitorsByAge": "Visitantes por rango de edad",
+      "visitsBySpace": "Espacios más visitados",
+      "visitsDemoColumn": "Visitas (ejemplo)"
     },
     "readiness": {
       "title": "¿Está lista la app?",

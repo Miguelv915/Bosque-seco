@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { demoVisits } from '../lib/demoVisits';
 import { summarizeContent, summarizeRequests } from '../lib/analytics';
 import { computeReadiness } from '../lib/readiness';
 import ContentStats from './analytics/ContentStats';
@@ -22,7 +23,9 @@ export default function LeaderAnalytics({ tree, requests }) {
           percent: Math.round((requiredDone / requiredTotal) * 100),
         }}
       />
-      <VisitsDemo seed={tree.id ?? tree.name ?? 'asociacion'} />
+      <VisitsDemo
+        data={demoVisits(tree.id ?? tree.name ?? 'asociacion', { spaces: tree.spaces ?? [] })}
+      />
     </>
   );
 }

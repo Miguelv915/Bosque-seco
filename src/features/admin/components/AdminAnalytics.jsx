@@ -3,6 +3,7 @@ import { features } from '../../../config/features';
 import { useAsync } from '../../../lib/useAsync';
 import { listAssociationsForAnalytics } from '../../../services/associations.service';
 import { listAllRequests } from '../../../services/changeRequests.service';
+import { demoNetworkVisits } from '../lib/demoVisits';
 import { spacesByDepartment, summarizeContent, summarizeRequests } from '../lib/analytics';
 import { computeReadiness } from '../lib/readiness';
 import ContentStats from './analytics/ContentStats';
@@ -35,6 +36,8 @@ export default function AdminAnalytics() {
     return acc;
   }, {});
 
+  const visits = demoNetworkVisits(associations);
+
   const rows = associations.map((association) => {
     const { requiredDone, requiredTotal } = computeReadiness(association);
     return {
@@ -44,6 +47,7 @@ export default function AdminAnalytics() {
       spaces: (association.spaces ?? []).length,
       providers: (association.providers ?? []).length,
       photos: (association.media ?? []).length,
+      visits: visits.byAssociation[association.id] ?? 0,
       pending: pendingByAssociation[association.id] ?? 0,
     };
   });
@@ -78,6 +82,7 @@ export default function AdminAnalytics() {
             { key: 'spaces', label: t('admin.analytics.spaces'), render: (r) => r.spaces },
             { key: 'providers', label: t('admin.analytics.providers'), render: (r) => r.providers },
             { key: 'photos', label: t('admin.analytics.photos'), render: (r) => r.photos },
+            { key: 'visits', label: t('admin.analytics.visitsDemoColumn'), render: (r) => r.visits },
             ...(features.approvals
               ? [{ key: 'pending', label: t('admin.analytics.pending'), render: (r) => r.pending }]
               : []),
@@ -85,7 +90,7 @@ export default function AdminAnalytics() {
         />
       </section>
 
-      <VisitsDemo seed="red" scale={Math.max(1, associations.length)} />
+      <VisitsDemo data={visits} />
     </>
   );
 }
