@@ -114,3 +114,107 @@
   font-size: 14px;
 }
 .fieldset legend { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; padding: 0 6px; }
+
+/* ---- navegación por secciones ---- */
+.sectionNav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 24px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.sectionTab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 14px;
+  border: 1px solid #201e1e33;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--color-ink-soft);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+.sectionTab:hover { border-color: var(--color-forest); }
+.sectionTab[aria-current='page'] {
+  background: var(--color-ink);
+  border-color: var(--color-ink);
+  color: #fff;
+}
+
+.count {
+  min-width: 20px;
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: var(--color-green);
+  color: var(--color-ink);
+  font-size: 11px;
+  text-align: center;
+}
+
+/* ---- resumen de carga ---- */
+.progress {
+  height: 8px;
+  border-radius: 999px;
+  background: #201e1e14;
+  overflow: hidden;
+}
+.progress span { display: block; height: 100%; background: var(--color-green); transition: width 0.3s; }
+
+.checklist { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 4px; }
+.checklist li {
+  display: grid;
+  grid-template-columns: 20px 1fr auto;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: #fff;
+  font-size: 14px;
+}
+.checklist li[data-ok='true'] { color: var(--color-forest); }
+.checklist li[data-ok='false'] { color: var(--color-ink); }
+.optional { color: var(--color-muted); font-style: normal; }
+
+.link {
+  border: 0;
+  background: none;
+  padding: 4px 2px;
+  color: var(--color-forest);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* ---- ayudas y errores de campo ---- */
+.fieldHint { color: var(--color-muted); font-size: 12.5px; line-height: 1.4; }
+.fieldError { color: #b3261e; font-size: 12.5px; line-height: 1.4; }
+.field abbr { color: #b3261e; text-decoration: none; }
+
+/* ---- puntos de ruta y QR ---- */
+.points { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 10px; }
+.points code, .qr code {
+  padding: 2px 6px;
+  border-radius: 6px;
+  background: #201e1e0f;
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+.qr {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 8px 0;
+  padding: 14px;
+  border: 1px dashed #201e1e44;
+  border-radius: 14px;
+  background: #fff;
+}
+.qr img { border-radius: 8px; }
+.qr figcaption { display: grid; gap: 8px; justify-items: start; }

@@ -257,7 +257,9 @@
         "subspace": "Sector",
         "provider": "Provider",
         "activity": "Activity",
-        "payment_method": "Payment method"
+        "payment_method": "Payment method",
+        "route_point": "Route point",
+        "reward": "Reward"
       },
       "action": {
         "create": "Create",
@@ -283,12 +285,28 @@
       "addPayment": "Add payment method",
       "providers": "Providers",
       "submit": "Send for approval",
-      "subspaces": "Sectors"
+      "subspaces": "Sectors",
+      "beforeYouGo": "This data forms the \"Before you go\" card in the mobile app.",
+      "noProviders": "No guides or services registered yet.",
+      "noPhone": "no phone",
+      "providerRule": "Each service publishes its own WhatsApp. The leader's phone is never shown.",
+      "routes": "Routes",
+      "noRoutes": "There are no routes yet.",
+      "noPoints": "This route has no points yet.",
+      "noGps": "no GPS",
+      "noPhoto": "no photo",
+      "addRoute": "Create route",
+      "rewards": "Rewards to redeem points",
+      "noRewards": "There are no rewards yet.",
+      "points": "points",
+      "addReward": "Add reward",
+      "rewardRule": "Points must be greater than 0 and the discount between 1 and 100."
     },
     "kind": {
       "guide": "Guide",
       "food": "Food",
-      "lodging": "Lodging"
+      "lodging": "Lodging",
+      "transport": "Transport"
     },
     "payment": {
       "cash": "Cash",
@@ -330,7 +348,13 @@
       "noteEs": "Note",
       "noteEn": "Note (EN)",
       "category": "Category",
-      "parent": "Area or sector"
+      "parent": "Area or sector",
+      "signal": "Mobile signal",
+      "access": "Access",
+      "route": "Route",
+      "rate": "Reference rate",
+      "points": "Points required",
+      "discount": "Discount (%)"
     },
     "loginPage": {
       "brand": "EcoRumbo",
@@ -342,6 +366,107 @@
       "hidePassword": "Hide password",
       "signingIn": "Signing in…",
       "noAccount": "Accounts are created by AIDER. If you do not have access yet, contact your coordinator."
+    },
+    "required": "required",
+    "nav": {
+      "label": "Panel sections",
+      "summary": "Overview",
+      "association": "Association",
+      "spaces": "Area",
+      "providers": "Guides and services",
+      "routes": "Routes and points",
+      "rewards": "Rewards",
+      "gallery": "Images",
+      "requests": "Requests"
+    },
+    "readiness": {
+      "title": "Is the app ready?",
+      "progress": "{{done}} of {{total}} requirements done",
+      "complete": "Everything required is ready: the app can work with your real data.",
+      "recommended": "recommended",
+      "fix": "Complete",
+      "pendingNote": "Changes waiting for administrator approval do not count yet.",
+      "items": {
+        "summary": {
+          "label": "Association summary"
+        },
+        "space": {
+          "label": "At least one area registered"
+        },
+        "beforeYouGo": {
+          "label": "\"Before you go\" card: location, mobile signal and access"
+        },
+        "payments": {
+          "label": "Accepted payment methods"
+        },
+        "guides": {
+          "label": "At least one active guide"
+        },
+        "phones": {
+          "label": "Every service has a valid WhatsApp number"
+        },
+        "route": {
+          "label": "A route with at least one point"
+        },
+        "pointsGps": {
+          "label": "Points with GPS coordinates"
+        },
+        "pointsPhoto": {
+          "label": "Points with a photo"
+        },
+        "rewards": {
+          "label": "Rewards to redeem points"
+        }
+      }
+    },
+    "hints": {
+      "location": "Example: Piura · Entrance via Máncora",
+      "signal": "Example: Only in town",
+      "access": "Example: 1 h on a dirt track",
+      "phone": "Peruvian 9-digit mobile starting with 9, or + and country code. Without a valid number the WhatsApp button does not appear.",
+      "rate": "Free text. Example: From S/ 50 per group",
+      "paymentNote": "Example: Yape is paid when returning to town",
+      "reward": "Example: Embroidered T-shirt, Carob honey"
+    },
+    "errors": {
+      "phone": "Invalid number. Use 9 digits starting with 9, or + and the country code.",
+      "code": "Use lowercase letters, numbers, hyphen or underscore; no spaces or accents, starting with a letter.",
+      "codeTaken": "Another point already uses this code. Choose a different one.",
+      "geoPair": "Enter latitude and longitude together, or leave both empty.",
+      "geoRange": "Coordinates are out of range or not numeric.",
+      "path": "Each line must be \"latitude, longitude\"."
+    },
+    "qr": {
+      "alt": "QR code for point {{code}}",
+      "download": "Download QR",
+      "show": "Show QR"
+    },
+    "routePoint": {
+      "title": "Add a point to a route",
+      "intro": "The code is what goes in the sign's QR and must be unique.",
+      "needRoute": "Create a route first; then you can add points to it.",
+      "position": "Order in the route",
+      "positionHint": "0 is the first point.",
+      "code": "Point code",
+      "codeHint": "Examples: mirador, pozas. Lowercase only, no spaces.",
+      "descriptionHint": "Shown to the tourist in Explore.",
+      "meters": "Meters from the previous point",
+      "minutes": "Walking minutes from the previous point",
+      "fromPreviousHint": "For the first point, leave 0.",
+      "gps": "GPS coordinates of the sign",
+      "lat": "Latitude",
+      "lon": "Longitude",
+      "useLocation": "Use my location",
+      "gpsHint": "Take them on site. Without them the map is not drawn and GPS distance is not calculated.",
+      "geo": {
+        "loading": "Getting location…",
+        "denied": "Could not get the location. Check the browser permission.",
+        "unsupported": "This browser does not provide location."
+      },
+      "path": "Path of the trail (optional)",
+      "pathHint": "One \"latitude, longitude\" coordinate per line. Without a path, the map joins points with straight lines.",
+      "photo": "Photo of the point (recommended)",
+      "photoHint": "It is reduced automatically so it loads with poor signal."
     }
   },
   "lang": {
@@ -400,6 +525,7 @@
     "viewSpace": "View area",
     "viewSubspace": "View sector",
     "noSpaces": "This association has no published areas yet.",
-    "noSubspaces": "This area has no published sectors yet."
+    "noSubspaces": "This area has no published sectors yet.",
+    "otherServices": "Food, lodging and transport"
   }
 }
