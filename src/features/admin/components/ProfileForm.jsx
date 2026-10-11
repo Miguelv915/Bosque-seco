@@ -8,7 +8,7 @@ import FormFeedback from './FormFeedback';
 import { copy } from '../lib/copy';
 import styles from '../admin.module.css';
 
-const FIELDS = ['summary_es', 'description_es', 'acronym', 'region', 'contact_whatsapp'];
+const FIELDS = ['summary_es', 'description_es', 'region', 'contact_whatsapp'];
 
 export default function ProfileForm({ associationId, onSent }) {
   const { t } = useTranslation();
@@ -43,16 +43,10 @@ export default function ProfileForm({ associationId, onSent }) {
     <form className={styles.card} onSubmit={handleSubmit}>
       <h2 className={styles.cardTitle}>{t('admin.profileForm.title')}</h2>
       <p className={styles.hint}>{t('admin.optionalHint')}</p>
-      <div className={styles.row}>
-        <label className={styles.field}>
-          <span>{t('admin.profileForm.acronym')}</span>
-          <input name="acronym" />
-        </label>
-        <label className={styles.field}>
-          <span>{t('admin.profileForm.region')}</span>
-          <input name="region" />
-        </label>
-      </div>
+      <label className={styles.field}>
+        <span>{t('admin.profileForm.region')}</span>
+        <input name="region" />
+      </label>
       <label className={styles.field}>
         <span>{t('admin.profileForm.summary')}</span>
         <textarea name="summary_es" rows={2} />

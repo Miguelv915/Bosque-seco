@@ -10,6 +10,12 @@ const byName = (items) => items.map((item) => ({ value: item.id, label: item.nam
 
 const validatePhone = (value) => (isValidPhone(value) ? null : 'admin.errors.phone');
 
+// Ubicación elegida en el mapa: `lat` y `lon` se envían como campos del registro.
+const locationField = f('location', 'location', {
+  type: 'location',
+  validate: ({ lat, lon }) => (lat === null || lon === null ? 'admin.errors.geoRange' : null),
+});
+
 export const PROVIDER_KINDS = ['guide', 'food', 'lodging', 'transport'];
 
 // Espacio: ficha "Antes de ir" de la app móvil.
@@ -22,6 +28,7 @@ export const spaceFields = [
   f('location_es', 'locationEs', { required: true, hint: 'admin.hints.location' }),
   f('signal_es', 'signal', { required: true, hint: 'admin.hints.signal' }),
   f('access_es', 'access', { required: true, hint: 'admin.hints.access' }),
+  locationField,
   f('description_es', 'descriptionEs', { type: 'textarea' }),
 ];
 
@@ -30,6 +37,7 @@ export const subspaceFields = (spaces) => [
   f('name', 'name', { required: true }),
   f('description_es', 'descriptionEs', { type: 'textarea' }),
   f('attractions_es', 'attractionsEs', { type: 'lines' }),
+  locationField,
 ];
 
 export const providerFields = (subspaces, t) => [
