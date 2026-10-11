@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 18px var(--gutter);
+  padding: 8px var(--gutter);
   background: #1d4a34cc;
   backdrop-filter: blur(8px);
   color: #fff;
@@ -23,29 +23,7 @@
   color: #fff;
 }
 
-.logo {
-  width: 28px;
-  height: 28px;
-  border: 1.5px solid var(--color-green);
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-}
-
-.logoDot {
-  width: 8px;
-  height: 8px;
-  background: var(--color-green);
-  border-radius: 50%;
-}
-
-.brandName {
-  font-family: var(--font-display);
-  font-weight: 500;
-  font-size: 13px;
-  letter-spacing: 0.14em;
-}
-
+.logo { display: block; height: 52px; width: auto; }
 
 .links {
   display: flex;
@@ -83,5 +61,4 @@
 
 @media (max-width: 760px) {
   .link { display: none; }
-  .brandName { font-size: 11px; }
 }

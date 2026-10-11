@@ -53,21 +53,13 @@
   margin-bottom: 24px;
 }
 
-.title {
-  font-family: var(--font-body);
-  font-weight: 800;
-  font-size: clamp(56px, 13vw, 220px);
-  line-height: 0.9;
-  letter-spacing: -0.035em;
-  text-transform: uppercase;
-  color: #fff;
-  text-shadow: 0 2px 24px #0005;
-}
+.title { margin: 0; line-height: 0; }
 
-.outline {
-  color: var(--color-green);
-  -webkit-text-stroke: 2px var(--color-green);
-  text-shadow: 0 2px 24px #0004;
+.logo {
+  display: block;
+  width: clamp(220px, 34vw, 460px);
+  height: auto;
+  filter: drop-shadow(0 2px 18px #0006);
 }
 
 .footerRow {

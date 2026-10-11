@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from '../components/shared/LanguageSwitcher';
+import logo from '../assets/images/logo-ecorumbo.png';
 import styles from './PublicLayout.module.css';
 
 const NAV_ITEMS = [
@@ -27,13 +28,8 @@ export default function PublicLayout() {
   return (
     <>
       <header className={styles.nav}>
-        <Link to="/#inicio" className={styles.brand}>
-          <span className={styles.logo} aria-hidden="true">
-            <span className={styles.logoDot} />
-          </span>
-          <span className={styles.brandName}>
-            {t('app.name').toUpperCase()}
-          </span>
+        <Link to="/#inicio" className={styles.brand} aria-label={t('app.name')}>
+          <img src={logo} alt="" className={styles.logo} />
         </Link>
 
         <nav className={styles.links} aria-label="Principal">
