@@ -1,0 +1,109 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+.media { position: absolute; inset: 0; }
+
+.fade {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, #ffffff99 0%, #ffffff33 35%, #ffffffcc 75%, #ffffff 100%);
+}
+
+.grid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(#201e1e0d 1px, transparent 1px),
+    linear-gradient(90deg, #201e1e0d 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
+.coords {
+  position: absolute;
+  top: 84px;
+  right: var(--gutter);
+  text-align: right;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  line-height: 1.7;
+  color: var(--color-ink-soft);
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.signal { color: var(--color-forest); }
+
+.content {
+  position: relative;
+  padding: 200px var(--gutter) 40px;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  color: var(--color-forest);
+  margin-bottom: 24px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(56px, 13vw, 220px);
+  line-height: 0.86;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.outline {
+  color: transparent;
+  -webkit-text-stroke: 2px var(--color-green);
+}
+
+.footerRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 32px;
+  margin-top: 36px;
+}
+
+.lead {
+  max-width: 520px;
+  font-size: clamp(17px, 1.5vw, 21px);
+  line-height: 1.5;
+  color: #2e2b28;
+  text-wrap: pretty;
+}
+
+.actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+.primary,
+.secondary {
+  white-space: nowrap;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  padding: 16px 26px;
+  border-radius: 999px;
+}
+
+.primary { background: var(--color-green); color: var(--color-ink); }
+.primary:hover { background: var(--color-sky); color: var(--color-ink); }
+
+.secondary { border: 1px solid #201e1e66; color: var(--color-ink); }
+.secondary:hover { border-color: var(--color-forest); color: var(--color-forest); }
+
+@media (max-width: 600px) {
+  .coords { display: none; }
+}

@@ -1,0 +1,34 @@
+.ticker {
+  position: relative;
+  overflow: hidden;
+  padding: 16px 0;
+  background: var(--color-bg);
+  border-block: 1px solid var(--color-line);
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  white-space: nowrap;
+  font-family: var(--font-display);
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  color: var(--color-ink-soft);
+  animation: ticker 40s linear infinite;
+}
+
+.row { display: flex; }
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  gap: 28px;
+  padding-right: 28px;
+}
+
+.star { color: var(--color-green); }
+
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}

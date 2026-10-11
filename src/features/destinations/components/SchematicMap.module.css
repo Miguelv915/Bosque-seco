@@ -1,0 +1,158 @@
+.map {
+  position: relative;
+  aspect-ratio: 1 / 1.05;
+  border: 1px solid var(--color-line);
+  border-radius: 24px;
+  overflow: hidden;
+  background: radial-gradient(circle at 40% 45%, #dcebdd 0%, #f4f1e0 75%);
+}
+
+.grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(#201e1e12 1px, transparent 1px),
+    linear-gradient(90deg, #201e1e12 1px, transparent 1px);
+  background-size: 10% 10%;
+}
+
+.sea {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 14%;
+  background: linear-gradient(90deg, #5ecbf533, #5ecbf500);
+}
+
+.ocean {
+  position: absolute;
+  left: 3%;
+  top: 50%;
+  transform: rotate(-90deg);
+  transform-origin: left top;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  color: var(--color-forest);
+}
+
+.radar {
+  position: absolute;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  transition: left 0.8s, top 0.8s;
+}
+
+.pulse {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--color-green);
+  animation: pulse 2s ease-out infinite;
+}
+
+.sweep {
+  position: absolute;
+  left: -160px;
+  top: -160px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, #00a55033, transparent 25%);
+  animation: sweep 4s linear infinite;
+}
+
+.lineH,
+.lineV { position: absolute; background: #00a55040; }
+.lineH { left: -1000px; top: 0; width: 2000px; height: 1px; }
+.lineV { left: 0; top: -1000px; width: 1px; height: 2000px; }
+
+.pointButton {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background: none;
+  border: 0;
+  padding: 12px;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.point,
+.pointActive {
+  display: block;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.point {
+  width: 10px;
+  height: 10px;
+  background: var(--color-sky);
+  box-shadow: 0 0 0 4px #fff, 0 0 24px var(--color-sky);
+}
+
+.pointActive {
+  width: 16px;
+  height: 16px;
+  background: var(--color-green);
+  box-shadow: 0 0 0 4px #fff, 0 0 24px var(--color-green);
+}
+
+.label {
+  position: absolute;
+  transform: translate(16px, -50%);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: #5a554d;
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+.labelActive { color: var(--color-forest); }
+
+.city {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  pointer-events: none;
+}
+
+.diamond {
+  width: 10px;
+  height: 10px;
+  border: 1.5px solid var(--color-ink);
+  transform: rotate(45deg);
+}
+
+.cityName {
+  font-family: var(--font-display);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+}
+
+.note {
+  position: absolute;
+  inset: auto 16px 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--color-muted);
+  pointer-events: none;
+}
+
+@keyframes pulse {
+  from { transform: translate(-50%, -50%) scale(1); opacity: 0.7; }
+  to { transform: translate(-50%, -50%) scale(3.2); opacity: 0; }
+}
+
+@keyframes sweep {
+  from { transform: rotate(0); }
+  to { transform: rotate(360deg); }
+}
