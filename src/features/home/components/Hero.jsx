@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import ImagePlaceholder from '../../../components/shared/ImagePlaceholder';
-import heroImage from '../../../assets/images/hero-senderismo.png';
+import heroImage from '../../../assets/images/hero-fondo.jpg';
 import Ticker from './Ticker';
 import styles from './Hero.module.css';
 
