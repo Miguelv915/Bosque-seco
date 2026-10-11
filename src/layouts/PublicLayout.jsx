@@ -19,13 +19,16 @@ const NAV_ITEMS = [
   { to: '/#antes-de-ir', labelKey: 'nav.beforeYouGo' },
 ];
 
-/** Lleva la vista al ancla indicada en la URL (p. ej. `/#explorar`). */
+/** Lleva la vista al ancla indicada en la URL (p. ej. `/#explorar`); sin ancla, arriba. */
 function useScrollToHash() {
-  const { hash } = useLocation();
+  const { pathname, hash } = useLocation();
   useEffect(() => {
-    if (!hash) return;
+    if (!hash) {
+      window.scrollTo(0, 0);
+      return;
+    }
     document.getElementById(hash.slice(1))?.scrollIntoView();
-  }, [hash]);
+  }, [pathname, hash]);
 }
 
 /** Enlace a la app: la tienda si está configurada; si no, la sección que la presenta. */

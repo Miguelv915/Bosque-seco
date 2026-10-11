@@ -1,6 +1,6 @@
 import { Link, Navigate, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { ArrowLeft, CalendarDays, Car, Compass, Map, MapPin } from 'lucide-react';
+import { ArrowLeft, CalendarDays, Car, Compass, Map as MapIcon, MapPin } from 'lucide-react';
 import ImagePlaceholder from '../../components/shared/ImagePlaceholder';
 import ContactButton from '../../components/shared/ContactButton';
 import { buttonClass } from '../../components/shared/buttonClass';
@@ -95,7 +95,7 @@ export default function DestinationPage() {
           <p className={styles.note}>{t('places.guideNote')}</p>
           <ContactButton message={message} block />
           <Link to={`/rutas?destino=${id}`} className={buttonClass('secondary', { block: true })}>
-            <Map size={18} aria-hidden="true" />
+            <MapIcon size={18} aria-hidden="true" />
             {t('places.viewOnMap')}
           </Link>
         </aside>

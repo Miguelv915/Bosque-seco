@@ -12,6 +12,8 @@
 
 .photo {
   position: relative;
+  display: block;
+  color: inherit;
   aspect-ratio: 4 / 3;
   overflow: hidden;
   background: var(--color-forest-deep);
@@ -116,3 +118,15 @@
   margin-top: auto;
   padding-top: var(--space-xs);
 }
+
+.mapLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: var(--tap);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-forest);
+}
+.mapLink:hover { text-decoration: underline; }

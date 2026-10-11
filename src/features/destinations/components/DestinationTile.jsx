@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { CalendarDays, Car, Compass, MapPin } from 'lucide-react';
+import { ArrowRight, CalendarDays, Car, Compass, Map as MapIcon, MapPin } from 'lucide-react';
 import ImagePlaceholder from '../../../components/shared/ImagePlaceholder';
 import ContactButton from '../../../components/shared/ContactButton';
 import { buttonClass } from '../../../components/shared/buttonClass';
@@ -12,16 +12,20 @@ const FACTS = [
   { key: 'season', Icon: CalendarDays },
 ];
 
-/** Tarjeta de destino con foto protagonista, datos prácticos y contacto. */
+/**
+ * Tarjeta de destino: la foto y el nombre llevan a la ficha completa; el
+ * WhatsApp va directo al guía, sin pasos intermedios.
+ */
 export default function DestinationTile({ destination }) {
   const { t } = useTranslation();
   const { id, image, credit } = destination;
   const key = `destinations.${id}`;
   const name = t(`${key}.name`);
+  const detail = `/lugares/${id}`;
 
   return (
     <article className={styles.tile} aria-labelledby={`destino-${id}`}>
-      <div className={styles.photo}>
+      <Link to={detail} className={styles.photo} aria-label={t('places.details') + ': ' + name}>
         <ImagePlaceholder
           src={image}
           credit={credit}
@@ -38,7 +42,7 @@ export default function DestinationTile({ destination }) {
             {name}
           </h2>
         </div>
-      </div>
+      </Link>
 
       <div className={styles.body}>
         <p className={styles.desc}>{t(`${key}.desc`)}</p>
@@ -57,7 +61,12 @@ export default function DestinationTile({ destination }) {
 
         <div className={styles.actions}>
           <ContactButton message={t('places.whatsappMessage', { name })} block />
-          <Link to={`/rutas?destino=${id}`} className={buttonClass('secondary', { block: true })}>
+          <Link to={detail} className={buttonClass('secondary', { block: true })}>
+            {t('places.details')}
+            <ArrowRight size={18} aria-hidden="true" />
+          </Link>
+          <Link to={`/rutas?destino=${id}`} className={styles.mapLink}>
+            <MapIcon size={16} aria-hidden="true" />
             {t('places.viewOnMap')}
           </Link>
         </div>
