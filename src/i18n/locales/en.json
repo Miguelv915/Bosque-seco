@@ -1,6 +1,6 @@
 {
   "app": {
-    "name": "Bosque Seco",
+    "name": "EcoRumbo",
     "region": "Piura"
   },
   "nav": {
@@ -176,7 +176,7 @@
     "whatsapp": "Message us on WhatsApp"
   },
   "footer": {
-    "left": "DRY FOREST / PIURA — SULLANA · MÁNCORA",
+    "left": "ECORUMBO / PIURA — SULLANA · MÁNCORA",
     "right": "TRAVEL WITH RESPECT · LEAVE NO TRACE"
   },
   "places": {

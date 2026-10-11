@@ -1,4 +1,4 @@
-# Bosque Seco · Piura
+# EcoRumbo · Piura
 
 Portal web de ecoturismo comunitario del bosque seco del norte de Perú. Reúne a las asociaciones que gestionan espacios de visita, y cada una administra su propia información desde un panel con **aprobación del administrador**. Bilingüe (**español / inglés**) y con base de datos compartida con la app móvil.
 
