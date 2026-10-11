@@ -19,3 +19,21 @@
   font-size: 11px;
   letter-spacing: 0.06em;
 }
+
+.credit {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  z-index: 1;
+  max-width: calc(100% - 16px);
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  background: #0d1f14b3;
+  color: var(--color-on-dark);
+  font-size: 10px;
+  line-height: 1.6;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+}

@@ -5,3 +5,9 @@
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr));
   gap: var(--space-lg);
 }
+
+.more {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-xl);
+}

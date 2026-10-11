@@ -31,7 +31,8 @@
     "todo": "What to do",
     "access": "Access",
     "season": "Best season",
-    "photo": "Photo: {{name}}"
+    "photo": "Photo: {{name}}",
+    "viewAll": "See all destinations"
   },
   "destinations": {
     "angolo": {
@@ -136,7 +137,8 @@
     "title3": "the forest.",
     "lead": "The families living next to the reserves care for the forest every day. Hire local guides, buy their products and sleep in their homes: every sol stays in the territory.",
     "photo": "Photo: community producers or guides",
-    "cta": "I want to take part →"
+    "cta": "I want to take part →",
+    "photoAlt": "A guide talks with a group of visitors in the shade of a carob tree in Cerros de Amotape National Park"
   },
   "offers": {
     "guides": {
@@ -187,10 +189,38 @@
     "photos": "Some photos: Wikimedia Commons (Creative Commons licenses and public domain)."
   },
   "places": {
-    "title": "Places"
+    "title": "Dry forest destinations",
+    "eyebrow": "Destinations",
+    "lead": "Places between Sullana and Máncora to hike, spot wildlife and meet the families who look after the forest. Pick one and message a local guide.",
+    "imageAlt": "Carob woodland in the Piura dry forest under a clear sky",
+    "count": "{{count}} destinations",
+    "corridor": "Sullana – Máncora corridor",
+    "listLabel": "Destination list",
+    "viewOnMap": "View on the map",
+    "whatsappMessage": "Hi, I found EcoRumbo and I'd like to visit {{name}}. What dates and rates do you have with a local guide?",
+    "ctaTitle": "Ready to head into the forest?",
+    "ctaText": "Check how to get there, what to bring and how to get around without signal before you travel."
   },
   "routes": {
-    "title": "Ecotourism routes"
+    "title": "Ecotourism routes",
+    "eyebrow": "Routes",
+    "lead": "Tap a point on the map to see what to do, how to get there and the best season. In the forest, follow the app: it works without signal.",
+    "stepsTitle": "How to plan your route",
+    "steps": {
+      "choose": {
+        "title": "Pick a destination",
+        "text": "Compare access and seasons on the map and the cards."
+      },
+      "contact": {
+        "title": "Message a local guide",
+        "text": "The association confirms dates, rates and the meeting point."
+      },
+      "app": {
+        "title": "Download the map",
+        "text": "Open the app with signal before you leave; in the forest it works offline."
+      }
+    },
+    "whatsappMessage": "Hi, I found EcoRumbo and I'd like to plan a route through the Piura dry forest. Can you help me with dates and rates?"
   },
   "admin": {
     "title": "Admin",
@@ -597,5 +627,9 @@
     "noSpaces": "This association has no published areas yet.",
     "noSubspaces": "This area has no published sectors yet.",
     "otherServices": "Food, lodging and transport"
+  },
+  "contact": {
+    "whatsapp": "Ask on WhatsApp",
+    "guide": "Contact a guide"
   }
 }

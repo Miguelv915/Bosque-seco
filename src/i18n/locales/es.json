@@ -31,7 +31,8 @@
     "todo": "Qué hacer",
     "access": "Acceso",
     "season": "Mejor época",
-    "photo": "Foto: {{name}}"
+    "photo": "Foto: {{name}}",
+    "viewAll": "Ver todos los destinos"
   },
   "destinations": {
     "angolo": {
@@ -136,7 +137,8 @@
     "title3": "el bosque.",
     "lead": "Las familias que viven junto a las reservas cuidan el bosque todos los días. Contrata guías locales, compra sus productos y duerme en sus casas: cada sol se queda en el territorio.",
     "photo": "Foto: productores o guías de la comunidad",
-    "cta": "Quiero ser parte →"
+    "cta": "Quiero ser parte →",
+    "photoAlt": "Un guía conversa con un grupo de visitantes a la sombra de un algarrobo en el Parque Nacional Cerros de Amotape"
   },
   "offers": {
     "guides": {
@@ -187,10 +189,38 @@
     "photos": "Algunas fotos: Wikimedia Commons (licencias Creative Commons y dominio público)."
   },
   "places": {
-    "title": "Lugares"
+    "title": "Destinos del bosque seco",
+    "eyebrow": "Destinos",
+    "lead": "Lugares entre Sullana y Máncora para caminar, ver fauna y conocer a las familias que cuidan el bosque. Elige uno y escríbele a un guía local.",
+    "imageAlt": "Algarrobal del bosque seco de Piura bajo un cielo despejado",
+    "count": "{{count}} destinos",
+    "corridor": "Corredor Sullana – Máncora",
+    "listLabel": "Lista de destinos",
+    "viewOnMap": "Ver en el mapa",
+    "whatsappMessage": "Hola, vi EcoRumbo y quiero visitar {{name}}. ¿Qué fechas y tarifas tienen con guía local?",
+    "ctaTitle": "¿Listo para salir al bosque?",
+    "ctaText": "Revisa cómo llegar, qué llevar y cómo moverte sin señal antes de viajar."
   },
   "routes": {
-    "title": "Rutas ecoturísticas"
+    "title": "Rutas ecoturísticas",
+    "eyebrow": "Rutas",
+    "lead": "Toca un punto del mapa para ver qué hacer, cómo llegar y la mejor época. En el bosque, guíate con la app: funciona sin señal.",
+    "stepsTitle": "Así armas tu ruta",
+    "steps": {
+      "choose": {
+        "title": "Elige un destino",
+        "text": "Compara accesos y temporadas en el mapa y en las fichas."
+      },
+      "contact": {
+        "title": "Escribe a un guía local",
+        "text": "La asociación te confirma fechas, tarifas y punto de encuentro."
+      },
+      "app": {
+        "title": "Descarga el mapa",
+        "text": "Abre la app con señal antes de salir; en el bosque funciona sin conexión."
+      }
+    },
+    "whatsappMessage": "Hola, vi EcoRumbo y quiero armar una ruta por el bosque seco de Piura. ¿Me ayudan con fechas y tarifas?"
   },
   "admin": {
     "title": "Administración",
@@ -597,5 +627,9 @@
     "noSpaces": "Esta asociación aún no tiene espacios publicados.",
     "noSubspaces": "Este espacio aún no tiene sectores publicados.",
     "otherServices": "Alimentación, hospedaje y transporte"
+  },
+  "contact": {
+    "whatsapp": "Consultar por WhatsApp",
+    "guide": "Contactar a un guía"
   }
 }

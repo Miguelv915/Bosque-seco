@@ -25,6 +25,7 @@ export default function SpeciesSection() {
                 <div className={styles.photo}>
                   <ImagePlaceholder
                     src={species.image}
+                    credit={species.credit}
                     alt={name}
                     label={t('explorer.photo', { name })}
                   />

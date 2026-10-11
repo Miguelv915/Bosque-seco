@@ -28,6 +28,22 @@ describe('useAutoTour', () => {
     expect(result.current[0]).toBe(2);
   });
 
+  it('arranca en `start` sin recorrido automático', () => {
+    const { result } = renderHook(() => useAutoTour(3, 1000, 2));
+    expect(result.current[0]).toBe(2);
+
+    act(() => vi.advanceTimersByTime(5000));
+    expect(result.current[0]).toBe(2);
+  });
+
+  it('ignora un `start` fuera de rango', () => {
+    const { result } = renderHook(() => useAutoTour(3, 1000, 7));
+    expect(result.current[0]).toBe(0);
+
+    act(() => vi.advanceTimersByTime(1000));
+    expect(result.current[0]).toBe(1);
+  });
+
   it('no avanza con un solo elemento', () => {
     const { result } = renderHook(() => useAutoTour(1, 1000));
     act(() => vi.advanceTimersByTime(5000));

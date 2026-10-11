@@ -1,0 +1,104 @@
+.section { padding: var(--section-y) var(--gutter); }
+
+.grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+  gap: var(--space-lg);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 0 14px;
+  border-radius: var(--radius-pill);
+  background: #ffffff26;
+  border: 1px solid #ffffff4d;
+  backdrop-filter: blur(6px);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.heading {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--text-2xl);
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-xl);
+}
+
+/* Banda de llamada a la acción */
+.band {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+  margin: 0 var(--gutter) var(--section-y);
+  padding: clamp(28px, 5vw, 56px);
+  border-radius: var(--radius-lg);
+  background: radial-gradient(circle at 90% 10%, #00a55033, var(--color-sand) 65%);
+  box-shadow: var(--shadow-sm);
+}
+
+.bandTitle {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--text-2xl);
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-xs);
+}
+
+.bandText { color: var(--color-ink-soft); max-width: 52ch; }
+
+/* Pasos */
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: var(--space-lg);
+}
+
+.step {
+  position: relative;
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  background: var(--color-sand-soft);
+  box-shadow: var(--shadow-sm);
+}
+
+.stepIcon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: var(--space-md);
+  border-radius: var(--radius-md);
+  background: var(--color-green);
+  color: var(--color-ink);
+}
+
+.stepNumber {
+  position: absolute;
+  top: var(--space-lg);
+  right: var(--space-lg);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+}
+
+.stepTitle {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-xs);
+}
+
+.stepText { color: var(--color-ink-soft); line-height: 1.6; }
+
+.stepsCta { display: flex; justify-content: center; margin-top: var(--space-xl); }

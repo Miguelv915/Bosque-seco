@@ -98,6 +98,3 @@ img { max-width: 100%; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
-
-/* Páginas secundarias aún sin diseño (debajo del nav fijo). */
-.page-stub { padding: 120px var(--gutter) 60px; }
