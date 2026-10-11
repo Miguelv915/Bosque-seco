@@ -106,6 +106,58 @@ begin
                 'Limited signal: pay when you return to town.');
 end $$;
 
+-- Ficha "Antes de ir", ruta con puntos, transporte y productos canjeables (Amotape).
+-- Datos de ejemplo: reemplazar por los reales desde el panel.
+do $$
+declare
+  a      uuid;
+  sp     uuid;
+  r      uuid;
+begin
+  select id into a from public.associations where slug = 'atec-amotape';
+  if a is null or exists (select 1 from public.routes where association_id = a) then
+    return;
+  end if;
+
+  select id into sp from public.spaces
+   where association_id = a and acronym = 'PNCA' limit 1;
+
+  update public.spaces
+     set signal_es = 'Solo en el pueblo', signal_en = 'Only in town',
+         access_es = '1 h de trocha desde la entrada', access_en = '1 h on a dirt track from the entrance'
+   where id = sp;
+
+  insert into public.providers (association_id, name, kind, specialty_es, specialty_en,
+                                whatsapp, rate_text_es, rate_text_en)
+  values (a, 'Mototaxi Rica Playa', 'transport', 'Traslado hasta la entrada del parque',
+          'Transfer to the park entrance', '900000003', 'Desde S/ 20 por viaje', 'From S/ 20 per trip');
+
+  insert into public.routes (association_id, space_id, name_es, name_en, description_es, description_en)
+  values (a, sp, 'Sendero Quebrada Faical', 'Faical ravine trail',
+          'Recorrido a pie por la quebrada, con parada en pozas y mirador.',
+          'Walk along the ravine with stops at pools and a viewpoint.')
+  returning id into r;
+
+  insert into public.route_points
+    (association_id, route_id, code, position, name_es, name_en, description_es, description_en,
+     meters_from_previous, minutes_from_previous, lat, lon)
+  values
+    (a, r, 'entrada', 0, 'Entrada El Caucho', 'El Caucho entrance',
+     'Punto de registro y charla de bienvenida.', 'Check-in point and welcome briefing.',
+     0, 0, -3.8312, -80.2441),
+    (a, r, 'mirador', 1, 'Mirador del Faical', 'Faical viewpoint',
+     'Vista de la quebrada y del bosque tropical del Pacífico.', 'View of the ravine and the Pacific tropical forest.',
+     850, 25, -3.8355, -80.2402),
+    (a, r, 'pozas', 2, 'Pozas de agua', 'Water pools',
+     'Pozas naturales donde se concentra la fauna al amanecer.', 'Natural pools where wildlife gathers at dawn.',
+     600, 20, -3.8391, -80.2368);
+
+  insert into public.rewards (association_id, name_es, name_en, points_required, discount_percent)
+  values
+    (a, 'Polo bordado', 'Embroidered T-shirt', 120, 15),
+    (a, 'Miel de algarrobo', 'Carob honey', 80, 10);
+end $$;
+
 -- Cuentas: crear los usuarios en Supabase Auth (Dashboard → Authentication) y luego
 --   insert into public.profiles (id, full_name, role, association_id)
 --   values ('<uuid-admin>', 'Admin', 'admin', null),
