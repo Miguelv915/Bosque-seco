@@ -15,6 +15,7 @@ import {
 } from '../lib/entityFields';
 import CreateEntityForm from './CreateEntityForm';
 import ImageForm from './ImageForm';
+import LeaderAnalytics from './LeaderAnalytics';
 import ProfileForm from './ProfileForm';
 import QrPreview from './QrPreview';
 import ReadinessSummary from './ReadinessSummary';
@@ -23,6 +24,17 @@ import RequestList from './RequestList';
 import RoutePointForm from './RoutePointForm';
 import SectionNav from './SectionNav';
 import styles from '../admin.module.css';
+
+const SECTIONS = [
+  'summary',
+  'association',
+  'spaces',
+  'providers',
+  ...(features.routes ? ['routes', 'rewards'] : []),
+  'gallery',
+  'analytics',
+  'requests',
+];
 
 export default function LeaderPanel({ associationId }) {
   const { t } = useTranslation();
@@ -52,7 +64,12 @@ export default function LeaderPanel({ associationId }) {
       <p className={styles.intro}>{t('admin.leader.intro')}</p>
 
       <div className={styles.panelLayout}>
-        <SectionNav current={section} onChange={setSection} pendingCount={pending} />
+        <SectionNav
+          sections={SECTIONS}
+          current={section}
+          onChange={setSection}
+          badge={{ section: 'requests', count: pending }}
+        />
         <div className={styles.panelContent}>
 
           {section === 'summary' && (
@@ -272,6 +289,13 @@ export default function LeaderPanel({ associationId }) {
 
           {section === 'gallery' && (
             <ImageForm associationId={associationId} spaces={spaces} onSent={requests.reload} />
+          )}
+
+          {section === 'analytics' && (
+            <LeaderAnalytics
+              tree={{ ...association, spaces, providers, routes }}
+              requests={requests.data ?? []}
+            />
           )}
 
           {section === 'requests' && <RequestList requests={requests.data ?? []} />}

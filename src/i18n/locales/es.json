@@ -381,6 +381,8 @@
     },
     "required": "obligatorio",
     "nav": {
+      "analytics": "Análisis",
+      "review": "Por revisar",
       "label": "Secciones del panel",
       "summary": "Resumen",
       "association": "Asociación",
@@ -390,6 +392,34 @@
       "rewards": "Productos",
       "gallery": "Imágenes",
       "requests": "Solicitudes"
+    },
+    "analytics": {
+      "title": "Análisis de contenido",
+      "readiness": "Avance de carga",
+      "spaces": "Espacios",
+      "subspaces": "Subespacios",
+      "providers": "Guías y servicios",
+      "activities": "Actividades",
+      "photos": "Fotos",
+      "providersByKind": "Servicios por tipo",
+      "photosByCategory": "Fotos por categoría",
+      "byDepartment": "Espacios por departamento",
+      "requests": "Solicitudes de cambio",
+      "pending": "Pendientes",
+      "approved": "Aprobadas",
+      "rejected": "Rechazadas",
+      "approvalRate": "Tasa de aprobación",
+      "avgResponse": "Tiempo medio de respuesta",
+      "associations": "Asociaciones",
+      "association": "Asociación",
+      "noData": "Aún no hay datos.",
+      "visitsTitle": "Visitas y visitantes",
+      "visitsNotice": "Las visitas, los rangos de edad y el tiempo de recorrido los registra la app móvil. Se mostrarán aquí cuando la app sincronice sus datos.",
+      "unit": {
+        "min": "{{value}} min",
+        "h": "{{value}} h",
+        "d": "{{value}} d"
+      }
     },
     "readiness": {
       "title": "¿Está lista la app?",

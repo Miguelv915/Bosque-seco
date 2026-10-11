@@ -84,10 +84,24 @@ export async function getAssociationTree(associationId) {
     .from('associations')
     .select(
       '*, spaces(*, subspaces(*)), providers(*), activities(*), payment_methods(*), ' +
-        'routes(*, route_points(*)), rewards(*)',
+        'media(category), routes(*, route_points(*)), rewards(*)',
     )
     .eq('id', associationId)
     .single();
+  raise(error);
+  return data;
+}
+
+/** Contenido de todas las asociaciones para el análisis del administrador. */
+export async function listAssociationsForAnalytics() {
+  const { data, error } = await supabase
+    .from('associations')
+    .select(
+      'id, name, is_active, summary_es, ' +
+        'spaces(id, departments, location_es, signal_es, access_es, subspaces(id)), ' +
+        'providers(kind, is_active, whatsapp), activities(id), payment_methods(id), media(category)',
+    )
+    .order('name');
   raise(error);
   return data;
 }

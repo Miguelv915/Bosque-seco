@@ -381,6 +381,8 @@
     },
     "required": "required",
     "nav": {
+      "analytics": "Analytics",
+      "review": "To review",
       "label": "Panel sections",
       "summary": "Overview",
       "association": "Association",
@@ -390,6 +392,34 @@
       "rewards": "Rewards",
       "gallery": "Images",
       "requests": "Requests"
+    },
+    "analytics": {
+      "title": "Content analytics",
+      "readiness": "Content progress",
+      "spaces": "Spaces",
+      "subspaces": "Subspaces",
+      "providers": "Guides and services",
+      "activities": "Activities",
+      "photos": "Photos",
+      "providersByKind": "Services by type",
+      "photosByCategory": "Photos by category",
+      "byDepartment": "Spaces by department",
+      "requests": "Change requests",
+      "pending": "Pending",
+      "approved": "Approved",
+      "rejected": "Rejected",
+      "approvalRate": "Approval rate",
+      "avgResponse": "Average response time",
+      "associations": "Associations",
+      "association": "Association",
+      "noData": "No data yet.",
+      "visitsTitle": "Visits and visitors",
+      "visitsNotice": "Visits, age ranges and trip duration are recorded by the mobile app. They will appear here once the app syncs its data.",
+      "unit": {
+        "min": "{{value}} min",
+        "h": "{{value}} h",
+        "d": "{{value}} d"
+      }
     },
     "readiness": {
       "title": "Is the app ready?",

@@ -15,6 +15,15 @@ export async function listRequests(associationId) {
   return data;
 }
 
+/** Estado y fechas de todas las solicitudes (solo admin), para el análisis. */
+export async function listAllRequests() {
+  const { data, error } = await supabase
+    .from('change_requests')
+    .select('association_id, status, created_at, reviewed_at');
+  if (error) throw error;
+  return data;
+}
+
 /** Solicitudes pendientes de todas las asociaciones (solo admin). */
 export async function listPendingRequests() {
   const { data, error } = await supabase
