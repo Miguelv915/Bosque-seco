@@ -35,6 +35,20 @@ Tipos: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `build`, `cho
 4. Al menos **una revisión** de otra persona del equipo antes de fusionar.
 5. Fusionar con *squash* o *merge* y borrar la rama.
 
+## Integración y despliegue
+
+```text
+rama → Pull Request → CI (lint + build) → revisión → merge a main → Cloudflare publica
+```
+
+- **CI:** `.github/workflows/ci.yml` corre `npm ci`, `npm run lint` y `npm run build` en cada PR y en cada push a `main`.
+- **Protección de `main`** (GitHub → Settings → Branches): exigir Pull Request y que el CI pase antes de fusionar.
+- **Despliegue:** Cloudflare publica `main` en producción y genera una previsualización por cada rama/PR.
+  - Build: `npm run build` · salida: `dist` · variable `NODE_VERSION=20`.
+  - Variables de entorno (en Cloudflare, no en el repo): `VITE_SUPABASE_URL`, `VITE_SUPABASE_PUBLISHABLE_KEY`, `VITE_WHATSAPP_URL`.
+  - `public/_redirects` hace que las rutas de React Router funcionen al recargar.
+  - Nunca cargar la *service role* ni tokens con prefijo `VITE_`: quedan incrustados en el JavaScript público.
+
 ## Convenciones de código
 
 - **Estructura por módulo** en `src/features/<módulo>/{components,data,hooks,lib}`; lo reutilizable va en `src/components/shared`.
