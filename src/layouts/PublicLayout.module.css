@@ -63,7 +63,7 @@ main:focus { outline: none; }
   white-space: nowrap;
 }
 .link:hover { color: #fff; background: #ffffff1f; }
-.link[aria-current='page'] { color: #fff; background: #ffffff2e; }
+.link[aria-current] { color: #fff; background: #ffffff2e; }
 
 .tools {
   display: flex;
@@ -114,7 +114,7 @@ main:focus { outline: none; }
   font-weight: 600;
 }
 .mobileLink:hover,
-.mobileLink[aria-current='page'] { background: #ffffff1f; color: #fff; }
+.mobileLink[aria-current] { background: #ffffff1f; color: #fff; }
 .mobileMenu > :last-child { margin-top: var(--space-sm); }
 
 @media (max-width: 1080px) {

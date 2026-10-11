@@ -12,7 +12,8 @@
     "beforeYouGo": "Antes de ir",
     "app": "Descarga la app",
     "menuOpen": "Abrir menú",
-    "menuClose": "Cerrar menú"
+    "menuClose": "Cerrar menú",
+    "communities": "Comunidades"
   },
   "hero": {
     "lead": "Marca tu rumbo hacia la naturaleza",
@@ -22,7 +23,7 @@
     "ctaDestinations": "Explorar destinos"
   },
   "explorer": {
-    "eyebrow": "[ 02 ] EXPLORADOR DE DESTINOS",
+    "eyebrow": "Destinos",
     "titleA": "Elige un punto.",
     "titleB": "Descubre el bosque.",
     "lead": "Mapa esquemático del corredor Sullana – Máncora. Toca un destino para ver qué hacer, cómo llegar y quién te recibe.",
@@ -97,7 +98,7 @@
     }
   },
   "ecosystem": {
-    "eyebrow": "[ 03 ] ECOSISTEMA",
+    "eyebrow": "Ecosistema",
     "titleA": "La vida que",
     "titleB": "resiste al sol.",
     "lead": "El bosque seco ecuatorial pasa meses sin lluvia. Cuando llega el agua, se vuelve verde en días. Estas son algunas de las especies que lo sostienen.",
@@ -131,7 +132,7 @@
     }
   },
   "community": {
-    "eyebrow": "[ 04 ] TURISMO COMUNITARIO",
+    "eyebrow": "Turismo comunitario",
     "title1": "Tu visita",
     "title2": "sostiene",
     "title3": "el bosque.",
@@ -159,7 +160,7 @@
     }
   },
   "visit": {
-    "eyebrow": "[ 05 ] PLANIFICA TU VISITA",
+    "eyebrow": "Planifica tu visita",
     "titleA": "Dos temporadas.",
     "titleB": "Dos bosques distintos.",
     "green": {
@@ -594,7 +595,7 @@
   },
   "associations": {
     "contactWhatsapp": "Coordinar la visita por WhatsApp",
-    "eyebrow": "ASOCIACIONES",
+    "eyebrow": "Asociaciones",
     "titleA": "Quienes cuidan",
     "titleB": "el bosque.",
     "lead": "Cada asociación administra su propia información: servicios, rutas y fotos. Conoce a quienes te reciben.",
@@ -759,6 +760,25 @@
       "thanks": "¡Con gusto! Si tienes otra duda, aquí estamos.",
       "bye": "¡Hasta pronto! Que disfrutes el bosque seco.",
       "fallback": "No tengo una respuesta para eso. Prueba con una de las preguntas de abajo o escribe a un guía de la comunidad: ellos te confirman cualquier detalle."
+    }
+  },
+  "highlights": {
+    "label": "Por qué viajar con EcoRumbo",
+    "guides": {
+      "title": "Guías de la comunidad",
+      "text": "Cada visita la reciben y guían las familias que cuidan el bosque."
+    },
+    "offline": {
+      "title": "Mapa sin señal",
+      "text": "La app funciona sin conexión, con GPS en todo el recorrido."
+    },
+    "direct": {
+      "title": "Contacto directo",
+      "text": "Escribe por WhatsApp al guía y coordina fechas y tarifas."
+    },
+    "impact": {
+      "title": "Turismo con sentido",
+      "text": "Tu visita sostiene a las familias y cuida el bosque seco."
     }
   }
 }

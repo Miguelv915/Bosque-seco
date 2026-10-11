@@ -112,7 +112,9 @@
   z-index: 2;
 }
 
-.labelActive { color: var(--color-forest); }
+.labelLeft { transform: translate(calc(-100% - 16px), -50%); text-align: right; }
+
+.labelActive { color: var(--color-forest); font-weight: 700; }
 
 .city {
   position: absolute;

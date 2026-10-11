@@ -12,7 +12,8 @@
     "beforeYouGo": "Before you go",
     "app": "Get the app",
     "menuOpen": "Open menu",
-    "menuClose": "Close menu"
+    "menuClose": "Close menu",
+    "communities": "Communities"
   },
   "hero": {
     "lead": "Set your course toward nature",
@@ -22,7 +23,7 @@
     "ctaDestinations": "Explore destinations"
   },
   "explorer": {
-    "eyebrow": "[ 02 ] DESTINATION EXPLORER",
+    "eyebrow": "Destinations",
     "titleA": "Pick a point.",
     "titleB": "Discover the forest.",
     "lead": "Schematic map of the Sullana – Máncora corridor. Tap a destination to see what to do, how to get there and who will welcome you.",
@@ -97,7 +98,7 @@
     }
   },
   "ecosystem": {
-    "eyebrow": "[ 03 ] ECOSYSTEM",
+    "eyebrow": "Ecosystem",
     "titleA": "Life that",
     "titleB": "withstands the sun.",
     "lead": "The equatorial dry forest goes months without rain. When water arrives, it turns green within days. These are some of the species that sustain it.",
@@ -131,7 +132,7 @@
     }
   },
   "community": {
-    "eyebrow": "[ 04 ] COMMUNITY TOURISM",
+    "eyebrow": "Community tourism",
     "title1": "Your visit",
     "title2": "sustains",
     "title3": "the forest.",
@@ -159,7 +160,7 @@
     }
   },
   "visit": {
-    "eyebrow": "[ 05 ] PLAN YOUR VISIT",
+    "eyebrow": "Plan your visit",
     "titleA": "Two seasons.",
     "titleB": "Two different forests.",
     "green": {
@@ -594,7 +595,7 @@
   },
   "associations": {
     "contactWhatsapp": "Arrange your visit on WhatsApp",
-    "eyebrow": "ASSOCIATIONS",
+    "eyebrow": "Associations",
     "titleA": "Those who look after",
     "titleB": "the forest.",
     "lead": "Each association manages its own information: services, routes and photos. Meet the people who welcome you.",
@@ -759,6 +760,25 @@
       "thanks": "You're welcome! If you have another question, we're here.",
       "bye": "See you soon! Enjoy the dry forest.",
       "fallback": "I don't have an answer for that. Try one of the questions below or message a community guide: they can confirm any detail."
+    }
+  },
+  "highlights": {
+    "label": "Why travel with EcoRumbo",
+    "guides": {
+      "title": "Community guides",
+      "text": "Every visit is hosted and guided by the families who look after the forest."
+    },
+    "offline": {
+      "title": "Map without signal",
+      "text": "The app works offline, with GPS along the whole route."
+    },
+    "direct": {
+      "title": "Direct contact",
+      "text": "Message the guide on WhatsApp and arrange dates and rates."
+    },
+    "impact": {
+      "title": "Travel with purpose",
+      "text": "Your visit supports local families and protects the dry forest."
     }
   }
 }

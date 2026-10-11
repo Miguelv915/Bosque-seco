@@ -27,6 +27,8 @@ export default function SchematicMap({ activeIndex, onSelect }) {
         const { x, y } = project(dest);
         const isActive = i === activeIndex;
         const name = t(`destinations.${dest.id}.short`);
+        // Del centro hacia la derecha la etiqueta va a la izquierda del punto, para no cortarse.
+        const flip = parseFloat(x) > 60;
         return (
           <div key={dest.id}>
             <button
@@ -40,7 +42,7 @@ export default function SchematicMap({ activeIndex, onSelect }) {
               <span className={isActive ? styles.pointActive : styles.point} />
             </button>
             <span
-              className={`${styles.label} ${isActive ? styles.labelActive : ''}`}
+              className={`${styles.label} ${flip ? styles.labelLeft : ''} ${isActive ? styles.labelActive : ''}`}
               style={{ left: x, top: y }}
             >
               {pad(i)} {name}

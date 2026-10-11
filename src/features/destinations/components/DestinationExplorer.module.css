@@ -1,4 +1,7 @@
-.section { padding: var(--section-y) var(--gutter); }
+.section {
+  padding: var(--section-y) var(--gutter);
+  background: var(--color-sand-soft);
+}
 
 .layout {
   display: grid;

@@ -11,25 +11,65 @@ import styles from './PublicLayout.module.css';
 
 const YEAR = new Date().getFullYear();
 
-// `to` con ruta propia (NavLink marca la página actual) o ancla de la portada.
+// Mismo orden que el recorrido de la portada. `to` es una ruta propia (NavLink
+// marca la página actual) o un ancla de la portada; `sections` son las secciones
+// que resaltan ese enlace mientras se desplaza.
 const NAV_ITEMS = [
   { to: '/lugares', labelKey: 'nav.destinations' },
   { to: '/rutas', labelKey: 'nav.routes' },
-  { to: '/#asociaciones', labelKey: 'nav.associations' },
-  { to: '/#ecosistema', labelKey: 'nav.ecosystem' },
-  { to: '/#antes-de-ir', labelKey: 'nav.beforeYouGo' },
+  { to: '/#ecosistema', labelKey: 'nav.ecosystem', sections: ['ecosistema', 'comunidades'] },
+  { to: '/#asociaciones', labelKey: 'nav.associations', sections: ['asociaciones'] },
+  { to: '/#antes-de-ir', labelKey: 'nav.beforeYouGo', sections: ['visita', 'antes-de-ir'] },
 ];
+
+// El pie suma las comunidades, que en el menú comparten el enlace del ecosistema.
+const FOOTER_ITEMS = [
+  NAV_ITEMS[0],
+  NAV_ITEMS[1],
+  NAV_ITEMS[2],
+  { to: '/#comunidades', labelKey: 'nav.communities' },
+  NAV_ITEMS[3],
+  NAV_ITEMS[4],
+];
+
+const SECTION_IDS = NAV_ITEMS.flatMap((item) => item.sections ?? []);
 
 /** Lleva la vista al ancla indicada en la URL (p. ej. `/#explorar`); sin ancla, arriba. */
 function useScrollToHash() {
-  const { pathname, hash } = useLocation();
+  const { pathname, hash, key } = useLocation();
   useEffect(() => {
     if (!hash) {
-      window.scrollTo(0, 0);
+      // «instant»: al cambiar de página no se anima un viaje hasta arriba.
+      window.scrollTo({ top: 0, behavior: 'instant' });
       return;
     }
     document.getElementById(hash.slice(1))?.scrollIntoView();
-  }, [pathname, hash]);
+    // `key` cambia en cada navegación: repetir el mismo ancla vuelve a desplazar.
+  }, [pathname, hash, key]);
+}
+
+/** Id de la sección de la portada que cruza la parte alta de la pantalla; null fuera de ella. */
+function useActiveSection(enabled) {
+  const [active, setActive] = useState(null);
+  useEffect(() => {
+    if (!enabled || typeof IntersectionObserver === 'undefined') return undefined;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(({ isIntersecting, target }) => {
+          // Al salir de la franja se limpia solo si seguía siendo la activa.
+          if (isIntersecting) setActive(target.id);
+          else setActive((current) => (current === target.id ? null : current));
+        });
+      },
+      { rootMargin: '-35% 0px -60% 0px' },
+    );
+    SECTION_IDS.forEach((id) => {
+      const element = document.getElementById(id);
+      if (element) observer.observe(element);
+    });
+    return () => observer.disconnect();
+  }, [enabled]);
+  return enabled ? active : null;
 }
 
 /** Enlace a la app: la tienda si está configurada; si no, la sección que la presenta. */
@@ -45,14 +85,19 @@ function AppLink({ className, children }) {
   );
 }
 
-function NavItem({ to, children, className, onClick }) {
+function NavItem({ to, children, className, onClick, current = false }) {
   const isRoute = !to.includes('#');
   return isRoute ? (
     <NavLink to={to} className={className} onClick={onClick}>
       {children}
     </NavLink>
   ) : (
-    <Link to={to} className={className} onClick={onClick}>
+    <Link
+      to={to}
+      className={className}
+      onClick={onClick}
+      aria-current={current ? 'location' : undefined}
+    >
       {children}
     </Link>
   );
@@ -67,6 +112,8 @@ export default function PublicLayout() {
   const menuOpen = openAt === here;
   const closeMenu = () => setOpenAt(null);
   useScrollToHash();
+  const activeSection = useActiveSection(pathname === '/');
+  const isCurrent = (item) => Boolean(item.sections?.includes(activeSection));
 
   useEffect(() => {
     if (!menuOpen) return undefined;
@@ -87,9 +134,9 @@ export default function PublicLayout() {
         </Link>
 
         <nav className={styles.links} aria-label={t('nav.label')}>
-          {NAV_ITEMS.map(({ to, labelKey }) => (
-            <NavItem key={to} to={to} className={styles.link}>
-              {t(labelKey)}
+          {NAV_ITEMS.map((item) => (
+            <NavItem key={item.to} to={item.to} className={styles.link} current={isCurrent(item)}>
+              {t(item.labelKey)}
             </NavItem>
           ))}
         </nav>
@@ -119,9 +166,15 @@ export default function PublicLayout() {
           aria-label={t('nav.label')}
           hidden={!menuOpen}
         >
-          {NAV_ITEMS.map(({ to, labelKey }) => (
-            <NavItem key={to} to={to} className={styles.mobileLink} onClick={closeMenu}>
-              {t(labelKey)}
+          {NAV_ITEMS.map((item) => (
+            <NavItem
+              key={item.to}
+              to={item.to}
+              className={styles.mobileLink}
+              onClick={closeMenu}
+              current={isCurrent(item)}
+            >
+              {t(item.labelKey)}
             </NavItem>
           ))}
           <AppLink className={buttonClass('primary', { size: 'lg', block: true })}>
@@ -146,7 +199,7 @@ export default function PublicLayout() {
           <div>
             <h2 className={styles.footerHeading}>{t('footer.explore')}</h2>
             <ul className={styles.footerList}>
-              {NAV_ITEMS.map(({ to, labelKey }) => (
+              {FOOTER_ITEMS.map(({ to, labelKey }) => (
                 <li key={to}>
                   <Link to={to} className={styles.footerLink}>
                     {t(labelKey)}

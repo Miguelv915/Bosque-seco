@@ -3,7 +3,7 @@
   padding: var(--section-y) var(--gutter);
   background:
     radial-gradient(circle at 85% 20%, #00a55040, transparent 55%),
-    var(--color-forest-deep);
+    var(--color-forest);
   color: var(--color-on-dark-soft);
   overflow: hidden;
 }

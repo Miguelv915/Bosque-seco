@@ -1,6 +1,6 @@
 .section {
   padding: var(--section-y) var(--gutter);
-  border-top: 1px solid #201e1e1a;
+  background: var(--color-bg);
 }
 
 .grid {
