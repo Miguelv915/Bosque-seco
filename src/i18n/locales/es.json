@@ -257,7 +257,9 @@
         "subspace": "Subespacio",
         "provider": "Prestador",
         "activity": "Actividad",
-        "payment_method": "Medio de pago"
+        "payment_method": "Medio de pago",
+        "route_point": "Punto de ruta",
+        "reward": "Producto"
       },
       "action": {
         "create": "Crear",
@@ -283,12 +285,28 @@
       "addPayment": "Agregar medio de pago",
       "providers": "Prestadores",
       "submit": "Enviar para aprobación",
-      "subspaces": "Subespacios"
+      "subspaces": "Subespacios",
+      "beforeYouGo": "Estos datos forman la ficha \"Antes de ir\" de la app móvil.",
+      "noProviders": "Aún no hay guías ni servicios registrados.",
+      "noPhone": "sin teléfono",
+      "providerRule": "Cada servicio publica su propio WhatsApp. El teléfono del líder nunca se muestra.",
+      "routes": "Rutas",
+      "noRoutes": "Aún no hay rutas.",
+      "noPoints": "Esta ruta aún no tiene puntos.",
+      "noGps": "sin GPS",
+      "noPhoto": "sin foto",
+      "addRoute": "Crear ruta",
+      "rewards": "Productos para canjear puntos",
+      "noRewards": "Aún no hay productos.",
+      "points": "puntos",
+      "addReward": "Agregar producto",
+      "rewardRule": "Los puntos deben ser mayores que 0 y el descuento estar entre 1 y 100."
     },
     "kind": {
       "guide": "Guía",
       "food": "Comida",
-      "lodging": "Alojamiento"
+      "lodging": "Alojamiento",
+      "transport": "Transporte"
     },
     "payment": {
       "cash": "Efectivo",
@@ -330,7 +348,13 @@
       "noteEs": "Nota",
       "noteEn": "Nota (EN)",
       "category": "Categoría",
-      "parent": "Espacio o subespacio"
+      "parent": "Espacio o subespacio",
+      "signal": "Señal de celular",
+      "access": "Acceso",
+      "route": "Ruta",
+      "rate": "Tarifa referencial",
+      "points": "Puntos necesarios",
+      "discount": "Descuento (%)"
     },
     "loginPage": {
       "brand": "EcoRumbo",
@@ -342,6 +366,107 @@
       "hidePassword": "Ocultar contraseña",
       "signingIn": "Ingresando…",
       "noAccount": "Las cuentas las crea AIDER. Si aún no tienes acceso, comunícate con tu coordinación."
+    },
+    "required": "obligatorio",
+    "nav": {
+      "label": "Secciones del panel",
+      "summary": "Resumen",
+      "association": "Asociación",
+      "spaces": "Espacio",
+      "providers": "Guías y servicios",
+      "routes": "Rutas y puntos",
+      "rewards": "Productos",
+      "gallery": "Imágenes",
+      "requests": "Solicitudes"
+    },
+    "readiness": {
+      "title": "¿Está lista la app?",
+      "progress": "{{done}} de {{total}} requisitos listos",
+      "complete": "Todo lo obligatorio está listo: la app puede trabajar con tus datos reales.",
+      "recommended": "recomendado",
+      "fix": "Completar",
+      "pendingNote": "Los cambios que esperan aprobación del administrador aún no cuentan.",
+      "items": {
+        "summary": {
+          "label": "Resumen de la asociación"
+        },
+        "space": {
+          "label": "Al menos un espacio registrado"
+        },
+        "beforeYouGo": {
+          "label": "Ficha \"Antes de ir\": ubicación, señal de celular y acceso"
+        },
+        "payments": {
+          "label": "Medios de pago aceptados"
+        },
+        "guides": {
+          "label": "Al menos un guía activo"
+        },
+        "phones": {
+          "label": "Todos los servicios con un WhatsApp válido"
+        },
+        "route": {
+          "label": "Una ruta con al menos un punto"
+        },
+        "pointsGps": {
+          "label": "Puntos con coordenadas GPS"
+        },
+        "pointsPhoto": {
+          "label": "Puntos con foto"
+        },
+        "rewards": {
+          "label": "Productos para canjear puntos"
+        }
+      }
+    },
+    "hints": {
+      "location": "Ejemplo: Piura · Entrada por Máncora",
+      "signal": "Ejemplo: Solo en el pueblo",
+      "access": "Ejemplo: 1 h de trocha",
+      "phone": "Celular peruano de 9 dígitos que empieza con 9, o con + y código de país. Sin un número válido el botón de WhatsApp no aparece.",
+      "rate": "Texto libre. Ejemplo: Desde S/ 50 por grupo",
+      "paymentNote": "Ejemplo: El Yape se paga al volver al pueblo",
+      "reward": "Ejemplo: Polo bordado, Miel de algarrobo"
+    },
+    "errors": {
+      "phone": "Número no válido. Usa 9 dígitos que empiecen con 9, o + y el código de país.",
+      "code": "Usa minúsculas, números, guion o guion bajo; sin espacios ni tildes y empezando con una letra.",
+      "codeTaken": "Ese código ya lo usa otro punto. Elige uno distinto.",
+      "geoPair": "Indica latitud y longitud juntas, o deja ambas vacías.",
+      "geoRange": "Coordenadas fuera de rango o no numéricas.",
+      "path": "Cada línea debe ser \"latitud, longitud\"."
+    },
+    "qr": {
+      "alt": "Código QR del punto {{code}}",
+      "download": "Descargar QR",
+      "show": "Ver QR"
+    },
+    "routePoint": {
+      "title": "Agregar punto a una ruta",
+      "intro": "El código es el que va en el QR del cartel y debe ser único.",
+      "needRoute": "Primero crea una ruta; luego podrás agregarle puntos.",
+      "position": "Orden en la ruta",
+      "positionHint": "0 es el primer punto.",
+      "code": "Código del punto",
+      "codeHint": "Ejemplos: mirador, pozas. Se escribe solo en minúsculas y sin espacios.",
+      "descriptionHint": "Se muestra al turista en Explorar.",
+      "meters": "Metros desde el punto anterior",
+      "minutes": "Minutos a pie desde el punto anterior",
+      "fromPreviousHint": "En el primer punto, deja 0.",
+      "gps": "Coordenadas GPS del cartel",
+      "lat": "Latitud",
+      "lon": "Longitud",
+      "useLocation": "Usar mi ubicación",
+      "gpsHint": "Tómalas en el lugar. Sin ellas no se dibuja el mapa ni se calcula la distancia por GPS.",
+      "geo": {
+        "loading": "Obteniendo ubicación…",
+        "denied": "No se pudo obtener la ubicación. Revisa el permiso del navegador.",
+        "unsupported": "Este navegador no ofrece ubicación."
+      },
+      "path": "Trazado del camino (opcional)",
+      "pathHint": "Una coordenada \"latitud, longitud\" por línea. Sin trazado, el mapa une los puntos en línea recta.",
+      "photo": "Foto del punto (recomendado)",
+      "photoHint": "Se reduce automáticamente para que cargue sin buena señal."
     }
   },
   "lang": {
@@ -400,6 +525,7 @@
     "viewSpace": "Ver espacio",
     "viewSubspace": "Ver sector",
     "noSpaces": "Esta asociación aún no tiene espacios publicados.",
-    "noSubspaces": "Este espacio aún no tiene sectores publicados."
+    "noSubspaces": "Este espacio aún no tiene sectores publicados.",
+    "otherServices": "Alimentación, hospedaje y transporte"
   }
 }

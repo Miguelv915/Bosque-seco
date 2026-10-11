@@ -1,3 +1,4 @@
+import { compressImage } from '../lib/image';
 import { supabase } from '../lib/supabaseClient';
 
 const BUCKET = 'association-media';
@@ -53,16 +54,30 @@ export async function rejectRequest(id, note) {
   if (error) throw error;
 }
 
-/** Sube una imagen a la carpeta de la asociación y devuelve su ruta en el bucket. */
+/**
+ * Sube una imagen a la carpeta de la asociación y devuelve su ruta en el bucket.
+ * Se reduce en el navegador antes de subirla para que cargue rápido sin señal.
+ */
 export async function uploadAssociationImage(associationId, file) {
   if (file.size > MAX_IMAGE_BYTES) {
     throw new Error('FILE_TOO_LARGE');
   }
-  const extension = file.name.split('.').pop().toLowerCase();
+  const prepared = await compressImage(file);
+  const extension = prepared.name.split('.').pop().toLowerCase();
   const path = `${associationId}/${crypto.randomUUID()}.${extension}`;
-  const { error } = await supabase.storage.from(BUCKET).upload(path, file, {
-    contentType: file.type,
+  const { error } = await supabase.storage.from(BUCKET).upload(path, prepared, {
+    contentType: prepared.type,
   });
   if (error) throw error;
   return path;
+}
+
+/** ¿Ya existe un punto publicado con este código? (el código del QR es único). */
+export async function isPointCodeTaken(code) {
+  const { count, error } = await supabase
+    .from('route_points')
+    .select('id', { count: 'exact', head: true })
+    .eq('code', code);
+  if (error) throw error;
+  return count > 0;
 }

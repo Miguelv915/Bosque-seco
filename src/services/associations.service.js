@@ -83,7 +83,8 @@ export async function getAssociationTree(associationId) {
   const { data, error } = await supabase
     .from('associations')
     .select(
-      '*, spaces(*, subspaces(*)), providers(*), activities(*), payment_methods(*)',
+      '*, spaces(*, subspaces(*)), providers(*), activities(*), payment_methods(*), ' +
+        'routes(*, route_points(*)), rewards(*)',
     )
     .eq('id', associationId)
     .single();
