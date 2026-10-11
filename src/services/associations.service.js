@@ -7,12 +7,6 @@ export function mediaUrl(path) {
   return supabase.storage.from(BUCKET).getPublicUrl(path).data.publicUrl;
 }
 
-/** Imagen de portada: la marcada como `is_cover` o la primera por orden. */
-export function pickCover(media = []) {
-  const sorted = [...media].sort((a, b) => a.sort_order - b.sort_order);
-  return sorted.find((m) => m.is_cover) || sorted[0] || null;
-}
-
 function raise(error) {
   if (error) throw error;
 }

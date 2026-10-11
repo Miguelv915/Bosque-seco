@@ -26,7 +26,7 @@ Admin (AIDER) ── crea asociaciones y líderes, aprueba cambios
 | i18n | i18next · react-i18next (ES / EN) |
 | Datos y auth | Supabase (Postgres + RLS, Auth, Storage) |
 | Mapas | Leaflet / react-leaflet |
-| Calidad | oxlint, EditorConfig |
+| Calidad | oxlint, Vitest + Testing Library, EditorConfig, GitHub Actions |
 
 ## Modelo de datos
 
@@ -66,6 +66,8 @@ npm run dev
 | `npm run dev` | Servidor de desarrollo |
 | `npm run build` | Compilación de producción |
 | `npm run lint` | Análisis estático |
+| `npm test` | Pruebas unitarias (Vitest) |
+| `npm run test:watch` | Pruebas en modo continuo mientras desarrollas |
 | `npm run preview` | Previsualizar la compilación |
 
 ## Estructura

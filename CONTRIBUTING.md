@@ -41,7 +41,8 @@ Tipos: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `build`, `cho
 rama → Pull Request → CI (lint + build) → revisión → merge a main → Cloudflare publica
 ```
 
-- **CI:** `.github/workflows/ci.yml` corre `npm ci`, `npm run lint` y `npm run build` en cada PR y en cada push a `main`.
+- **CI:** `.github/workflows/ci.yml` corre `npm ci`, `npm run lint`, `npm test` y `npm run build` en cada PR y en cada push a `main`.
+- **Pruebas:** junto al código (`*.test.js`), con Vitest. La lógica pura va en `lib/` para poder probarla sin red ni Supabase. Toda clave nueva de i18n debe existir en `es.json` y `en.json`: una prueba lo verifica.
 - **Protección de `main`** (GitHub → Settings → Branches): exigir Pull Request y que el CI pase antes de fusionar.
 - **Despliegue:** Cloudflare publica `main` en producción y genera una previsualización por cada rama/PR.
   - Build: `npm run build` · salida: `dist` · variable `NODE_VERSION=20`.
