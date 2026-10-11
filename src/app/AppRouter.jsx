@@ -3,6 +3,7 @@ import PublicLayout from '../layouts/PublicLayout';
 import AdminLayout from '../layouts/AdminLayout';
 import HomePage from '../pages/public/HomePage';
 import LugaresPage from '../pages/public/LugaresPage';
+import DestinationPage from '../pages/public/DestinationPage';
 import RutasPage from '../pages/public/RutasPage';
 import LoginPage from '../pages/admin/LoginPage';
 import DashboardPage from '../pages/admin/DashboardPage';
@@ -18,6 +19,7 @@ export default function AppRouter() {
         <Route element={<PublicLayout />}>
           <Route index element={<HomePage />} />
           <Route path="lugares" element={<LugaresPage />} />
+          <Route path="lugares/:id" element={<DestinationPage />} />
           <Route path="rutas" element={<RutasPage />} />
           <Route path="asociaciones/:slug" element={<AssociationPage />} />
           <Route path="espacios/:id" element={<SpacePage />} />

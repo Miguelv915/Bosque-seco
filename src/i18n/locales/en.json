@@ -3,18 +3,23 @@
     "name": "EcoRumbo"
   },
   "nav": {
-    "explore": "Explore",
     "ecosystem": "Ecosystem",
-    "communities": "Communities",
-    "plan": "Plan your trip",
-    "associations": "Associations"
+    "associations": "Associations",
+    "label": "Main",
+    "skip": "Skip to content",
+    "destinations": "Destinations",
+    "routes": "Routes",
+    "beforeYouGo": "Before you go",
+    "app": "Get the app",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu"
   },
   "hero": {
     "lead": "Set your course toward nature",
-    "ctaMap": "Explore the map",
-    "ctaCommunities": "Support the communities",
+    "ctaCommunities": "Meet the communities",
     "imageAlt": "Group of visitors hiking a dry forest trail among carob trees and sandy hillsides",
-    "imagePlaceholder": "Panoramic photo: carob and ceibo trees at sunset"
+    "imagePlaceholder": "Panoramic photo: carob and ceibo trees at sunset",
+    "ctaDestinations": "Explore destinations"
   },
   "explorer": {
     "eyebrow": "[ 02 ] DESTINATION EXPLORER",
@@ -26,7 +31,8 @@
     "todo": "What to do",
     "access": "Access",
     "season": "Best season",
-    "photo": "Photo: {{name}}"
+    "photo": "Photo: {{name}}",
+    "viewAll": "See all destinations"
   },
   "destinations": {
     "angolo": {
@@ -131,7 +137,8 @@
     "title3": "the forest.",
     "lead": "The families living next to the reserves care for the forest every day. Hire local guides, buy their products and sleep in their homes: every sol stays in the territory.",
     "photo": "Photo: community producers or guides",
-    "cta": "I want to take part →"
+    "cta": "I want to take part →",
+    "photoAlt": "A guide talks with a group of visitors in the shade of a carob tree in Cerros de Amotape National Park"
   },
   "offers": {
     "guides": {
@@ -164,19 +171,60 @@
       "range": "May — Dec · Dry season",
       "title": "The golden forest",
       "text": "Easier access, clear skies and wildlife concentrated near water. The best time for hikes and 4×4 routes."
-    },
-    "ctaTitle": "Build your route with a community guide.",
-    "whatsapp": "Message us on WhatsApp"
+    }
   },
   "footer": {
-    "left": "ECORUMBO / PIURA — SULLANA · MÁNCORA",
-    "right": "TRAVEL WITH RESPECT · LEAVE NO TRACE"
+    "tagline": "Community ecotourism in the dry forest of northern Piura. Every visit is hosted and guided by the families who look after it.",
+    "motto": "Travel with respect · Leave no trace",
+    "explore": "Explore",
+    "contact": "Contact",
+    "whatsapp": "Message us on WhatsApp",
+    "contactGuides": "Contact a local guide",
+    "aider": "AIDER · Challenge 12",
+    "appTitle": "Take the app",
+    "appText": "Offline map, GPS and a stamp at every point of the route.",
+    "rights": "© {{year}} EcoRumbo · Piura, Peru",
+    "photos": "Some photos: Wikimedia Commons (Creative Commons licenses and public domain)."
   },
   "places": {
-    "title": "Places"
+    "title": "Dry forest destinations",
+    "eyebrow": "Destinations",
+    "lead": "Places between Sullana and Máncora to hike, spot wildlife and meet the families who look after the forest. Pick one and message a local guide.",
+    "imageAlt": "Carob woodland in the Piura dry forest under a clear sky",
+    "count": "{{count}} destinations",
+    "corridor": "Sullana – Máncora corridor",
+    "listLabel": "Destination list",
+    "viewOnMap": "View on the map",
+    "whatsappMessage": "Hi, I found EcoRumbo and I'd like to visit {{name}}. What dates and rates do you have with a local guide?",
+    "ctaTitle": "Ready to head into the forest?",
+    "ctaText": "Check how to get there, what to bring and how to get around without signal before you travel.",
+    "back": "All destinations",
+    "gallery": "Gallery",
+    "planTitle": "Plan your visit",
+    "guideNote": "A local guide confirms dates, rates and meeting point on WhatsApp.",
+    "moreTitle": "More dry forest destinations",
+    "details": "See details"
   },
   "routes": {
-    "title": "Ecotourism routes"
+    "title": "Ecotourism routes",
+    "eyebrow": "Routes",
+    "lead": "Tap a point on the map to see what to do, how to get there and the best season. In the forest, follow the app: it works without signal.",
+    "stepsTitle": "How to plan your route",
+    "steps": {
+      "choose": {
+        "title": "Pick a destination",
+        "text": "Compare access and seasons on the map and the cards."
+      },
+      "contact": {
+        "title": "Message a local guide",
+        "text": "The association confirms dates, rates and the meeting point."
+      },
+      "app": {
+        "title": "Download the map",
+        "text": "Open the app with signal before you leave; in the forest it works offline."
+      }
+    },
+    "whatsappMessage": "Hi, I found EcoRumbo and I'd like to plan a route through the Piura dry forest. Can you help me with dates and rates?"
   },
   "admin": {
     "title": "Admin",
@@ -582,6 +630,73 @@
     "viewSubspace": "View sector",
     "noSpaces": "This association has no published areas yet.",
     "noSubspaces": "This area has no published sectors yet.",
-    "otherServices": "Food, lodging and transport"
+    "otherServices": "Food, lodging and transport",
+    "whatsappMessage": "Hi, I found {{name}} on EcoRumbo and I'd like to arrange a visit. What dates and rates do you have?"
+  },
+  "contact": {
+    "whatsapp": "Ask on WhatsApp",
+    "guide": "Contact a guide"
+  },
+  "beforeYouGo": {
+    "eyebrow": "Before you go",
+    "titleA": "Ready",
+    "titleB": "for the forest.",
+    "lead": "The practical details for a safe visit with no surprises. Associations confirm the specifics of each route.",
+    "arrive": {
+      "title": "Getting there",
+      "text": "Destinations lie between Sullana and Máncora. Arrange transport with the association: some access roads require a 4×4 and an authorized guide."
+    },
+    "signal": {
+      "title": "No signal",
+      "text": "Most of the forest has no mobile coverage. Download the EcoRumbo app and its map while you have signal: afterwards it works offline.",
+      "link": "About the app"
+    },
+    "payments": {
+      "title": "Payments",
+      "text": "Bring cash in soles. If you pay with a digital wallet, do it before heading in: without signal there are no online payments. Each association lists its payment methods on its page."
+    },
+    "pack": {
+      "title": "What to bring",
+      "items": {
+        "water": "Enough water for the whole day",
+        "sun": "Hat, sunglasses and sunscreen",
+        "clothes": "Light long-sleeved clothing",
+        "shoes": "Closed walking shoes",
+        "repellent": "Insect repellent",
+        "trash": "A bag to carry your trash back"
+      }
+    },
+    "ctaTitle": "Plan your route with a community guide.",
+    "ctaText": "Message us and we will connect you with local guides for dates, rates and the meeting point.",
+    "whatsappMessage": "Hi, I'd like to visit the Piura dry forest with EcoRumbo. What routes, dates and rates do you have with a local guide?"
+  },
+  "appPromo": {
+    "eyebrow": "EcoRumbo app",
+    "title": "Take EcoRumbo into the forest.",
+    "lead": "The website helps you choose; the app walks the route with you. Download it before you leave and use it where there is no signal.",
+    "features": {
+      "offline": {
+        "title": "Works without signal",
+        "text": "Download the map while you have signal and use it offline for the whole route."
+      },
+      "gps": {
+        "title": "GPS map",
+        "text": "See where you are on the route even without mobile coverage."
+      },
+      "stamps": {
+        "title": "A stamp at every point",
+        "text": "Collect a stamp at each point of the route you visit."
+      },
+      "discounts": {
+        "title": "Community discounts",
+        "text": "Redeem your stamps for discounts on products made by forest families."
+      }
+    },
+    "askLink": "Ask your guide or the association for the download link before you travel.",
+    "whatsappMessage": "Hi, I'd like to download the EcoRumbo app before my visit to the dry forest. Could you send me the link?",
+    "mock": {
+      "offline": "Offline · map ready",
+      "stamp": "Stamp collected"
+    }
   }
 }

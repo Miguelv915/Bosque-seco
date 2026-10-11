@@ -2,9 +2,10 @@
   display: flex;
   flex-direction: column;
   border: 1px solid var(--color-line);
-  border-radius: 24px;
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  background: var(--color-sand);
+  background: var(--color-sand-soft);
+  box-shadow: var(--shadow-md);
 }
 
 .photo { position: relative; aspect-ratio: 16 / 9; }
@@ -63,7 +64,7 @@
   overflow: hidden;
 }
 
-.fact { background: var(--color-sand); padding: 14px 16px; }
+.fact { background: var(--color-sand-soft); padding: 14px 16px; }
 
 .fact dt {
   font-family: var(--font-mono);
@@ -79,15 +80,18 @@
 
 .tab {
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.06em;
-  padding: 9px 12px;
-  border-radius: 999px;
+  min-height: var(--tap);
+  padding: 0 16px;
+  border-radius: var(--radius-pill);
   cursor: pointer;
   border: 1px solid #201e1e33;
   background: transparent;
   color: var(--color-ink-soft);
 }
+
+.tab:hover { border-color: var(--color-forest); color: var(--color-forest); }
 
 .tab[aria-pressed='true'] {
   background: var(--color-green);

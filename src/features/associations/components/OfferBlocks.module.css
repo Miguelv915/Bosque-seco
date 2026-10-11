@@ -1,4 +1,4 @@
-.block { margin-top: 56px; }
+.block { margin-top: var(--space-3xl); }
 
 .heading {
   font-family: var(--font-display);
@@ -31,9 +31,10 @@
   flex-direction: column;
   gap: 8px;
   border: 1px solid var(--color-line);
-  border-radius: 16px;
+  border-radius: var(--radius-md);
   padding: 20px 22px;
-  background: var(--color-sand);
+  background: var(--color-sand-soft);
+  box-shadow: var(--shadow-sm);
 }
 
 .card h3 { font-family: var(--font-display); font-weight: 500; font-size: 18px; }
@@ -43,6 +44,9 @@
 .meta { font-family: var(--font-mono); font-size: 12px !important; color: var(--color-muted) !important; }
 
 .whatsapp {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap);
   margin-top: auto;
   align-self: flex-start;
   font-family: var(--font-mono);
@@ -50,7 +54,7 @@
   letter-spacing: 0.08em;
   background: var(--color-green);
   color: var(--color-ink);
-  padding: 10px 16px;
-  border-radius: 999px;
+  padding: 0 18px;
+  border-radius: var(--radius-pill);
 }
 .whatsapp:hover { background: var(--color-sky); color: var(--color-ink); }

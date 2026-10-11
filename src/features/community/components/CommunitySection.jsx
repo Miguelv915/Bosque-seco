@@ -1,5 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import ImagePlaceholder from '../../../components/shared/ImagePlaceholder';
+import { buttonClass } from '../../../components/shared/buttonClass';
+import { REMOTE_IMAGES } from '../../../lib/remoteImages';
 import { OFFERS } from '../data/offers';
 import styles from './CommunitySection.module.css';
 
@@ -20,7 +22,12 @@ export default function CommunitySection() {
           </h2>
           <p className={styles.lead}>{t('community.lead')}</p>
           <div className={styles.photo}>
-            <ImagePlaceholder label={t('community.photo')} />
+            <ImagePlaceholder
+              src={REMOTE_IMAGES.amotapeVisit.src}
+              credit={REMOTE_IMAGES.amotapeVisit.credit}
+              alt={t('community.photoAlt')}
+              label={t('community.photo')}
+            />
           </div>
         </div>
 
@@ -36,8 +43,8 @@ export default function CommunitySection() {
               </li>
             ))}
           </ol>
-          <a href="#visita" className={styles.cta}>
-            {t('community.cta').toUpperCase()}
+          <a href="#antes-de-ir" className={`${buttonClass('dark', { size: 'lg' })} ${styles.cta}`}>
+            {t('community.cta')}
           </a>
         </div>
       </div>

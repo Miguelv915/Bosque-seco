@@ -8,7 +8,7 @@ const pad = (n) => String(n + 1).padStart(2, '0');
 /** Ficha del destino activo con selector de pestañas. */
 export default function DestinationCard({ activeIndex, onSelect }) {
   const { t } = useTranslation();
-  const { id, image } = DESTINATIONS[activeIndex];
+  const { id, image, credit } = DESTINATIONS[activeIndex];
   const key = `destinations.${id}`;
   const facts = ['todo', 'access', 'season'];
 
@@ -17,6 +17,7 @@ export default function DestinationCard({ activeIndex, onSelect }) {
       <div className={styles.photo}>
         <ImagePlaceholder
           src={image}
+          credit={credit}
           alt={t(`${key}.name`)}
           label={t('explorer.photo', { name: t(`${key}.name`) })}
         />

@@ -3,18 +3,23 @@
     "name": "EcoRumbo"
   },
   "nav": {
-    "explore": "Explorar",
     "ecosystem": "Ecosistema",
-    "communities": "Comunidades",
-    "plan": "Planifica",
-    "associations": "Asociaciones"
+    "associations": "Asociaciones",
+    "label": "Principal",
+    "skip": "Saltar al contenido",
+    "destinations": "Destinos",
+    "routes": "Rutas",
+    "beforeYouGo": "Antes de ir",
+    "app": "Descarga la app",
+    "menuOpen": "Abrir menú",
+    "menuClose": "Cerrar menú"
   },
   "hero": {
     "lead": "Marca tu rumbo hacia la naturaleza",
-    "ctaMap": "Explorar el mapa",
-    "ctaCommunities": "Apoya a las comunidades",
+    "ctaCommunities": "Conocer comunidades",
     "imageAlt": "Grupo de visitantes caminando por un sendero del bosque seco, entre algarrobos y laderas de arena",
-    "imagePlaceholder": "Foto panorámica: algarrobos y ceibos al atardecer"
+    "imagePlaceholder": "Foto panorámica: algarrobos y ceibos al atardecer",
+    "ctaDestinations": "Explorar destinos"
   },
   "explorer": {
     "eyebrow": "[ 02 ] EXPLORADOR DE DESTINOS",
@@ -26,7 +31,8 @@
     "todo": "Qué hacer",
     "access": "Acceso",
     "season": "Mejor época",
-    "photo": "Foto: {{name}}"
+    "photo": "Foto: {{name}}",
+    "viewAll": "Ver todos los destinos"
   },
   "destinations": {
     "angolo": {
@@ -131,7 +137,8 @@
     "title3": "el bosque.",
     "lead": "Las familias que viven junto a las reservas cuidan el bosque todos los días. Contrata guías locales, compra sus productos y duerme en sus casas: cada sol se queda en el territorio.",
     "photo": "Foto: productores o guías de la comunidad",
-    "cta": "Quiero ser parte →"
+    "cta": "Quiero ser parte →",
+    "photoAlt": "Un guía conversa con un grupo de visitantes a la sombra de un algarrobo en el Parque Nacional Cerros de Amotape"
   },
   "offers": {
     "guides": {
@@ -164,19 +171,60 @@
       "range": "May — Dic · Temporada seca",
       "title": "El bosque dorado",
       "text": "Accesos más fáciles, cielos despejados y fauna concentrada cerca del agua. La mejor época para caminatas y rutas en 4×4."
-    },
-    "ctaTitle": "Arma tu ruta con un guía de la comunidad.",
-    "whatsapp": "Escríbenos por WhatsApp"
+    }
   },
   "footer": {
-    "left": "ECORUMBO / PIURA — SULLANA · MÁNCORA",
-    "right": "VIAJA CON RESPETO · NO DEJES HUELLA"
+    "tagline": "Ecoturismo comunitario en el bosque seco del norte de Piura. Cada visita la reciben y guían las familias que lo cuidan.",
+    "motto": "Viaja con respeto · No dejes huella",
+    "explore": "Explora",
+    "contact": "Contacto",
+    "whatsapp": "Escríbenos por WhatsApp",
+    "contactGuides": "Contacta a un guía local",
+    "aider": "AIDER · Reto 12",
+    "appTitle": "Lleva la app",
+    "appText": "Mapa sin conexión, GPS y sellos en cada punto de la ruta.",
+    "rights": "© {{year}} EcoRumbo · Piura, Perú",
+    "photos": "Algunas fotos: Wikimedia Commons (licencias Creative Commons y dominio público)."
   },
   "places": {
-    "title": "Lugares"
+    "title": "Destinos del bosque seco",
+    "eyebrow": "Destinos",
+    "lead": "Lugares entre Sullana y Máncora para caminar, ver fauna y conocer a las familias que cuidan el bosque. Elige uno y escríbele a un guía local.",
+    "imageAlt": "Algarrobal del bosque seco de Piura bajo un cielo despejado",
+    "count": "{{count}} destinos",
+    "corridor": "Corredor Sullana – Máncora",
+    "listLabel": "Lista de destinos",
+    "viewOnMap": "Ver en el mapa",
+    "whatsappMessage": "Hola, vi EcoRumbo y quiero visitar {{name}}. ¿Qué fechas y tarifas tienen con guía local?",
+    "ctaTitle": "¿Listo para salir al bosque?",
+    "ctaText": "Revisa cómo llegar, qué llevar y cómo moverte sin señal antes de viajar.",
+    "back": "Todos los destinos",
+    "gallery": "Galería",
+    "planTitle": "Planifica tu visita",
+    "guideNote": "Un guía local te confirma fechas, tarifas y punto de encuentro por WhatsApp.",
+    "moreTitle": "Otros destinos del bosque seco",
+    "details": "Ver detalles"
   },
   "routes": {
-    "title": "Rutas ecoturísticas"
+    "title": "Rutas ecoturísticas",
+    "eyebrow": "Rutas",
+    "lead": "Toca un punto del mapa para ver qué hacer, cómo llegar y la mejor época. En el bosque, guíate con la app: funciona sin señal.",
+    "stepsTitle": "Así armas tu ruta",
+    "steps": {
+      "choose": {
+        "title": "Elige un destino",
+        "text": "Compara accesos y temporadas en el mapa y en las fichas."
+      },
+      "contact": {
+        "title": "Escribe a un guía local",
+        "text": "La asociación te confirma fechas, tarifas y punto de encuentro."
+      },
+      "app": {
+        "title": "Descarga el mapa",
+        "text": "Abre la app con señal antes de salir; en el bosque funciona sin conexión."
+      }
+    },
+    "whatsappMessage": "Hola, vi EcoRumbo y quiero armar una ruta por el bosque seco de Piura. ¿Me ayudan con fechas y tarifas?"
   },
   "admin": {
     "title": "Administración",
@@ -582,6 +630,73 @@
     "viewSubspace": "Ver sector",
     "noSpaces": "Esta asociación aún no tiene espacios publicados.",
     "noSubspaces": "Este espacio aún no tiene sectores publicados.",
-    "otherServices": "Alimentación, hospedaje y transporte"
+    "otherServices": "Alimentación, hospedaje y transporte",
+    "whatsappMessage": "Hola, vi a {{name}} en EcoRumbo y quiero coordinar una visita. ¿Qué fechas y tarifas tienen?"
+  },
+  "contact": {
+    "whatsapp": "Consultar por WhatsApp",
+    "guide": "Contactar a un guía"
+  },
+  "beforeYouGo": {
+    "eyebrow": "Antes de ir",
+    "titleA": "Todo listo",
+    "titleB": "para el bosque.",
+    "lead": "Lo práctico para que tu visita sea segura y sin sorpresas. Las asociaciones te confirman los detalles de cada ruta.",
+    "arrive": {
+      "title": "Cómo llegar",
+      "text": "Los destinos están entre Sullana y Máncora. Coordina el traslado con la asociación: algunos accesos son en camioneta 4×4 y con guía autorizado."
+    },
+    "signal": {
+      "title": "No hay señal",
+      "text": "En gran parte del bosque no hay cobertura móvil. Descarga la app EcoRumbo y su mapa mientras tengas señal: después funciona sin conexión.",
+      "link": "Conoce la app"
+    },
+    "payments": {
+      "title": "Medios de pago",
+      "text": "Lleva efectivo en soles. Si pagas con billetera digital, hazlo antes de entrar: sin señal no hay pagos en línea. Cada asociación publica sus medios de pago en su ficha."
+    },
+    "pack": {
+      "title": "Qué llevar",
+      "items": {
+        "water": "Agua suficiente para todo el día",
+        "sun": "Sombrero, lentes y bloqueador",
+        "clothes": "Ropa ligera de manga larga",
+        "shoes": "Calzado cerrado para caminar",
+        "repellent": "Repelente de insectos",
+        "trash": "Una bolsa para traer tu basura"
+      }
+    },
+    "ctaTitle": "Arma tu ruta con un guía de la comunidad.",
+    "ctaText": "Escríbenos y te ponemos en contacto con los guías locales para fechas, tarifas y punto de encuentro.",
+    "whatsappMessage": "Hola, quiero visitar el bosque seco de Piura con EcoRumbo. ¿Qué rutas, fechas y tarifas tienen con guía local?"
+  },
+  "appPromo": {
+    "eyebrow": "App EcoRumbo",
+    "title": "Lleva EcoRumbo al bosque.",
+    "lead": "La web te ayuda a elegir; la app te acompaña en la ruta. Descárgala antes de salir y úsala donde no llega la señal.",
+    "features": {
+      "offline": {
+        "title": "Funciona sin señal",
+        "text": "Descarga el mapa con señal y úsalo en todo el recorrido sin conexión."
+      },
+      "gps": {
+        "title": "Mapa con GPS",
+        "text": "Mira dónde estás en la ruta aunque no haya cobertura móvil."
+      },
+      "stamps": {
+        "title": "Sellos en cada punto",
+        "text": "Consigue un sello en cada punto de la ruta que visitas."
+      },
+      "discounts": {
+        "title": "Descuentos en la comunidad",
+        "text": "Canjea tus sellos por descuentos en productos de las familias del bosque."
+      }
+    },
+    "askLink": "Pide el enlace de descarga a tu guía o a la asociación antes de viajar.",
+    "whatsappMessage": "Hola, quiero descargar la app EcoRumbo antes de mi visita al bosque seco. ¿Me pasan el enlace?",
+    "mock": {
+      "offline": "Sin conexión · mapa listo",
+      "stamp": "Sello conseguido"
+    }
   }
 }

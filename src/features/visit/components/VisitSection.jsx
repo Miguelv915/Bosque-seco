@@ -1,9 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import styles from './VisitSection.module.css';
 
-// URL de contacto configurable por entorno (p. ej. https://wa.me/519XXXXXXXX).
-const WHATSAPP_URL = import.meta.env.VITE_WHATSAPP_URL || '#';
-
 const SEASONS = [
   { key: 'green', className: styles.green },
   { key: 'dry', className: styles.dry },
@@ -31,12 +28,6 @@ export default function VisitSection() {
         ))}
       </div>
 
-      <div className={styles.cta}>
-        <h3 className={styles.ctaTitle}>{t('visit.ctaTitle')}</h3>
-        <a href={WHATSAPP_URL} className={styles.button} target="_blank" rel="noopener noreferrer">
-          {t('visit.whatsapp').toUpperCase()}
-        </a>
-      </div>
     </section>
   );
 }

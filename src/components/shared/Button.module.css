@@ -1,0 +1,77 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  min-height: var(--tap);
+  padding: 10px 22px;
+  border: 2px solid transparent;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: center;
+  cursor: pointer;
+  transition:
+    background var(--duration) var(--ease),
+    color var(--duration) var(--ease),
+    border-color var(--duration) var(--ease),
+    box-shadow var(--duration) var(--ease),
+    transform var(--duration) var(--ease);
+}
+.button:hover { transform: translateY(-1px); }
+.button svg { flex-shrink: 0; }
+
+.lg {
+  min-height: 52px;
+  padding: 14px 28px;
+  font-size: var(--text-base);
+}
+
+.block { width: 100%; }
+
+/* Verde con texto oscuro: contraste 5,3:1. */
+.primary {
+  background: var(--color-green);
+  color: var(--color-ink);
+  box-shadow: var(--shadow-sm);
+}
+.primary:hover {
+  background: var(--color-forest);
+  color: var(--color-on-dark);
+  box-shadow: var(--shadow-md);
+}
+
+.secondary {
+  background: transparent;
+  border-color: #201e1e59;
+  color: var(--color-ink);
+}
+.secondary:hover {
+  border-color: var(--color-forest);
+  background: #00a55014;
+  color: var(--color-forest);
+}
+
+/* Sobre fotos o fondos oscuros. */
+.onDark {
+  background: #15301f40;
+  border-color: #ffffffb3;
+  color: var(--color-on-dark);
+  backdrop-filter: blur(4px);
+}
+.onDark:hover {
+  background: var(--color-on-dark);
+  border-color: var(--color-on-dark);
+  color: var(--color-forest);
+}
+
+.dark {
+  background: var(--color-ink);
+  color: var(--color-on-dark);
+}
+.dark:hover {
+  background: var(--color-forest-deep);
+  color: var(--color-on-dark);
+}
