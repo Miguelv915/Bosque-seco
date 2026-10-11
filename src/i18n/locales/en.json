@@ -331,6 +331,17 @@
       "noteEn": "Note (EN)",
       "category": "Category",
       "parent": "Area or sector"
+    },
+    "loginPage": {
+      "brand": "EcoRumbo",
+      "tagline": "Set your course toward nature",
+      "welcome": "Welcome back!",
+      "subtitle": "Sign in with your association or administrator account.",
+      "back": "Back to the portal",
+      "showPassword": "Show password",
+      "hidePassword": "Hide password",
+      "signingIn": "Signing in…",
+      "noAccount": "Accounts are created by AIDER. If you do not have access yet, contact your coordinator."
     }
   },
   "lang": {

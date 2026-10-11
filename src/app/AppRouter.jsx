@@ -23,8 +23,8 @@ export default function AppRouter() {
           <Route path="espacios/:id" element={<SpacePage />} />
           <Route path="subespacios/:id" element={<SubspacePage />} />
         </Route>
+        <Route path="admin/login" element={<LoginPage />} />
         <Route path="admin" element={<AdminLayout />}>
-          <Route path="login" element={<LoginPage />} />
           <Route element={<ProtectedRoute />}>
             <Route index element={<DashboardPage />} />
           </Route>
