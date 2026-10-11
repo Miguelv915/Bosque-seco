@@ -4,6 +4,7 @@ import AssociationsSection from '../../features/associations/components/Associat
 import SpeciesSection from '../../features/ecosystem/components/SpeciesSection';
 import CommunitySection from '../../features/community/components/CommunitySection';
 import VisitSection from '../../features/visit/components/VisitSection';
+import BeforeYouGo from '../../features/visit/components/BeforeYouGo';
 
 export default function HomePage() {
   return (
@@ -14,6 +15,7 @@ export default function HomePage() {
       <SpeciesSection />
       <CommunitySection />
       <VisitSection />
+      <BeforeYouGo />
     </>
   );
 }

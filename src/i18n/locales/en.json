@@ -171,9 +171,7 @@
       "range": "May — Dec · Dry season",
       "title": "The golden forest",
       "text": "Easier access, clear skies and wildlife concentrated near water. The best time for hikes and 4×4 routes."
-    },
-    "ctaTitle": "Build your route with a community guide.",
-    "whatsapp": "Message us on WhatsApp"
+    }
   },
   "footer": {
     "tagline": "Community ecotourism in the dry forest of northern Piura. Every visit is hosted and guided by the families who look after it.",
@@ -631,5 +629,38 @@
   "contact": {
     "whatsapp": "Ask on WhatsApp",
     "guide": "Contact a guide"
+  },
+  "beforeYouGo": {
+    "eyebrow": "Before you go",
+    "titleA": "Ready",
+    "titleB": "for the forest.",
+    "lead": "The practical details for a safe visit with no surprises. Associations confirm the specifics of each route.",
+    "arrive": {
+      "title": "Getting there",
+      "text": "Destinations lie between Sullana and Máncora. Arrange transport with the association: some access roads require a 4×4 and an authorized guide."
+    },
+    "signal": {
+      "title": "No signal",
+      "text": "Most of the forest has no mobile coverage. Download the EcoRumbo app and its map while you have signal: afterwards it works offline.",
+      "link": "About the app"
+    },
+    "payments": {
+      "title": "Payments",
+      "text": "Bring cash in soles. If you pay with a digital wallet, do it before heading in: without signal there are no online payments. Each association lists its payment methods on its page."
+    },
+    "pack": {
+      "title": "What to bring",
+      "items": {
+        "water": "Enough water for the whole day",
+        "sun": "Hat, sunglasses and sunscreen",
+        "clothes": "Light long-sleeved clothing",
+        "shoes": "Closed walking shoes",
+        "repellent": "Insect repellent",
+        "trash": "A bag to carry your trash back"
+      }
+    },
+    "ctaTitle": "Plan your route with a community guide.",
+    "ctaText": "Message us and we will connect you with local guides for dates, rates and the meeting point.",
+    "whatsappMessage": "Hi, I'd like to visit the Piura dry forest with EcoRumbo. What routes, dates and rates do you have with a local guide?"
   }
 }

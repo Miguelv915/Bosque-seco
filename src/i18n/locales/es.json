@@ -171,9 +171,7 @@
       "range": "May — Dic · Temporada seca",
       "title": "El bosque dorado",
       "text": "Accesos más fáciles, cielos despejados y fauna concentrada cerca del agua. La mejor época para caminatas y rutas en 4×4."
-    },
-    "ctaTitle": "Arma tu ruta con un guía de la comunidad.",
-    "whatsapp": "Escríbenos por WhatsApp"
+    }
   },
   "footer": {
     "tagline": "Ecoturismo comunitario en el bosque seco del norte de Piura. Cada visita la reciben y guían las familias que lo cuidan.",
@@ -631,5 +629,38 @@
   "contact": {
     "whatsapp": "Consultar por WhatsApp",
     "guide": "Contactar a un guía"
+  },
+  "beforeYouGo": {
+    "eyebrow": "Antes de ir",
+    "titleA": "Todo listo",
+    "titleB": "para el bosque.",
+    "lead": "Lo práctico para que tu visita sea segura y sin sorpresas. Las asociaciones te confirman los detalles de cada ruta.",
+    "arrive": {
+      "title": "Cómo llegar",
+      "text": "Los destinos están entre Sullana y Máncora. Coordina el traslado con la asociación: algunos accesos son en camioneta 4×4 y con guía autorizado."
+    },
+    "signal": {
+      "title": "No hay señal",
+      "text": "En gran parte del bosque no hay cobertura móvil. Descarga la app EcoRumbo y su mapa mientras tengas señal: después funciona sin conexión.",
+      "link": "Conoce la app"
+    },
+    "payments": {
+      "title": "Medios de pago",
+      "text": "Lleva efectivo en soles. Si pagas con billetera digital, hazlo antes de entrar: sin señal no hay pagos en línea. Cada asociación publica sus medios de pago en su ficha."
+    },
+    "pack": {
+      "title": "Qué llevar",
+      "items": {
+        "water": "Agua suficiente para todo el día",
+        "sun": "Sombrero, lentes y bloqueador",
+        "clothes": "Ropa ligera de manga larga",
+        "shoes": "Calzado cerrado para caminar",
+        "repellent": "Repelente de insectos",
+        "trash": "Una bolsa para traer tu basura"
+      }
+    },
+    "ctaTitle": "Arma tu ruta con un guía de la comunidad.",
+    "ctaText": "Escríbenos y te ponemos en contacto con los guías locales para fechas, tarifas y punto de encuentro.",
+    "whatsappMessage": "Hola, quiero visitar el bosque seco de Piura con EcoRumbo. ¿Qué rutas, fechas y tarifas tienen con guía local?"
   }
 }

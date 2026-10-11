@@ -43,7 +43,7 @@ export default function CommunitySection() {
               </li>
             ))}
           </ol>
-          <a href="#visita" className={`${buttonClass('dark', { size: 'lg' })} ${styles.cta}`}>
+          <a href="#antes-de-ir" className={`${buttonClass('dark', { size: 'lg' })} ${styles.cta}`}>
             {t('community.cta')}
           </a>
         </div>
