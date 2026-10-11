@@ -9,7 +9,7 @@ export default function AdminLayout() {
   const { session, profile, signOut } = useAuth();
 
   return (
-    <>
+    <div className={styles.shell}>
       <header className={styles.header}>
         <Link to="/" className={styles.brand}>
           {t('app.name').toUpperCase()} · {t('admin.title').toUpperCase()}
@@ -27,6 +27,6 @@ export default function AdminLayout() {
       <main className={styles.main}>
         <Outlet />
       </main>
-    </>
+    </div>
   );
 }
