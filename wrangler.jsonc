@@ -1,0 +1,10 @@
+{
+  // Despliegue en Cloudflare Workers (static assets) de la SPA de Vite.
+  "name": "bosque-seco",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./dist",
+    // Las rutas de React Router (p. ej. /asociaciones/...) devuelven index.html.
+    "not_found_handling": "single-page-application"
+  }
+}

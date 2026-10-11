@@ -38,15 +38,15 @@ Tipos: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `build`, `cho
 ## Integración y despliegue
 
 ```text
-rama → Pull Request → CI (lint + build) → revisión → merge a main → Cloudflare publica
+rama → Pull Request → CI (lint + build) → revisión → merge a main → Cloudflare publica el Worker
 ```
 
 - **CI:** `.github/workflows/ci.yml` corre `npm ci`, `npm run lint` y `npm run build` en cada PR y en cada push a `main`.
 - **Protección de `main`** (GitHub → Settings → Branches): exigir Pull Request y que el CI pase antes de fusionar.
-- **Despliegue:** Cloudflare publica `main` en producción y genera una previsualización por cada rama/PR.
-  - Build: `npm run build` · salida: `dist` · variable `NODE_VERSION=20`.
-  - Variables de entorno (en Cloudflare, no en el repo): `VITE_SUPABASE_URL`, `VITE_SUPABASE_PUBLISHABLE_KEY`, `VITE_WHATSAPP_URL`.
-  - `public/_redirects` hace que las rutas de React Router funcionen al recargar.
+- **Despliegue:** Cloudflare Workers publica `main` en producción y genera una previsualización por rama/PR.
+  - Build: `npm run build` · despliegue: `npx wrangler deploy` (configurado en `wrangler.jsonc`).
+  - Variables **de build** (en Cloudflare → Settings → Build → Variables and secrets, no en el repo): `NODE_VERSION`, `VITE_SUPABASE_URL`, `VITE_SUPABASE_PUBLISHABLE_KEY`, `VITE_WHATSAPP_URL`.
+  - `wrangler.jsonc` activa `single-page-application` para que las rutas de React Router funcionen al recargar.
   - Nunca cargar la *service role* ni tokens con prefijo `VITE_`: quedan incrustados en el JavaScript público.
 
 ## Convenciones de código
