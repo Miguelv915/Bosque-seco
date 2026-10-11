@@ -1,7 +1,6 @@
 {
   "app": {
-    "name": "EcoRumbo",
-    "region": "Piura"
+    "name": "EcoRumbo"
   },
   "nav": {
     "explore": "Explore",
@@ -17,7 +16,7 @@
     "eyebrow": "[ ECOSYSTEM 001 ] NORTHERN PIURA — PERU",
     "titleA": "Eco",
     "titleB": "Rumbo",
-    "lead": "Centuries-old carob trees, green ceibos in the middle of the drought and ravines that reach the sea. A living territory that is best protected when visited with respect.",
+    "lead": "Set your course toward nature",
     "ctaMap": "Explore the map",
     "ctaCommunities": "Support the communities",
     "imageAlt": "Group of visitors hiking a dry forest trail among carob trees and sandy hillsides",

@@ -1,7 +1,6 @@
 {
   "app": {
-    "name": "EcoRumbo",
-    "region": "Piura"
+    "name": "EcoRumbo"
   },
   "nav": {
     "explore": "Explorar",
@@ -17,7 +16,7 @@
     "eyebrow": "[ ECOSISTEMA 001 ] NORTE DE PIURA — PERÚ",
     "titleA": "Eco",
     "titleB": "Rumbo",
-    "lead": "Algarrobos centenarios, ceibos verdes en plena sequía y quebradas que llegan al mar. Un territorio vivo que se cuida mejor cuando se visita con respeto.",
+    "lead": "Marca tu rumbo hacia la naturaleza",
     "ctaMap": "Explorar el mapa",
     "ctaCommunities": "Apoya a las comunidades",
     "imageAlt": "Grupo de visitantes caminando por un sendero del bosque seco, entre algarrobos y laderas de arena",

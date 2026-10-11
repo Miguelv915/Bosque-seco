@@ -33,8 +33,6 @@ export default function PublicLayout() {
           </span>
           <span className={styles.brandName}>
             {t('app.name').toUpperCase()}
-            <span className={styles.brandSep}> / </span>
-            {t('app.region').toUpperCase()}
           </span>
         </Link>
 
