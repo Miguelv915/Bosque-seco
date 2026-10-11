@@ -9,64 +9,31 @@
 
 .media { position: absolute; inset: 0; }
 
+.media img { object-position: center 60%; }
+
+/* La foto se ve tal cual: solo una sombra oscura suave abajo a la izquierda
+   para que el texto se lea. Sin velo blanco ni cuadrícula. */
 .fade {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(180deg, #ffffff99 0%, #ffffff33 35%, #ffffffcc 75%, #ffffff 100%);
+  background:
+    linear-gradient(0deg, #0a1a1099 0%, #0a1a1000 55%),
+    linear-gradient(90deg, #0a1a1066 0%, #0a1a1000 55%);
 }
-
-.grid {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background-image:
-    linear-gradient(#201e1e0d 1px, transparent 1px),
-    linear-gradient(90deg, #201e1e0d 1px, transparent 1px);
-  background-size: 80px 80px;
-}
-
-.coords {
-  position: absolute;
-  top: 84px;
-  right: var(--gutter);
-  text-align: right;
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  line-height: 1.7;
-  color: var(--color-ink-soft);
-  pointer-events: none;
-  white-space: nowrap;
-}
-
-.signal { color: var(--color-forest); }
 
 .content {
   position: relative;
   padding: 200px var(--gutter) 40px;
 }
 
-.eyebrow {
-  font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 0.2em;
-  color: var(--color-forest);
-  margin-bottom: 24px;
-}
+.title { margin: 0; line-height: 0; }
 
-.title {
-  font-family: var(--font-body);
-  font-weight: 800;
-  font-size: clamp(56px, 13vw, 220px);
-  line-height: 0.9;
-  letter-spacing: -0.035em;
-  text-transform: uppercase;
-}
-
-.outline {
-  color: var(--color-green);
-  -webkit-text-stroke: 2px var(--color-green);
+.logo {
+  display: block;
+  width: clamp(220px, 34vw, 460px);
+  height: auto;
+  filter: drop-shadow(0 2px 18px #0006);
 }
 
 .footerRow {
@@ -82,7 +49,8 @@
   max-width: 520px;
   font-size: clamp(17px, 1.5vw, 21px);
   line-height: 1.5;
-  color: #2e2b28;
+  color: #fff;
+  text-shadow: 0 1px 10px #0008;
   text-wrap: pretty;
 }
 
@@ -101,9 +69,5 @@
 .primary { background: var(--color-green); color: var(--color-ink); }
 .primary:hover { background: var(--color-sky); color: var(--color-ink); }
 
-.secondary { border: 1px solid #201e1e66; color: var(--color-ink); }
-.secondary:hover { border-color: var(--color-forest); color: var(--color-forest); }
-
-@media (max-width: 600px) {
-  .coords { display: none; }
-}
+.secondary { border: 1px solid #ffffffcc; color: #fff; background: #ffffff1f; backdrop-filter: blur(4px); }
+.secondary:hover { background: #fff; color: var(--color-forest); }

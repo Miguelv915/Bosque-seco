@@ -1,7 +1,6 @@
 {
   "app": {
-    "name": "EcoRumbo",
-    "region": "Piura"
+    "name": "EcoRumbo"
   },
   "nav": {
     "explore": "Explore",
@@ -11,13 +10,7 @@
     "associations": "Associations"
   },
   "hero": {
-    "coords": "04°05′S — 81°03′W",
-    "places": "SULLANA · MÁNCORA · TALARA",
-    "signal": "● SIGNAL ACTIVE",
-    "eyebrow": "[ ECOSYSTEM 001 ] NORTHERN PIURA — PERU",
-    "titleA": "Eco",
-    "titleB": "Rumbo",
-    "lead": "Centuries-old carob trees, green ceibos in the middle of the drought and ravines that reach the sea. A living territory that is best protected when visited with respect.",
+    "lead": "Set your course toward nature",
     "ctaMap": "Explore the map",
     "ctaCommunities": "Support the communities",
     "imageAlt": "Group of visitors hiking a dry forest trail among carob trees and sandy hillsides",
@@ -204,7 +197,8 @@
     },
     "leader": {
       "title": "Association panel",
-      "intro": "Your changes are sent to the administrator and published once approved."
+      "intro": "Your changes are sent to the administrator and published once approved.",
+      "introDirect": "Your changes are published on the portal as soon as you save them."
     },
     "profileForm": {
       "title": "Association details",
@@ -214,11 +208,14 @@
       "descriptionEn": "Description (EN)",
       "phone": "Phone",
       "whatsapp": "WhatsApp",
+      "contactWhatsapp": "Association contact WhatsApp (optional)",
+      "contactWhatsappHint": "If you fill it in, visitors will see a button to message the association and arrange the visit. Each guide keeps their own number. Use a number you are happy to make public.",
       "submit": "Send changes",
       "acronym": "Acronym",
       "region": "Region",
       "summary": "Summary",
-      "description": "Description"
+      "description": "Description",
+      "submitDirect": "Save and publish"
     },
     "serviceForm": {
       "title": "New service",
@@ -237,7 +234,8 @@
       "cover": "Use as cover",
       "submit": "Upload image",
       "tooLarge": "The image is larger than 5 MB.",
-      "alt": "Image description"
+      "alt": "Image description",
+      "submitDirect": "Upload and publish"
     },
     "requests": {
       "title": "My requests",
@@ -306,7 +304,8 @@
       "noRewards": "There are no rewards yet.",
       "points": "points",
       "addReward": "Add reward",
-      "rewardRule": "Points must be greater than 0 and the discount between 1 and 100."
+      "rewardRule": "Points must be greater than 0 and the discount between 1 and 100.",
+      "submitDirect": "Save and publish"
     },
     "table": {
       "name": "Name",
@@ -386,6 +385,8 @@
     },
     "required": "required",
     "nav": {
+      "analytics": "Analytics",
+      "review": "To review",
       "label": "Panel sections",
       "summary": "Overview",
       "association": "Association",
@@ -395,6 +396,40 @@
       "rewards": "Rewards",
       "gallery": "Images",
       "requests": "Requests"
+    },
+    "analytics": {
+      "title": "Content analytics",
+      "readiness": "Content progress",
+      "spaces": "Spaces",
+      "subspaces": "Subspaces",
+      "providers": "Guides and services",
+      "activities": "Activities",
+      "photos": "Photos",
+      "providersByKind": "Services by type",
+      "photosByCategory": "Photos by category",
+      "byDepartment": "Spaces by department",
+      "requests": "Change requests",
+      "pending": "Pending",
+      "approved": "Approved",
+      "rejected": "Rejected",
+      "approvalRate": "Approval rate",
+      "avgResponse": "Average response time",
+      "associations": "Associations",
+      "association": "Association",
+      "noData": "No data yet.",
+      "visitsTitle": "Visits and visitors",
+      "unit": {
+        "min": "{{value}} min",
+        "h": "{{value}} h",
+        "d": "{{value}} d"
+      },
+      "demoBadge": "Sample data",
+      "demoNotice": "Fictional figures to preview the layout. They will be replaced by real ones once the mobile app syncs its data.",
+      "visits": "Visits",
+      "visitors": "Visitors",
+      "avgDuration": "Average trip duration",
+      "visitsByMonth": "Visits per month",
+      "visitorsByAge": "Visitors by age range"
     },
     "readiness": {
       "title": "Is the app ready?",
@@ -484,7 +519,8 @@
       "pathHint": "One \"latitude, longitude\" coordinate per line. Without a path, the map joins points with straight lines.",
       "photo": "Photo of the point (recommended)",
       "photoHint": "It is reduced automatically so it loads with poor signal."
-    }
+    },
+    "sentDirect": "Changes saved and published."
   },
   "lang": {
     "label": "Language"
@@ -496,6 +532,7 @@
     "translateHint": "Descriptions are written in Spanish by each association. To read them in English, right-click the page and choose “Translate to English”."
   },
   "associations": {
+    "contactWhatsapp": "Arrange your visit on WhatsApp",
     "eyebrow": "ASSOCIATIONS",
     "titleA": "Those who look after",
     "titleB": "the forest.",

@@ -31,6 +31,9 @@
 }
 
 .brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
   font-family: var(--font-display);
   font-weight: 500;
   font-size: 13px;
@@ -65,3 +68,5 @@
 
 .actions > div button { color: #fff; }
 .actions > div button[aria-pressed='true'] { background: #fff; color: var(--color-forest); }
+
+.logo { display: block; height: 44px; width: auto; }

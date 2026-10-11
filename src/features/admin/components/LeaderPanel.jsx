@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useAsync } from '../../../lib/useAsync';
 import { getAssociationTree } from '../../../services/associations.service';
+import { features } from '../../../config/features';
+import { copy } from '../lib/copy';
 import { listRequests } from '../../../services/changeRequests.service';
 import {
   activityFields,
@@ -14,6 +16,7 @@ import {
 } from '../lib/entityFields';
 import CreateEntityForm from './CreateEntityForm';
 import ImageForm from './ImageForm';
+import LeaderAnalytics from './LeaderAnalytics';
 import ProfileForm from './ProfileForm';
 import QrPreview from './QrPreview';
 import ReadinessSummary from './ReadinessSummary';
@@ -23,6 +26,17 @@ import RoutePointForm from './RoutePointForm';
 import SectionNav from './SectionNav';
 import styles from '../admin.module.css';
 
+const SECTIONS = [
+  'summary',
+  'association',
+  'spaces',
+  'providers',
+  ...(features.routes ? ['routes', 'rewards'] : []),
+  'gallery',
+  'analytics',
+  ...(features.approvals ? ['requests'] : []),
+];
+
 export default function LeaderPanel({ associationId }) {
   const { t } = useTranslation();
   const [section, setSection] = useState('summary');
@@ -30,7 +44,7 @@ export default function LeaderPanel({ associationId }) {
   const tree = useAsync(() => getAssociationTree(associationId), [associationId]);
   const requests = useAsync(() => listRequests(associationId), [associationId]);
 
-  if (tree.loading) return <p>{t('common.loading')}</p>;
+  if (tree.loading && !tree.data) return <p>{t('common.loading')}</p>;
   if (tree.error || !tree.data) return <p>{t('common.error')}</p>;
 
   const association = tree.data;
@@ -43,15 +57,25 @@ export default function LeaderPanel({ associationId }) {
   }));
   const rewards = association.rewards ?? [];
   const pending = (requests.data ?? []).filter((r) => r.status === 'pending').length;
-  const common = { associationId, onSent: requests.reload };
+  // Con publicación directa el cambio ya está en el árbol: se recarga todo.
+  const reloadAll = () => {
+    tree.reload();
+    requests.reload();
+  };
+  const common = { associationId, onSent: reloadAll };
 
   return (
     <>
       <h1 className={styles.title}>{association.name}</h1>
-      <p className={styles.intro}>{t('admin.leader.intro')}</p>
+      <p className={styles.intro}>{t(copy('admin.leader.intro'))}</p>
 
       <div className={styles.panelLayout}>
-        <SectionNav current={section} onChange={setSection} pendingCount={pending} />
+        <SectionNav
+          sections={SECTIONS}
+          current={section}
+          onChange={setSection}
+          badge={{ section: 'requests', count: features.approvals ? pending : 0 }}
+        />
         <div className={styles.panelContent}>
 
           {section === 'summary' && (
@@ -176,7 +200,7 @@ export default function LeaderPanel({ associationId }) {
             </>
           )}
 
-          {section === 'routes' && (
+          {features.routes && section === 'routes' && (
             <>
               <Registered
                 title={t('admin.sections.routes')}
@@ -239,7 +263,7 @@ export default function LeaderPanel({ associationId }) {
             </>
           )}
 
-          {section === 'rewards' && (
+          {features.routes && section === 'rewards' && (
             <>
               <Registered
                 title={t('admin.sections.rewards')}
@@ -270,10 +294,17 @@ export default function LeaderPanel({ associationId }) {
           )}
 
           {section === 'gallery' && (
-            <ImageForm associationId={associationId} spaces={spaces} onSent={requests.reload} />
+            <ImageForm associationId={associationId} spaces={spaces} onSent={reloadAll} />
           )}
 
-          {section === 'requests' && <RequestList requests={requests.data ?? []} />}
+          {section === 'analytics' && (
+            <LeaderAnalytics
+              tree={{ ...association, spaces, providers, routes }}
+              requests={requests.data ?? []}
+            />
+          )}
+
+          {features.approvals && section === 'requests' && <RequestList requests={requests.data ?? []} />}
         </div>
       </div>
     </>

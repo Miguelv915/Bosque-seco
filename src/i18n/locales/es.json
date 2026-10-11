@@ -1,7 +1,6 @@
 {
   "app": {
-    "name": "EcoRumbo",
-    "region": "Piura"
+    "name": "EcoRumbo"
   },
   "nav": {
     "explore": "Explorar",
@@ -11,13 +10,7 @@
     "associations": "Asociaciones"
   },
   "hero": {
-    "coords": "04°05′S — 81°03′O",
-    "places": "SULLANA · MÁNCORA · TALARA",
-    "signal": "● SEÑAL ACTIVA",
-    "eyebrow": "[ ECOSISTEMA 001 ] NORTE DE PIURA — PERÚ",
-    "titleA": "Eco",
-    "titleB": "Rumbo",
-    "lead": "Algarrobos centenarios, ceibos verdes en plena sequía y quebradas que llegan al mar. Un territorio vivo que se cuida mejor cuando se visita con respeto.",
+    "lead": "Marca tu rumbo hacia la naturaleza",
     "ctaMap": "Explorar el mapa",
     "ctaCommunities": "Apoya a las comunidades",
     "imageAlt": "Grupo de visitantes caminando por un sendero del bosque seco, entre algarrobos y laderas de arena",
@@ -204,7 +197,8 @@
     },
     "leader": {
       "title": "Panel de la asociación",
-      "intro": "Tus cambios se envían al administrador y se publican cuando son aprobados."
+      "intro": "Tus cambios se envían al administrador y se publican cuando son aprobados.",
+      "introDirect": "Tus cambios se publican en el portal al guardarlos."
     },
     "profileForm": {
       "title": "Datos de la asociación",
@@ -214,11 +208,14 @@
       "descriptionEn": "Descripción (EN)",
       "phone": "Teléfono",
       "whatsapp": "WhatsApp",
+      "contactWhatsapp": "WhatsApp de contacto de la asociación (opcional)",
+      "contactWhatsappHint": "Si lo completas, el turista verá un botón para escribir a la asociación y coordinar la visita. Cada guía conserva su propio número. Usa un número que quieras hacer público.",
       "submit": "Enviar cambios",
       "acronym": "Siglas",
       "region": "Región",
       "summary": "Resumen",
-      "description": "Descripción"
+      "description": "Descripción",
+      "submitDirect": "Guardar y publicar"
     },
     "serviceForm": {
       "title": "Nuevo servicio",
@@ -237,7 +234,8 @@
       "cover": "Usar como portada",
       "submit": "Subir imagen",
       "tooLarge": "La imagen supera 5 MB.",
-      "alt": "Descripción de la imagen"
+      "alt": "Descripción de la imagen",
+      "submitDirect": "Subir y publicar"
     },
     "requests": {
       "title": "Mis solicitudes",
@@ -306,7 +304,8 @@
       "noRewards": "Aún no hay productos.",
       "points": "puntos",
       "addReward": "Agregar producto",
-      "rewardRule": "Los puntos deben ser mayores que 0 y el descuento estar entre 1 y 100."
+      "rewardRule": "Los puntos deben ser mayores que 0 y el descuento estar entre 1 y 100.",
+      "submitDirect": "Guardar y publicar"
     },
     "table": {
       "name": "Nombre",
@@ -386,6 +385,8 @@
     },
     "required": "obligatorio",
     "nav": {
+      "analytics": "Análisis",
+      "review": "Por revisar",
       "label": "Secciones del panel",
       "summary": "Resumen",
       "association": "Asociación",
@@ -395,6 +396,40 @@
       "rewards": "Productos",
       "gallery": "Imágenes",
       "requests": "Solicitudes"
+    },
+    "analytics": {
+      "title": "Análisis de contenido",
+      "readiness": "Avance de carga",
+      "spaces": "Espacios",
+      "subspaces": "Subespacios",
+      "providers": "Guías y servicios",
+      "activities": "Actividades",
+      "photos": "Fotos",
+      "providersByKind": "Servicios por tipo",
+      "photosByCategory": "Fotos por categoría",
+      "byDepartment": "Espacios por departamento",
+      "requests": "Solicitudes de cambio",
+      "pending": "Pendientes",
+      "approved": "Aprobadas",
+      "rejected": "Rechazadas",
+      "approvalRate": "Tasa de aprobación",
+      "avgResponse": "Tiempo medio de respuesta",
+      "associations": "Asociaciones",
+      "association": "Asociación",
+      "noData": "Aún no hay datos.",
+      "visitsTitle": "Visitas y visitantes",
+      "unit": {
+        "min": "{{value}} min",
+        "h": "{{value}} h",
+        "d": "{{value}} d"
+      },
+      "demoBadge": "Datos de ejemplo",
+      "demoNotice": "Cifras ficticias para ver cómo quedará. Se reemplazarán por las reales cuando la app móvil sincronice sus datos.",
+      "visits": "Visitas",
+      "visitors": "Visitantes",
+      "avgDuration": "Duración media del recorrido",
+      "visitsByMonth": "Visitas por mes",
+      "visitorsByAge": "Visitantes por rango de edad"
     },
     "readiness": {
       "title": "¿Está lista la app?",
@@ -484,7 +519,8 @@
       "pathHint": "Una coordenada \"latitud, longitud\" por línea. Sin trazado, el mapa une los puntos en línea recta.",
       "photo": "Foto del punto (recomendado)",
       "photoHint": "Se reduce automáticamente para que cargue sin buena señal."
-    }
+    },
+    "sentDirect": "Cambios guardados y publicados."
   },
   "lang": {
     "label": "Idioma"
@@ -496,6 +532,7 @@
     "translateHint": "Las descripciones las escribe cada asociación en español."
   },
   "associations": {
+    "contactWhatsapp": "Coordinar la visita por WhatsApp",
     "eyebrow": "ASOCIACIONES",
     "titleA": "Quienes cuidan",
     "titleB": "el bosque.",

@@ -4,6 +4,7 @@ import { createRequest } from '../../../services/changeRequests.service';
 import { collectPayload } from '../lib/formData';
 import { useSubmitRequest } from '../hooks/useSubmitRequest';
 import FormFeedback from './FormFeedback';
+import { copy } from '../lib/copy';
 import styles from '../admin.module.css';
 
 function Field({ field, t, error }) {
@@ -140,7 +141,7 @@ export default function CreateEntityForm({
       </div>
       <FormFeedback result={result} />
       <button type="submit" className={styles.primary} disabled={busy}>
-        {t('admin.sections.submit')}
+        {t(copy('admin.sections.submit'))}
       </button>
     </form>
   );

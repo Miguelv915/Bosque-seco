@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Check, Circle } from 'lucide-react';
 import { computeReadiness } from '../lib/readiness';
+import { features } from '../../../config/features';
 import styles from '../admin.module.css';
 
 /** Qué falta para que la app móvil funcione con datos reales. */
@@ -48,7 +49,7 @@ export default function ReadinessSummary({ tree, onGoTo }) {
           </li>
         ))}
       </ul>
-      <p className={styles.hint}>{t('admin.readiness.pendingNote')}</p>
+      {features.approvals && <p className={styles.hint}>{t('admin.readiness.pendingNote')}</p>}
     </section>
   );
 }

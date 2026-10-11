@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { esText } from '../../lib/esText';
 import { useAsync } from '../../lib/useAsync';
 import { getAssociationBySlug } from '../../services/associations.service';
+import AssociationContact from '../../features/associations/components/AssociationContact';
 import ActivityList from '../../features/associations/components/ActivityList';
 import GuideContact from '../../features/associations/components/GuideContact';
 import PaymentMethods from '../../features/associations/components/PaymentMethods';
@@ -36,6 +37,7 @@ export default function AssociationPage() {
           {t('associations.endorsed', { by: association.endorsed_by, association: association.acronym || association.name })}
         </p>
         <p className={styles.summary}>{esText(association, 'summary')}</p>
+        <AssociationContact number={association.contact_whatsapp} />
       </header>
 
       {association.description_es && (

@@ -1,9 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useAsync } from '../../../lib/useAsync';
 import {
   approveRequest,
-  listPendingRequests,
   rejectRequest,
 } from '../../../services/changeRequests.service';
 import PayloadView from './PayloadView';
@@ -56,13 +54,13 @@ function PendingItem({ request, onDone }) {
   );
 }
 
-export default function AdminReview() {
+export default function AdminReview({ requests }) {
   const { t } = useTranslation();
-  const { data, error, loading, reload } = useAsync(listPendingRequests);
+  const { data, error, loading, reload } = requests;
 
   return (
     <>
-      <h1 className={styles.title}>{t('admin.review.title')}</h1>
+      <h2 className={styles.sectionTitle}>{t('admin.review.title')}</h2>
       {loading && <p>{t('common.loading')}</p>}
       {error && <p className={styles.error}>{t('common.error')}</p>}
       {data && data.length === 0 && <p className={styles.hint}>{t('admin.review.empty')}</p>}

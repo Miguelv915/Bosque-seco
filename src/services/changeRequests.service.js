@@ -1,3 +1,4 @@
+import { features } from '../config/features';
 import { compressImage } from '../lib/image';
 import { supabase } from '../lib/supabaseClient';
 
@@ -11,6 +12,15 @@ export async function listRequests(associationId) {
     .select('*')
     .eq('association_id', associationId)
     .order('created_at', { ascending: false });
+  if (error) throw error;
+  return data;
+}
+
+/** Estado y fechas de todas las solicitudes (solo admin), para el análisis. */
+export async function listAllRequests() {
+  const { data, error } = await supabase
+    .from('change_requests')
+    .select('association_id, status, created_at, reviewed_at');
   if (error) throw error;
   return data;
 }
@@ -30,15 +40,20 @@ export async function createRequest({ associationId, entityType, entityId = null
   const {
     data: { user },
   } = await supabase.auth.getUser();
-  const { error } = await supabase.from('change_requests').insert({
-    association_id: associationId,
-    entity_type: entityType,
-    entity_id: entityId,
-    action,
-    payload,
-    created_by: user.id,
-  });
+  const { data, error } = await supabase
+    .from('change_requests')
+    .insert({
+      association_id: associationId,
+      entity_type: entityType,
+      entity_id: entityId,
+      action,
+      payload,
+      created_by: user.id,
+    })
+    .select('id')
+    .single();
   if (error) throw error;
+  if (!features.approvals) await approveRequest(data.id);
 }
 
 export async function approveRequest(id) {
