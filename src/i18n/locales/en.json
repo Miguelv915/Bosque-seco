@@ -197,7 +197,8 @@
     },
     "leader": {
       "title": "Association panel",
-      "intro": "Your changes are sent to the administrator and published once approved."
+      "intro": "Your changes are sent to the administrator and published once approved.",
+      "introDirect": "Your changes are published on the portal as soon as you save them."
     },
     "profileForm": {
       "title": "Association details",
@@ -213,7 +214,8 @@
       "acronym": "Acronym",
       "region": "Region",
       "summary": "Summary",
-      "description": "Description"
+      "description": "Description",
+      "submitDirect": "Save and publish"
     },
     "serviceForm": {
       "title": "New service",
@@ -232,7 +234,8 @@
       "cover": "Use as cover",
       "submit": "Upload image",
       "tooLarge": "The image is larger than 5 MB.",
-      "alt": "Image description"
+      "alt": "Image description",
+      "submitDirect": "Upload and publish"
     },
     "requests": {
       "title": "My requests",
@@ -301,7 +304,8 @@
       "noRewards": "There are no rewards yet.",
       "points": "points",
       "addReward": "Add reward",
-      "rewardRule": "Points must be greater than 0 and the discount between 1 and 100."
+      "rewardRule": "Points must be greater than 0 and the discount between 1 and 100.",
+      "submitDirect": "Save and publish"
     },
     "table": {
       "name": "Name",
@@ -515,7 +519,8 @@
       "pathHint": "One \"latitude, longitude\" coordinate per line. Without a path, the map joins points with straight lines.",
       "photo": "Photo of the point (recommended)",
       "photoHint": "It is reduced automatically so it loads with poor signal."
-    }
+    },
+    "sentDirect": "Changes saved and published."
   },
   "lang": {
     "label": "Language"

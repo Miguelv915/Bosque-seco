@@ -1,3 +1,4 @@
+import { features } from '../config/features';
 import { compressImage } from '../lib/image';
 import { supabase } from '../lib/supabaseClient';
 
@@ -39,15 +40,20 @@ export async function createRequest({ associationId, entityType, entityId = null
   const {
     data: { user },
   } = await supabase.auth.getUser();
-  const { error } = await supabase.from('change_requests').insert({
-    association_id: associationId,
-    entity_type: entityType,
-    entity_id: entityId,
-    action,
-    payload,
-    created_by: user.id,
-  });
+  const { data, error } = await supabase
+    .from('change_requests')
+    .insert({
+      association_id: associationId,
+      entity_type: entityType,
+      entity_id: entityId,
+      action,
+      payload,
+      created_by: user.id,
+    })
+    .select('id')
+    .single();
   if (error) throw error;
+  if (!features.approvals) await approveRequest(data.id);
 }
 
 export async function approveRequest(id) {

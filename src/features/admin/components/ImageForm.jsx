@@ -3,6 +3,7 @@ import { createRequest, uploadAssociationImage } from '../../../services/changeR
 import { filledFields } from '../lib/formData';
 import { useSubmitRequest } from '../hooks/useSubmitRequest';
 import FormFeedback from './FormFeedback';
+import { copy } from '../lib/copy';
 import styles from '../admin.module.css';
 
 const CATEGORIES = ['landscape', 'flora', 'fauna', 'facilities'];
@@ -92,7 +93,7 @@ export default function ImageForm({ associationId, spaces, onSent }) {
       </label>
       <FormFeedback result={result} />
       <button type="submit" className={styles.primary} disabled={busy}>
-        {t('admin.imageForm.submit')}
+        {t(copy('admin.imageForm.submit'))}
       </button>
     </form>
   );

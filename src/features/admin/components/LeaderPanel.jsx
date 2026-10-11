@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useAsync } from '../../../lib/useAsync';
 import { getAssociationTree } from '../../../services/associations.service';
 import { features } from '../../../config/features';
+import { copy } from '../lib/copy';
 import { listRequests } from '../../../services/changeRequests.service';
 import {
   activityFields,
@@ -33,7 +34,7 @@ const SECTIONS = [
   ...(features.routes ? ['routes', 'rewards'] : []),
   'gallery',
   'analytics',
-  'requests',
+  ...(features.approvals ? ['requests'] : []),
 ];
 
 export default function LeaderPanel({ associationId }) {
@@ -43,7 +44,7 @@ export default function LeaderPanel({ associationId }) {
   const tree = useAsync(() => getAssociationTree(associationId), [associationId]);
   const requests = useAsync(() => listRequests(associationId), [associationId]);
 
-  if (tree.loading) return <p>{t('common.loading')}</p>;
+  if (tree.loading && !tree.data) return <p>{t('common.loading')}</p>;
   if (tree.error || !tree.data) return <p>{t('common.error')}</p>;
 
   const association = tree.data;
@@ -56,19 +57,24 @@ export default function LeaderPanel({ associationId }) {
   }));
   const rewards = association.rewards ?? [];
   const pending = (requests.data ?? []).filter((r) => r.status === 'pending').length;
-  const common = { associationId, onSent: requests.reload };
+  // Con publicación directa el cambio ya está en el árbol: se recarga todo.
+  const reloadAll = () => {
+    tree.reload();
+    requests.reload();
+  };
+  const common = { associationId, onSent: reloadAll };
 
   return (
     <>
       <h1 className={styles.title}>{association.name}</h1>
-      <p className={styles.intro}>{t('admin.leader.intro')}</p>
+      <p className={styles.intro}>{t(copy('admin.leader.intro'))}</p>
 
       <div className={styles.panelLayout}>
         <SectionNav
           sections={SECTIONS}
           current={section}
           onChange={setSection}
-          badge={{ section: 'requests', count: pending }}
+          badge={{ section: 'requests', count: features.approvals ? pending : 0 }}
         />
         <div className={styles.panelContent}>
 
@@ -288,7 +294,7 @@ export default function LeaderPanel({ associationId }) {
           )}
 
           {section === 'gallery' && (
-            <ImageForm associationId={associationId} spaces={spaces} onSent={requests.reload} />
+            <ImageForm associationId={associationId} spaces={spaces} onSent={reloadAll} />
           )}
 
           {section === 'analytics' && (
@@ -298,7 +304,7 @@ export default function LeaderPanel({ associationId }) {
             />
           )}
 
-          {section === 'requests' && <RequestList requests={requests.data ?? []} />}
+          {features.approvals && section === 'requests' && <RequestList requests={requests.data ?? []} />}
         </div>
       </div>
     </>

@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { features } from '../../../config/features';
 import { useAsync } from '../../../lib/useAsync';
 import { listAssociationsForAnalytics } from '../../../services/associations.service';
 import { listAllRequests } from '../../../services/changeRequests.service';
@@ -77,7 +78,9 @@ export default function AdminAnalytics() {
             { key: 'spaces', label: t('admin.analytics.spaces'), render: (r) => r.spaces },
             { key: 'providers', label: t('admin.analytics.providers'), render: (r) => r.providers },
             { key: 'photos', label: t('admin.analytics.photos'), render: (r) => r.photos },
-            { key: 'pending', label: t('admin.analytics.pending'), render: (r) => r.pending },
+            ...(features.approvals
+              ? [{ key: 'pending', label: t('admin.analytics.pending'), render: (r) => r.pending }]
+              : []),
           ]}
         />
       </section>

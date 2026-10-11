@@ -197,7 +197,8 @@
     },
     "leader": {
       "title": "Panel de la asociación",
-      "intro": "Tus cambios se envían al administrador y se publican cuando son aprobados."
+      "intro": "Tus cambios se envían al administrador y se publican cuando son aprobados.",
+      "introDirect": "Tus cambios se publican en el portal al guardarlos."
     },
     "profileForm": {
       "title": "Datos de la asociación",
@@ -213,7 +214,8 @@
       "acronym": "Siglas",
       "region": "Región",
       "summary": "Resumen",
-      "description": "Descripción"
+      "description": "Descripción",
+      "submitDirect": "Guardar y publicar"
     },
     "serviceForm": {
       "title": "Nuevo servicio",
@@ -232,7 +234,8 @@
       "cover": "Usar como portada",
       "submit": "Subir imagen",
       "tooLarge": "La imagen supera 5 MB.",
-      "alt": "Descripción de la imagen"
+      "alt": "Descripción de la imagen",
+      "submitDirect": "Subir y publicar"
     },
     "requests": {
       "title": "Mis solicitudes",
@@ -301,7 +304,8 @@
       "noRewards": "Aún no hay productos.",
       "points": "puntos",
       "addReward": "Agregar producto",
-      "rewardRule": "Los puntos deben ser mayores que 0 y el descuento estar entre 1 y 100."
+      "rewardRule": "Los puntos deben ser mayores que 0 y el descuento estar entre 1 y 100.",
+      "submitDirect": "Guardar y publicar"
     },
     "table": {
       "name": "Nombre",
@@ -515,7 +519,8 @@
       "pathHint": "Una coordenada \"latitud, longitud\" por línea. Sin trazado, el mapa une los puntos en línea recta.",
       "photo": "Foto del punto (recomendado)",
       "photoHint": "Se reduce automáticamente para que cargue sin buena señal."
-    }
+    },
+    "sentDirect": "Cambios guardados y publicados."
   },
   "lang": {
     "label": "Idioma"

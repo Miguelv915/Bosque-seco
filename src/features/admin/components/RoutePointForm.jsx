@@ -17,6 +17,7 @@ import {
 import { useSubmitRequest } from '../hooks/useSubmitRequest';
 import FormFeedback from './FormFeedback';
 import QrPreview from './QrPreview';
+import { copy } from '../lib/copy';
 import styles from '../admin.module.css';
 
 const EMPTY = { code: '', lat: '', lon: '', name: '' };
@@ -268,7 +269,7 @@ export default function RoutePointForm({ associationId, routes, onSent }) {
 
       <FormFeedback result={result} />
       <button type="submit" className={styles.primary} disabled={busy}>
-        {t('admin.sections.submit')}
+        {t(copy('admin.sections.submit'))}
       </button>
     </form>
   );

@@ -5,6 +5,7 @@ import { filledFields } from '../lib/formData';
 import { useSubmitRequest } from '../hooks/useSubmitRequest';
 import { isValidPhone, normalizePhone } from '../lib/validation';
 import FormFeedback from './FormFeedback';
+import { copy } from '../lib/copy';
 import styles from '../admin.module.css';
 
 const FIELDS = ['summary_es', 'description_es', 'acronym', 'region', 'contact_whatsapp'];
@@ -76,7 +77,7 @@ export default function ProfileForm({ associationId, onSent }) {
       </label>
       <FormFeedback result={result} />
       <button type="submit" className={styles.primary} disabled={busy}>
-        {t('admin.profileForm.submit')}
+        {t(copy('admin.profileForm.submit'))}
       </button>
     </form>
   );

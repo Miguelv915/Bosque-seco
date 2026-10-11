@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { features } from '../../../../config/features';
 import { splitDuration } from '../../lib/analytics';
 import { BarList, Stat, StatGrid } from './Widgets';
 import styles from '../../admin.module.css';
@@ -50,24 +51,26 @@ export default function ContentStats({ content, requests, readiness }) {
         />
       </div>
 
-      <section className={styles.card}>
-        <h3 className={styles.cardTitle}>{t('admin.analytics.requests')}</h3>
-        <StatGrid>
-          <Stat label={t('admin.analytics.pending')} value={requests.pending} />
-          <Stat label={t('admin.analytics.approved')} value={requests.approved} />
-          <Stat label={t('admin.analytics.rejected')} value={requests.rejected} />
-          <Stat
-            label={t('admin.analytics.approvalRate')}
-            value={
-              requests.approvalRate == null ? '—' : `${Math.round(requests.approvalRate * 100)}%`
-            }
-          />
-          <Stat
-            label={t('admin.analytics.avgResponse')}
-            value={response ? t(`admin.analytics.unit.${response.unit}`, { value: response.value }) : '—'}
-          />
-        </StatGrid>
-      </section>
+      {features.approvals && (
+        <section className={styles.card}>
+          <h3 className={styles.cardTitle}>{t('admin.analytics.requests')}</h3>
+          <StatGrid>
+            <Stat label={t('admin.analytics.pending')} value={requests.pending} />
+            <Stat label={t('admin.analytics.approved')} value={requests.approved} />
+            <Stat label={t('admin.analytics.rejected')} value={requests.rejected} />
+            <Stat
+              label={t('admin.analytics.approvalRate')}
+              value={
+                requests.approvalRate == null ? '—' : `${Math.round(requests.approvalRate * 100)}%`
+              }
+            />
+            <Stat
+              label={t('admin.analytics.avgResponse')}
+              value={response ? t(`admin.analytics.unit.${response.unit}`, { value: response.value }) : '—'}
+            />
+          </StatGrid>
+        </section>
+      )}
     </>
   );
 }
