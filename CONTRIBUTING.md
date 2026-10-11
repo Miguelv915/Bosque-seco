@@ -46,7 +46,9 @@ rama → Pull Request → CI (lint + build) → revisión → merge a main → C
 - **Protección de `main`** (GitHub → Settings → Branches): exigir Pull Request y que el CI pase antes de fusionar.
 - **Despliegue:** Cloudflare publica `main` en producción y genera una previsualización por cada rama/PR.
   - Build: `npm run build` · salida: `dist` · variable `NODE_VERSION=20`.
-  - Variables de entorno (en Cloudflare, no en el repo): `VITE_SUPABASE_URL`, `VITE_SUPABASE_PUBLISHABLE_KEY`, `VITE_WHATSAPP_URL`.
+  - Variables de entorno (en Cloudflare, no en el repo): `VITE_SUPABASE_URL`, `VITE_SUPABASE_PUBLISHABLE_KEY`, `VITE_WHATSAPP_URL`, `VITE_APP_URL`.
+    - `VITE_WHATSAPP_URL`: WhatsApp de contacto, como enlace (`https://wa.me/51987654321`) o solo el número. Es público.
+    - `VITE_APP_URL`: descarga de la app móvil. Vacío, el botón lleva a la sección que la presenta.
   - `public/_redirects` hace que las rutas de React Router funcionen al recargar.
   - Nunca cargar la *service role* ni tokens con prefijo `VITE_`: quedan incrustados en el JavaScript público.
 

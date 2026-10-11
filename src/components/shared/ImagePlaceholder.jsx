@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Leaf } from 'lucide-react';
 import styles from './ImagePlaceholder.module.css';
 
 /**
@@ -26,6 +27,7 @@ export default function ImagePlaceholder({ src, alt = '', label, credit, priorit
   }
   return (
     <div className={styles.placeholder} role="img" aria-label={label}>
+      <Leaf size={28} aria-hidden="true" />
       <span>{label}</span>
     </div>
   );

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { whatsappLink, withMessage } from './whatsapp';
+import { contactLink, whatsappLink, withMessage } from './whatsapp';
 
 describe('whatsappLink', () => {
   it('deja solo los dígitos del número', () => {
@@ -29,5 +29,29 @@ describe('withMessage', () => {
   it('sin enlace devuelve null y sin texto deja el enlace igual', () => {
     expect(withMessage('', 'Hola')).toBeNull();
     expect(withMessage('https://wa.me/1', '')).toBe('https://wa.me/1');
+  });
+});
+
+describe('contactLink', () => {
+  it('deja intacto un enlace completo', () => {
+    expect(contactLink('https://wa.me/51987654321')).toBe('https://wa.me/51987654321');
+    expect(contactLink('  https://wa.me/51987654321  ')).toBe('https://wa.me/51987654321');
+  });
+
+  it('convierte un número con código de país', () => {
+    expect(contactLink('+51 987 654 321')).toBe('https://wa.me/51987654321');
+    expect(contactLink('51987654321')).toBe('https://wa.me/51987654321');
+  });
+
+  it('agrega el 51 a un celular peruano de 9 dígitos', () => {
+    expect(contactLink('987654321')).toBe('https://wa.me/51987654321');
+    expect(contactLink('987-654-321')).toBe('https://wa.me/51987654321');
+  });
+
+  it('devuelve vacío si no hay un teléfono usable', () => {
+    expect(contactLink('')).toBe('');
+    expect(contactLink(undefined)).toBe('');
+    expect(contactLink('123')).toBe('');
+    expect(contactLink('sin número')).toBe('');
   });
 });

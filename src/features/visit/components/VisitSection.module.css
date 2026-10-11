@@ -1,24 +1,7 @@
-.section { padding: var(--section-y) var(--gutter); }
-
-.eyebrow {
-  font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 0.2em;
-  color: var(--color-forest);
-  margin-bottom: 16px;
+.section {
+  padding: var(--section-y) var(--gutter);
+  background: var(--color-bg);
 }
-
-.title {
-  max-width: 1000px;
-  margin-bottom: var(--space-2xl);
-  font-family: var(--font-display);
-  font-weight: 500;
-  font-size: var(--text-3xl);
-  line-height: 1;
-  letter-spacing: -0.03em;
-}
-
-.muted { color: var(--color-muted); }
 
 .seasons {
   display: grid;
@@ -26,32 +9,40 @@
   gap: var(--space-lg);
 }
 
-.season { border-radius: var(--radius-lg); padding: clamp(24px, 4vw, 36px); box-shadow: var(--shadow-sm); }
+.season {
+  border-radius: var(--radius-lg);
+  padding: clamp(24px, 4vw, 40px);
+  box-shadow: var(--shadow-sm);
+}
 
 .green {
   border: 1px solid #00a55099;
-  background: linear-gradient(160deg, #24523766, #24523700);
+  background: linear-gradient(160deg, #2452371f, #24523700), var(--color-bg);
 }
 
 .dry {
   border: 1px solid #806950;
-  background: linear-gradient(160deg, #80695040, #80695000);
+  background: linear-gradient(160deg, #80695026, #80695000), var(--color-bg);
 }
 
 .range {
+  display: inline-block;
+  margin-bottom: var(--space-md);
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
   font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.16em;
-  margin-bottom: 20px;
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
-.green .range { color: var(--color-forest); }
+.green .range { background: #00a5501f; color: var(--color-forest); }
+.dry .range { background: #8069502e; color: #5a4733; }
 
 .seasonTitle {
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: 28px;
-  margin-bottom: 12px;
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-sm);
 }
 
 .seasonText { color: var(--color-ink-soft); line-height: 1.6; }
-
