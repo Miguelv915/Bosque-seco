@@ -20,14 +20,7 @@ export default function Hero() {
       </div>
       <div className={styles.fade} />
 
-      <div className={styles.coords}>
-        <div>{t('hero.coords')}</div>
-        <div>{t('hero.places')}</div>
-        <div className={styles.signal}>{t('hero.signal')}</div>
-      </div>
-
       <div className={styles.content}>
-        <p className={styles.eyebrow}>{t('hero.eyebrow')}</p>
         <h1 id="hero-title" className={styles.title}>
           <img src={logo} alt={t('app.name')} className={styles.logo} />
         </h1>
