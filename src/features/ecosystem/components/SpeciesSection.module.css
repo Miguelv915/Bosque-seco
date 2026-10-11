@@ -1,0 +1,60 @@
+.section {
+  padding: 100px var(--gutter);
+  border-top: 1px solid #201e1e1a;
+}
+
+.grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+  gap: 20px;
+}
+
+.card {
+  height: 100%;
+  border: 1px solid var(--color-line);
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--color-sand);
+  transition: border-color 0.2s;
+}
+.card:hover { border-color: var(--color-forest); }
+
+.photo { position: relative; aspect-ratio: 4 / 3; }
+
+.body { padding: 20px 22px 24px; }
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: var(--color-muted);
+  margin-bottom: 10px;
+}
+
+.code { color: var(--color-forest); }
+
+.name {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.scientific {
+  font-style: italic;
+  color: var(--color-muted);
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.note {
+  color: var(--color-ink-soft);
+  font-size: 15px;
+  line-height: 1.55;
+}

@@ -1,0 +1,390 @@
+{
+  "app": {
+    "name": "Bosque Seco",
+    "region": "Piura"
+  },
+  "nav": {
+    "explore": "Explorar",
+    "ecosystem": "Ecosistema",
+    "communities": "Comunidades",
+    "plan": "Planifica",
+    "associations": "Asociaciones"
+  },
+  "hero": {
+    "coords": "04°05′S — 81°03′O",
+    "places": "SULLANA · MÁNCORA · TALARA",
+    "signal": "● SEÑAL ACTIVA",
+    "eyebrow": "[ ECOSISTEMA 001 ] NORTE DE PIURA — PERÚ",
+    "titleA": "Bosque",
+    "titleB": "Seco",
+    "lead": "Algarrobos centenarios, ceibos verdes en plena sequía y quebradas que llegan al mar. Un territorio vivo que se cuida mejor cuando se visita con respeto.",
+    "ctaMap": "Explorar el mapa",
+    "ctaCommunities": "Apoya a las comunidades",
+    "imageAlt": "Grupo de visitantes caminando por un sendero del bosque seco, entre algarrobos y laderas de arena",
+    "imagePlaceholder": "Foto panorámica: algarrobos y ceibos al atardecer"
+  },
+  "explorer": {
+    "eyebrow": "[ 02 ] EXPLORADOR DE DESTINOS",
+    "titleA": "Elige un punto.",
+    "titleB": "Descubre el bosque.",
+    "lead": "Mapa esquemático del corredor Sullana – Máncora. Toca un destino para ver qué hacer, cómo llegar y quién te recibe.",
+    "mapNote": "ESQUEMA · NO A ESCALA",
+    "ocean": "OCÉANO PACÍFICO",
+    "todo": "Qué hacer",
+    "access": "Acceso",
+    "season": "Mejor época",
+    "photo": "Foto: {{name}}"
+  },
+  "destinations": {
+    "angolo": {
+      "short": "El Angolo",
+      "name": "Coto de Caza El Angolo",
+      "type": "Área natural protegida",
+      "place": "Sullana – Talara",
+      "desc": "El corazón del bosque seco: colinas cubiertas de algarrobos, hualtacos y palo santo, hogar del venado cola blanca y del zorro de Sechura.",
+      "todo": "Senderismo, avistamiento de fauna",
+      "access": "4×4 desde Máncora o Sullana",
+      "season": "May – Dic"
+    },
+    "amotape": {
+      "short": "Amotape",
+      "name": "Parque Nacional Cerros de Amotape",
+      "type": "Parque nacional",
+      "place": "Piura – Tumbes",
+      "desc": "Parte de la Reserva de Biósfera del Noroeste. Bosque seco que se funde con bosque tropical del Pacífico en un mismo recorrido.",
+      "todo": "Rutas guiadas, aves endémicas",
+      "access": "Con guía autorizado",
+      "season": "Todo el año"
+    },
+    "fernandez": {
+      "short": "Q. Fernández",
+      "name": "Quebrada Fernández y pozas de barro",
+      "type": "Paisaje · Bienestar",
+      "place": "Máncora",
+      "desc": "A pocos minutos de la playa, la quebrada abre paso a pozas de barro y agua termal rodeadas de bosque seco.",
+      "todo": "Baños de barro, caminatas cortas",
+      "access": "Mototaxi o auto desde Máncora",
+      "season": "May – Dic"
+    },
+    "lancones": {
+      "short": "Lancones",
+      "name": "Bosques de Lancones",
+      "type": "Turismo rural",
+      "place": "Sullana",
+      "desc": "Caseríos en medio del algarrobal donde se produce miel, algarrobina y queso de cabra. Paisaje de frontera, silencio total.",
+      "todo": "Vivencial, productos locales",
+      "access": "Carretera desde Sullana",
+      "season": "Ene – Abr (verde)"
+    },
+    "poechos": {
+      "short": "Poechos",
+      "name": "Represa de Poechos",
+      "type": "Espejo de agua",
+      "place": "Sullana",
+      "desc": "Un gran lago entre cerros secos. Atardeceres intensos, aves acuáticas y pesca artesanal de las comunidades vecinas.",
+      "todo": "Paseos en bote, gastronomía",
+      "access": "Desde Sullana por carretera",
+      "season": "Todo el año"
+    },
+    "chira": {
+      "short": "Valle del Chira",
+      "name": "Valle del río Chira",
+      "type": "Ruta cultural",
+      "place": "Sullana",
+      "desc": "El río que da vida al norte: chacras, molinos de algarroba y pueblos con tradición culinaria a orillas del bosque.",
+      "todo": "Ruta gastronómica, ciclismo",
+      "access": "Desde Sullana",
+      "season": "Todo el año"
+    }
+  },
+  "ecosystem": {
+    "eyebrow": "[ 03 ] ECOSISTEMA",
+    "titleA": "La vida que",
+    "titleB": "resiste al sol.",
+    "lead": "El bosque seco ecuatorial pasa meses sin lluvia. Cuando llega el agua, se vuelve verde en días. Estas son algunas de las especies que lo sostienen.",
+    "flora": "Flora",
+    "fauna": "Fauna"
+  },
+  "species": {
+    "algarrobo": {
+      "name": "Algarrobo",
+      "note": "Raíces de hasta 50 m que alcanzan el agua profunda. De su fruto nace la algarrobina."
+    },
+    "ceibo": {
+      "name": "Ceibo",
+      "note": "Tronco verde que hace fotosíntesis cuando pierde sus hojas. Guarda agua en su interior."
+    },
+    "palosanto": {
+      "name": "Palo santo",
+      "note": "Madera aromática usada por generaciones. Su aprovechamiento debe ser sostenible."
+    },
+    "venado": {
+      "name": "Venado cola blanca",
+      "note": "Símbolo de El Angolo. Se observa al amanecer cerca de quebradas."
+    },
+    "ardilla": {
+      "name": "Ardilla de nuca blanca",
+      "note": "Ágil habitante de los algarrobos, fácil de ver en todo el norte."
+    },
+    "zorro": {
+      "name": "Zorro de Sechura",
+      "note": "Adaptado a la aridez extrema. Se alimenta de frutos de algarrobo."
+    }
+  },
+  "community": {
+    "eyebrow": "[ 04 ] TURISMO COMUNITARIO",
+    "title1": "Tu visita",
+    "title2": "sostiene",
+    "title3": "el bosque.",
+    "lead": "Las familias que viven junto a las reservas cuidan el bosque todos los días. Contrata guías locales, compra sus productos y duerme en sus casas: cada sol se queda en el territorio.",
+    "photo": "Foto: productores o guías de la comunidad",
+    "cta": "Quiero ser parte →"
+  },
+  "offers": {
+    "guides": {
+      "title": "Guías locales",
+      "text": "Personas que conocen cada quebrada y cada huella. Su conocimiento hace la ruta segura y auténtica."
+    },
+    "honey": {
+      "title": "Miel y algarrobina",
+      "text": "Productos del bosque elaborados por familias de Lancones, Sullana y alrededores."
+    },
+    "lodging": {
+      "title": "Hospedaje vivencial",
+      "text": "Duerme en casas de la comunidad, comparte la cocina y la vida del campo."
+    },
+    "crafts": {
+      "title": "Artesanía",
+      "text": "Tejidos, cerámica y objetos hechos con materiales del territorio, sin dañarlo."
+    }
+  },
+  "visit": {
+    "eyebrow": "[ 05 ] PLANIFICA TU VISITA",
+    "titleA": "Dos temporadas.",
+    "titleB": "Dos bosques distintos.",
+    "green": {
+      "range": "Ene — Abr · Temporada verde",
+      "title": "El bosque despierta",
+      "text": "Lluvias, quebradas con agua y follaje intenso. Ideal para fotografía y observación de aves. Algunos caminos pueden cerrarse."
+    },
+    "dry": {
+      "range": "May — Dic · Temporada seca",
+      "title": "El bosque dorado",
+      "text": "Accesos más fáciles, cielos despejados y fauna concentrada cerca del agua. La mejor época para caminatas y rutas en 4×4."
+    },
+    "ctaTitle": "Arma tu ruta con un guía de la comunidad.",
+    "whatsapp": "Escríbenos por WhatsApp"
+  },
+  "footer": {
+    "left": "BOSQUE SECO / PIURA — SULLANA · MÁNCORA",
+    "right": "VIAJA CON RESPETO · NO DEJES HUELLA"
+  },
+  "places": {
+    "title": "Lugares"
+  },
+  "routes": {
+    "title": "Rutas ecoturísticas"
+  },
+  "admin": {
+    "title": "Administración",
+    "login": "Acceso administrativo",
+    "dashboard": "Panel administrativo",
+    "noProfile": "Tu cuenta aún no tiene un perfil asignado. Contacta al administrador.",
+    "forbidden": "No tienes permisos para ver esta sección.",
+    "guideNotice": "Los guías usan la aplicación móvil.",
+    "signOut": "Cerrar sesión",
+    "sent": "Solicitud enviada. Quedó pendiente de aprobación.",
+    "sendError": "No se pudo enviar. Intenta de nuevo.",
+    "optionalHint": "Deja vacío lo que no quieras cambiar.",
+    "loginForm": {
+      "email": "Correo",
+      "password": "Contraseña",
+      "submit": "Ingresar",
+      "error": "Correo o contraseña incorrectos."
+    },
+    "leader": {
+      "title": "Panel de la asociación",
+      "intro": "Tus cambios se envían al administrador y se publican cuando son aprobados."
+    },
+    "profileForm": {
+      "title": "Datos de la asociación",
+      "summaryEs": "Resumen (ES)",
+      "summaryEn": "Resumen (EN)",
+      "descriptionEs": "Descripción (ES)",
+      "descriptionEn": "Descripción (EN)",
+      "phone": "Teléfono",
+      "whatsapp": "WhatsApp",
+      "submit": "Enviar cambios",
+      "acronym": "Siglas",
+      "region": "Región"
+    },
+    "serviceForm": {
+      "title": "Nuevo servicio",
+      "nameEs": "Nombre (ES)",
+      "nameEn": "Nombre (EN)",
+      "descriptionEs": "Descripción (ES)",
+      "descriptionEn": "Descripción (EN)",
+      "price": "Precio (S/)",
+      "submit": "Proponer servicio"
+    },
+    "imageForm": {
+      "title": "Nueva imagen",
+      "file": "Archivo (JPG, PNG o WebP, máx. 5 MB)",
+      "altEs": "Descripción (ES)",
+      "altEn": "Descripción (EN)",
+      "cover": "Usar como portada",
+      "submit": "Subir imagen",
+      "tooLarge": "La imagen supera 5 MB."
+    },
+    "requests": {
+      "title": "Mis solicitudes",
+      "empty": "Aún no has enviado solicitudes.",
+      "note": "Nota del administrador",
+      "status": {
+        "pending": "Pendiente",
+        "approved": "Aprobada",
+        "rejected": "Rechazada"
+      },
+      "entity": {
+        "association": "Datos",
+        "service": "Servicio",
+        "route": "Ruta",
+        "media": "Imagen",
+        "space": "Espacio",
+        "subspace": "Subespacio",
+        "provider": "Prestador",
+        "activity": "Actividad",
+        "payment_method": "Medio de pago"
+      },
+      "action": {
+        "create": "Crear",
+        "update": "Editar",
+        "delete": "Eliminar"
+      }
+    },
+    "review": {
+      "title": "Solicitudes pendientes",
+      "empty": "No hay solicitudes pendientes.",
+      "approve": "Aprobar",
+      "reject": "Rechazar",
+      "notePlaceholder": "Motivo del rechazo (opcional)",
+      "from": "Asociación"
+    },
+    "sections": {
+      "spaces": "Mis espacios",
+      "noSpaces": "Aún no tienes espacios. Agrega el primero.",
+      "addSpace": "Agregar espacio",
+      "addSubspace": "Agregar subespacio",
+      "addProvider": "Agregar prestador",
+      "addActivity": "Agregar actividad",
+      "addPayment": "Agregar medio de pago",
+      "providers": "Prestadores",
+      "submit": "Enviar para aprobación",
+      "subspaces": "Subespacios"
+    },
+    "kind": {
+      "guide": "Guía",
+      "food": "Comida",
+      "lodging": "Alojamiento"
+    },
+    "payment": {
+      "cash": "Efectivo",
+      "yape": "Yape"
+    },
+    "categories": {
+      "flora": "Flora",
+      "fauna": "Fauna",
+      "landscape": "Paisaje",
+      "facilities": "Instalaciones"
+    },
+    "fields": {
+      "name": "Nombre",
+      "acronym": "Siglas",
+      "departments": "Departamentos (separados por coma)",
+      "province": "Provincia",
+      "kind": "Tipo",
+      "locationEs": "Ubicación (ES)",
+      "locationEn": "Ubicación (EN)",
+      "descriptionEs": "Descripción (ES)",
+      "descriptionEn": "Descripción (EN)",
+      "attractionsEs": "Atractivos (ES, uno por línea)",
+      "attractionsEn": "Atractivos (EN, uno por línea)",
+      "space": "Espacio",
+      "subspace": "Subespacio",
+      "provider": "Prestador",
+      "none": "— Ninguno —",
+      "specialtyEs": "Especialidad (ES)",
+      "specialtyEn": "Especialidad (EN)",
+      "whatsapp": "WhatsApp (solo guías)",
+      "assignedSubspaces": "Subespacios donde trabaja",
+      "nameEs": "Nombre (ES)",
+      "nameEn": "Nombre (EN)",
+      "price": "Tarifa (S/)",
+      "priceUnitEs": "Unidad de tarifa (ES)",
+      "priceUnitEn": "Unidad de tarifa (EN)",
+      "duration": "Duración (minutos)",
+      "capacity": "Capacidad máxima",
+      "noteEs": "Nota (ES)",
+      "noteEn": "Nota (EN)",
+      "category": "Categoría",
+      "parent": "Espacio o subespacio"
+    }
+  },
+  "lang": {
+    "label": "Idioma"
+  },
+  "common": {
+    "loading": "Cargando…",
+    "error": "No se pudo cargar la información. Intenta de nuevo.",
+    "back": "Volver"
+  },
+  "associations": {
+    "eyebrow": "ASOCIACIONES",
+    "titleA": "Quienes cuidan",
+    "titleB": "el bosque.",
+    "lead": "Cada asociación administra su propia información: servicios, rutas y fotos. Conoce a quienes te reciben.",
+    "empty": "Aún no hay asociaciones publicadas.",
+    "view": "Ver asociación",
+    "notFound": "No encontramos esta asociación.",
+    "contact": "Contacto",
+    "services": "Servicios",
+    "routes": "Rutas",
+    "gallery": "Galería",
+    "difficulty": {
+      "easy": "Fácil",
+      "moderate": "Moderada",
+      "hard": "Difícil"
+    },
+    "minutes": "{{count}} min",
+    "departmentAll": "Todos",
+    "departmentLabel": "Departamento",
+    "spaces": "Espacios de visita",
+    "subspaces": "Sectores",
+    "attractions": "Atractivos",
+    "activities": "Actividades y tarifas",
+    "generalOffer": "Oferta general",
+    "payments": "Medios de pago",
+    "payment": {
+      "cash": "Efectivo",
+      "yape": "Yape"
+    },
+    "guides": "Guías",
+    "guideNotice": "El guiado es obligatorio. Coordina tu visita por WhatsApp con un guía de la asociación antes de llegar.",
+    "noGuides": "Esta asociación aún no tiene guías registrados. Vuelve pronto.",
+    "contactGuide": "Escribir por WhatsApp",
+    "endorsed": "Avalado por {{by}} y {{association}}",
+    "categories": {
+      "all": "Todo",
+      "flora": "Flora",
+      "fauna": "Fauna",
+      "landscape": "Paisaje",
+      "facilities": "Instalaciones"
+    },
+    "maxPeople": "Máx. {{count}} personas",
+    "withProvider": "Con {{name}}",
+    "viewSpace": "Ver espacio",
+    "viewSubspace": "Ver sector",
+    "noSpaces": "Esta asociación aún no tiene espacios publicados.",
+    "noSubspaces": "Este espacio aún no tiene sectores publicados."
+  }
+}

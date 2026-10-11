@@ -1,0 +1,7 @@
+.section { padding: 120px var(--gutter) 100px; }
+
+.layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr));
+  gap: 24px;
+}

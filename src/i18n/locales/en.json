@@ -1,0 +1,390 @@
+{
+  "app": {
+    "name": "Bosque Seco",
+    "region": "Piura"
+  },
+  "nav": {
+    "explore": "Explore",
+    "ecosystem": "Ecosystem",
+    "communities": "Communities",
+    "plan": "Plan your trip",
+    "associations": "Associations"
+  },
+  "hero": {
+    "coords": "04°05′S — 81°03′W",
+    "places": "SULLANA · MÁNCORA · TALARA",
+    "signal": "● SIGNAL ACTIVE",
+    "eyebrow": "[ ECOSYSTEM 001 ] NORTHERN PIURA — PERU",
+    "titleA": "Dry",
+    "titleB": "Forest",
+    "lead": "Centuries-old carob trees, green ceibos in the middle of the drought and ravines that reach the sea. A living territory that is best protected when visited with respect.",
+    "ctaMap": "Explore the map",
+    "ctaCommunities": "Support the communities",
+    "imageAlt": "Group of visitors hiking a dry forest trail among carob trees and sandy hillsides",
+    "imagePlaceholder": "Panoramic photo: carob and ceibo trees at sunset"
+  },
+  "explorer": {
+    "eyebrow": "[ 02 ] DESTINATION EXPLORER",
+    "titleA": "Pick a point.",
+    "titleB": "Discover the forest.",
+    "lead": "Schematic map of the Sullana – Máncora corridor. Tap a destination to see what to do, how to get there and who will welcome you.",
+    "mapNote": "SCHEMATIC · NOT TO SCALE",
+    "ocean": "PACIFIC OCEAN",
+    "todo": "What to do",
+    "access": "Access",
+    "season": "Best season",
+    "photo": "Photo: {{name}}"
+  },
+  "destinations": {
+    "angolo": {
+      "short": "El Angolo",
+      "name": "El Angolo Hunting Reserve",
+      "type": "Protected natural area",
+      "place": "Sullana – Talara",
+      "desc": "The heart of the dry forest: hills covered in carob, hualtaco and palo santo trees, home to the white-tailed deer and the Sechuran fox.",
+      "todo": "Hiking, wildlife watching",
+      "access": "4×4 from Máncora or Sullana",
+      "season": "May – Dec"
+    },
+    "amotape": {
+      "short": "Amotape",
+      "name": "Cerros de Amotape National Park",
+      "type": "National park",
+      "place": "Piura – Tumbes",
+      "desc": "Part of the Northwest Biosphere Reserve. Dry forest that blends into Pacific tropical forest along a single route.",
+      "todo": "Guided routes, endemic birds",
+      "access": "With an authorized guide",
+      "season": "Year-round"
+    },
+    "fernandez": {
+      "short": "Fernández Ravine",
+      "name": "Fernández Ravine and mud pools",
+      "type": "Landscape · Wellness",
+      "place": "Máncora",
+      "desc": "A few minutes from the beach, the ravine opens onto mud pools and thermal water surrounded by dry forest.",
+      "todo": "Mud baths, short walks",
+      "access": "Mototaxi or car from Máncora",
+      "season": "May – Dec"
+    },
+    "lancones": {
+      "short": "Lancones",
+      "name": "Lancones Forests",
+      "type": "Rural tourism",
+      "place": "Sullana",
+      "desc": "Hamlets in the middle of the carob grove where honey, algarrobina syrup and goat cheese are made. Borderland scenery, total silence.",
+      "todo": "Community stays, local products",
+      "access": "Road from Sullana",
+      "season": "Jan – Apr (green)"
+    },
+    "poechos": {
+      "short": "Poechos",
+      "name": "Poechos Reservoir",
+      "type": "Water body",
+      "place": "Sullana",
+      "desc": "A large lake among dry hills. Intense sunsets, waterbirds and artisanal fishing by neighboring communities.",
+      "todo": "Boat rides, local food",
+      "access": "By road from Sullana",
+      "season": "Year-round"
+    },
+    "chira": {
+      "short": "Chira Valley",
+      "name": "Chira River Valley",
+      "type": "Cultural route",
+      "place": "Sullana",
+      "desc": "The river that gives life to the north: farms, carob mills and towns with culinary tradition on the edge of the forest.",
+      "todo": "Food route, cycling",
+      "access": "From Sullana",
+      "season": "Year-round"
+    }
+  },
+  "ecosystem": {
+    "eyebrow": "[ 03 ] ECOSYSTEM",
+    "titleA": "Life that",
+    "titleB": "withstands the sun.",
+    "lead": "The equatorial dry forest goes months without rain. When water arrives, it turns green within days. These are some of the species that sustain it.",
+    "flora": "Flora",
+    "fauna": "Fauna"
+  },
+  "species": {
+    "algarrobo": {
+      "name": "Carob tree (Algarrobo)",
+      "note": "Roots up to 50 m deep reach groundwater. Its fruit becomes algarrobina syrup."
+    },
+    "ceibo": {
+      "name": "Ceibo",
+      "note": "A green trunk that photosynthesizes when the tree drops its leaves. Stores water inside."
+    },
+    "palosanto": {
+      "name": "Palo santo",
+      "note": "Aromatic wood used for generations. Harvesting must be sustainable."
+    },
+    "venado": {
+      "name": "White-tailed deer",
+      "note": "A symbol of El Angolo. Seen at dawn near ravines."
+    },
+    "ardilla": {
+      "name": "Guayaquil squirrel",
+      "note": "Agile resident of the carob trees, easy to spot across the north."
+    },
+    "zorro": {
+      "name": "Sechuran fox",
+      "note": "Adapted to extreme aridity. Feeds on carob fruit."
+    }
+  },
+  "community": {
+    "eyebrow": "[ 04 ] COMMUNITY TOURISM",
+    "title1": "Your visit",
+    "title2": "sustains",
+    "title3": "the forest.",
+    "lead": "The families living next to the reserves care for the forest every day. Hire local guides, buy their products and sleep in their homes: every sol stays in the territory.",
+    "photo": "Photo: community producers or guides",
+    "cta": "I want to take part →"
+  },
+  "offers": {
+    "guides": {
+      "title": "Local guides",
+      "text": "People who know every ravine and every track. Their knowledge makes the route safe and authentic."
+    },
+    "honey": {
+      "title": "Honey and algarrobina",
+      "text": "Forest products made by families from Lancones, Sullana and surrounding areas."
+    },
+    "lodging": {
+      "title": "Community lodging",
+      "text": "Sleep in community homes, share the kitchen and the country way of life."
+    },
+    "crafts": {
+      "title": "Crafts",
+      "text": "Textiles, ceramics and objects made from local materials, without harming the land."
+    }
+  },
+  "visit": {
+    "eyebrow": "[ 05 ] PLAN YOUR VISIT",
+    "titleA": "Two seasons.",
+    "titleB": "Two different forests.",
+    "green": {
+      "range": "Jan — Apr · Green season",
+      "title": "The forest awakens",
+      "text": "Rain, flowing ravines and lush foliage. Ideal for photography and birdwatching. Some roads may close."
+    },
+    "dry": {
+      "range": "May — Dec · Dry season",
+      "title": "The golden forest",
+      "text": "Easier access, clear skies and wildlife concentrated near water. The best time for hikes and 4×4 routes."
+    },
+    "ctaTitle": "Build your route with a community guide.",
+    "whatsapp": "Message us on WhatsApp"
+  },
+  "footer": {
+    "left": "DRY FOREST / PIURA — SULLANA · MÁNCORA",
+    "right": "TRAVEL WITH RESPECT · LEAVE NO TRACE"
+  },
+  "places": {
+    "title": "Places"
+  },
+  "routes": {
+    "title": "Ecotourism routes"
+  },
+  "admin": {
+    "title": "Admin",
+    "login": "Admin login",
+    "dashboard": "Admin dashboard",
+    "noProfile": "Your account has no profile assigned yet. Please contact the administrator.",
+    "forbidden": "You do not have permission to view this section.",
+    "guideNotice": "Guides use the mobile app.",
+    "signOut": "Sign out",
+    "sent": "Request sent. It is pending approval.",
+    "sendError": "Could not send. Please try again.",
+    "optionalHint": "Leave empty whatever you do not want to change.",
+    "loginForm": {
+      "email": "Email",
+      "password": "Password",
+      "submit": "Sign in",
+      "error": "Incorrect email or password."
+    },
+    "leader": {
+      "title": "Association panel",
+      "intro": "Your changes are sent to the administrator and published once approved."
+    },
+    "profileForm": {
+      "title": "Association details",
+      "summaryEs": "Summary (ES)",
+      "summaryEn": "Summary (EN)",
+      "descriptionEs": "Description (ES)",
+      "descriptionEn": "Description (EN)",
+      "phone": "Phone",
+      "whatsapp": "WhatsApp",
+      "submit": "Send changes",
+      "acronym": "Acronym",
+      "region": "Region"
+    },
+    "serviceForm": {
+      "title": "New service",
+      "nameEs": "Name (ES)",
+      "nameEn": "Name (EN)",
+      "descriptionEs": "Description (ES)",
+      "descriptionEn": "Description (EN)",
+      "price": "Price (S/)",
+      "submit": "Propose service"
+    },
+    "imageForm": {
+      "title": "New image",
+      "file": "File (JPG, PNG or WebP, max 5 MB)",
+      "altEs": "Description (ES)",
+      "altEn": "Description (EN)",
+      "cover": "Use as cover",
+      "submit": "Upload image",
+      "tooLarge": "The image is larger than 5 MB."
+    },
+    "requests": {
+      "title": "My requests",
+      "empty": "You have not sent any requests yet.",
+      "note": "Administrator note",
+      "status": {
+        "pending": "Pending",
+        "approved": "Approved",
+        "rejected": "Rejected"
+      },
+      "entity": {
+        "association": "Details",
+        "service": "Service",
+        "route": "Route",
+        "media": "Image",
+        "space": "Area",
+        "subspace": "Sector",
+        "provider": "Provider",
+        "activity": "Activity",
+        "payment_method": "Payment method"
+      },
+      "action": {
+        "create": "Create",
+        "update": "Edit",
+        "delete": "Delete"
+      }
+    },
+    "review": {
+      "title": "Pending requests",
+      "empty": "There are no pending requests.",
+      "approve": "Approve",
+      "reject": "Reject",
+      "notePlaceholder": "Reason for rejection (optional)",
+      "from": "Association"
+    },
+    "sections": {
+      "spaces": "My areas",
+      "noSpaces": "You have no areas yet. Add the first one.",
+      "addSpace": "Add area",
+      "addSubspace": "Add sector",
+      "addProvider": "Add provider",
+      "addActivity": "Add activity",
+      "addPayment": "Add payment method",
+      "providers": "Providers",
+      "submit": "Send for approval",
+      "subspaces": "Sectors"
+    },
+    "kind": {
+      "guide": "Guide",
+      "food": "Food",
+      "lodging": "Lodging"
+    },
+    "payment": {
+      "cash": "Cash",
+      "yape": "Yape"
+    },
+    "categories": {
+      "flora": "Flora",
+      "fauna": "Fauna",
+      "landscape": "Landscape",
+      "facilities": "Facilities"
+    },
+    "fields": {
+      "name": "Name",
+      "acronym": "Acronym",
+      "departments": "Departments (comma-separated)",
+      "province": "Province",
+      "kind": "Type",
+      "locationEs": "Location (ES)",
+      "locationEn": "Location (EN)",
+      "descriptionEs": "Description (ES)",
+      "descriptionEn": "Description (EN)",
+      "attractionsEs": "Highlights (ES, one per line)",
+      "attractionsEn": "Highlights (EN, one per line)",
+      "space": "Area",
+      "subspace": "Sector",
+      "provider": "Provider",
+      "none": "— None —",
+      "specialtyEs": "Specialty (ES)",
+      "specialtyEn": "Specialty (EN)",
+      "whatsapp": "WhatsApp (guides only)",
+      "assignedSubspaces": "Sectors where they work",
+      "nameEs": "Name (ES)",
+      "nameEn": "Name (EN)",
+      "price": "Rate (S/)",
+      "priceUnitEs": "Rate unit (ES)",
+      "priceUnitEn": "Rate unit (EN)",
+      "duration": "Duration (minutes)",
+      "capacity": "Maximum capacity",
+      "noteEs": "Note (ES)",
+      "noteEn": "Note (EN)",
+      "category": "Category",
+      "parent": "Area or sector"
+    }
+  },
+  "lang": {
+    "label": "Language"
+  },
+  "common": {
+    "loading": "Loading…",
+    "error": "Could not load the information. Please try again.",
+    "back": "Back"
+  },
+  "associations": {
+    "eyebrow": "ASSOCIATIONS",
+    "titleA": "Those who look after",
+    "titleB": "the forest.",
+    "lead": "Each association manages its own information: services, routes and photos. Meet the people who welcome you.",
+    "empty": "No associations have been published yet.",
+    "view": "View association",
+    "notFound": "We could not find this association.",
+    "contact": "Contact",
+    "services": "Services",
+    "routes": "Routes",
+    "gallery": "Gallery",
+    "difficulty": {
+      "easy": "Easy",
+      "moderate": "Moderate",
+      "hard": "Hard"
+    },
+    "minutes": "{{count}} min",
+    "departmentAll": "All",
+    "departmentLabel": "Department",
+    "spaces": "Visiting areas",
+    "subspaces": "Sectors",
+    "attractions": "Highlights",
+    "activities": "Activities and rates",
+    "generalOffer": "General offer",
+    "payments": "Payment methods",
+    "payment": {
+      "cash": "Cash",
+      "yape": "Yape"
+    },
+    "guides": "Guides",
+    "guideNotice": "Guided visits are mandatory. Coordinate your visit on WhatsApp with one of the association's guides before you arrive.",
+    "noGuides": "This association has no registered guides yet. Please check back soon.",
+    "contactGuide": "Message on WhatsApp",
+    "endorsed": "Endorsed by {{by}} and {{association}}",
+    "categories": {
+      "all": "All",
+      "flora": "Flora",
+      "fauna": "Fauna",
+      "landscape": "Landscape",
+      "facilities": "Facilities"
+    },
+    "maxPeople": "Max. {{count}} people",
+    "withProvider": "With {{name}}",
+    "viewSpace": "View area",
+    "viewSubspace": "View sector",
+    "noSpaces": "This association has no published areas yet.",
+    "noSubspaces": "This area has no published sectors yet."
+  }
+}
