@@ -11,10 +11,10 @@
   },
   "hero": {
     "lead": "Set your course toward nature",
-    "ctaMap": "Explore the map",
-    "ctaCommunities": "Support the communities",
+    "ctaCommunities": "Meet the communities",
     "imageAlt": "Group of visitors hiking a dry forest trail among carob trees and sandy hillsides",
-    "imagePlaceholder": "Panoramic photo: carob and ceibo trees at sunset"
+    "imagePlaceholder": "Panoramic photo: carob and ceibo trees at sunset",
+    "ctaDestinations": "Explore destinations"
   },
   "explorer": {
     "eyebrow": "[ 02 ] DESTINATION EXPLORER",

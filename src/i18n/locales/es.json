@@ -11,10 +11,10 @@
   },
   "hero": {
     "lead": "Marca tu rumbo hacia la naturaleza",
-    "ctaMap": "Explorar el mapa",
-    "ctaCommunities": "Apoya a las comunidades",
+    "ctaCommunities": "Conocer comunidades",
     "imageAlt": "Grupo de visitantes caminando por un sendero del bosque seco, entre algarrobos y laderas de arena",
-    "imagePlaceholder": "Foto panorámica: algarrobos y ceibos al atardecer"
+    "imagePlaceholder": "Foto panorámica: algarrobos y ceibos al atardecer",
+    "ctaDestinations": "Explorar destinos"
   },
   "explorer": {
     "eyebrow": "[ 02 ] EXPLORADOR DE DESTINOS",

@@ -1,5 +1,8 @@
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { ArrowRight } from 'lucide-react';
 import ImagePlaceholder from '../../../components/shared/ImagePlaceholder';
+import { buttonClass } from '../../../components/shared/buttonClass';
 import logo from '../../../assets/images/logo-ecorumbo.png';
 import heroImage from '../../../assets/images/hero-fondo.jpg';
 import Ticker from './Ticker';
@@ -27,12 +30,13 @@ export default function Hero() {
         <div className={styles.footerRow}>
           <p className={styles.lead}>{t('hero.lead')}</p>
           <div className={styles.actions}>
-            <a href="#explorar" className={styles.primary}>
-              {t('hero.ctaMap').toUpperCase()}
-            </a>
-            <a href="#comunidades" className={styles.secondary}>
-              {t('hero.ctaCommunities').toUpperCase()}
-            </a>
+            <Link to="/lugares" className={buttonClass('primary', { size: 'lg' })}>
+              {t('hero.ctaDestinations')}
+              <ArrowRight size={18} aria-hidden="true" />
+            </Link>
+            <Link to="/#comunidades" className={buttonClass('onDark', { size: 'lg' })}>
+              {t('hero.ctaCommunities')}
+            </Link>
           </div>
         </div>
       </div>
