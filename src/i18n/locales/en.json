@@ -370,7 +370,8 @@
       "route": "Route",
       "rate": "Reference rate",
       "points": "Points required",
-      "discount": "Discount (%)"
+      "discount": "Discount (%)",
+      "location": "Location on the map"
     },
     "loginPage": {
       "brand": "EcoRumbo",
@@ -522,7 +523,17 @@
       "photo": "Photo of the point (recommended)",
       "photoHint": "It is reduced automatically so it loads with poor signal."
     },
-    "sentDirect": "Changes saved and published."
+    "sentDirect": "Changes saved and published.",
+    "location": {
+      "lat": "Latitude",
+      "lon": "Longitude",
+      "useMine": "Use my location",
+      "locating": "Locating…",
+      "clear": "Remove point",
+      "help": "Tap the map to place the point and drag the marker to adjust it. You can also type the coordinates.",
+      "denied": "Your location could not be obtained. Check the browser permission.",
+      "unsupported": "This device cannot provide its location."
+    }
   },
   "lang": {
     "label": "Language"

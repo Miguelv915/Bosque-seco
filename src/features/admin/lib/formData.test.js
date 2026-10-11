@@ -51,4 +51,26 @@ describe('collectPayload', () => {
   it('no incluye checkboxes sin selección', () => {
     expect(collectPayload(formWith([]), fields)).toEqual({});
   });
+
+  describe('ubicación', () => {
+    const geo = [{ name: 'location', type: 'location' }];
+
+    it('toma lat y lon como un solo valor', () => {
+      const form = formWith([['lat', '-4.912345'], ['lon', ' -80.5 ']]);
+      expect(collectPayload(form, geo)).toEqual({ location: { lat: -4.912345, lon: -80.5 } });
+    });
+
+    it('la omite si no se eligió punto', () => {
+      expect(collectPayload(formWith([['lat', ''], ['lon', '']]), geo)).toEqual({});
+    });
+
+    it('marca como inválido lo que está fuera de rango o incompleto', () => {
+      expect(collectPayload(formWith([['lat', '95'], ['lon', '-80']]), geo)).toEqual({
+        location: { lat: null, lon: -80 },
+      });
+      expect(collectPayload(formWith([['lat', '-4.9'], ['lon', '']]), geo)).toEqual({
+        location: { lat: -4.9, lon: null },
+      });
+    });
+  });
 });
