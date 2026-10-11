@@ -41,7 +41,7 @@ export default function ImageForm({ associationId, spaces, onSent }) {
           [parent === 'space' ? 'space_id' : 'subspace_id']: parentId,
           category: data.get('category'),
           is_cover: data.get('is_cover') === 'on',
-          ...filledFields(data, ['alt_es', 'alt_en']),
+          ...filledFields(data, ['alt_es']),
         },
       });
     });
@@ -82,16 +82,10 @@ export default function ImageForm({ associationId, spaces, onSent }) {
         <span>{t('admin.imageForm.file')}</span>
         <input name="file" type="file" accept="image/jpeg,image/png,image/webp" required />
       </label>
-      <div className={styles.row}>
-        <label className={styles.field}>
-          <span>{t('admin.imageForm.altEs')}</span>
-          <input name="alt_es" />
-        </label>
-        <label className={styles.field}>
-          <span>{t('admin.imageForm.altEn')}</span>
-          <input name="alt_en" />
-        </label>
-      </div>
+      <label className={styles.field}>
+        <span>{t('admin.imageForm.alt')}</span>
+        <input name="alt_es" />
+      </label>
       <label className={styles.check}>
         <input name="is_cover" type="checkbox" />
         {t('admin.imageForm.cover')}
