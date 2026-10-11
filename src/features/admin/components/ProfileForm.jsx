@@ -5,7 +5,7 @@ import { useSubmitRequest } from '../hooks/useSubmitRequest';
 import FormFeedback from './FormFeedback';
 import styles from '../admin.module.css';
 
-const FIELDS = ['summary_es', 'summary_en', 'description_es', 'description_en', 'acronym', 'region'];
+const FIELDS = ['summary_es', 'description_es', 'acronym', 'region'];
 
 export default function ProfileForm({ associationId, onSent }) {
   const { t } = useTranslation();
@@ -41,20 +41,12 @@ export default function ProfileForm({ associationId, onSent }) {
         </label>
       </div>
       <label className={styles.field}>
-        <span>{t('admin.profileForm.summaryEs')}</span>
+        <span>{t('admin.profileForm.summary')}</span>
         <textarea name="summary_es" rows={2} />
       </label>
       <label className={styles.field}>
-        <span>{t('admin.profileForm.summaryEn')}</span>
-        <textarea name="summary_en" rows={2} />
-      </label>
-      <label className={styles.field}>
-        <span>{t('admin.profileForm.descriptionEs')}</span>
+        <span>{t('admin.profileForm.description')}</span>
         <textarea name="description_es" rows={4} />
-      </label>
-      <label className={styles.field}>
-        <span>{t('admin.profileForm.descriptionEn')}</span>
-        <textarea name="description_en" rows={4} />
       </label>
       <FormFeedback result={result} />
       <button type="submit" className={styles.primary} disabled={busy}>
