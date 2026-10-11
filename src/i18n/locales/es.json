@@ -331,6 +331,17 @@
       "noteEn": "Nota (EN)",
       "category": "Categoría",
       "parent": "Espacio o subespacio"
+    },
+    "loginPage": {
+      "brand": "EcoRumbo",
+      "tagline": "Marca tu rumbo hacia la naturaleza",
+      "welcome": "¡Bienvenido de nuevo!",
+      "subtitle": "Ingresa con tu cuenta de asociación o de administración.",
+      "back": "Volver al portal",
+      "showPassword": "Mostrar contraseña",
+      "hidePassword": "Ocultar contraseña",
+      "signingIn": "Ingresando…",
+      "noAccount": "Las cuentas las crea AIDER. Si aún no tienes acceso, comunícate con tu coordinación."
     }
   },
   "lang": {
