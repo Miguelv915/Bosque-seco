@@ -37,7 +37,10 @@ export default function AssociationPage() {
           {t('associations.endorsed', { by: association.endorsed_by, association: association.acronym || association.name })}
         </p>
         <p className={styles.summary}>{esText(association, 'summary')}</p>
-        <AssociationContact number={association.contact_whatsapp} />
+        <AssociationContact
+          number={association.contact_whatsapp}
+          message={t('associations.whatsappMessage', { name: association.name })}
+        />
       </header>
 
       {association.description_es && (

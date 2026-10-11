@@ -624,7 +624,8 @@
     "viewSubspace": "View sector",
     "noSpaces": "This association has no published areas yet.",
     "noSubspaces": "This area has no published sectors yet.",
-    "otherServices": "Food, lodging and transport"
+    "otherServices": "Food, lodging and transport",
+    "whatsappMessage": "Hi, I found {{name}} on EcoRumbo and I'd like to arrange a visit. What dates and rates do you have?"
   },
   "contact": {
     "whatsapp": "Ask on WhatsApp",

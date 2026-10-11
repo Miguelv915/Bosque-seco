@@ -624,7 +624,8 @@
     "viewSubspace": "Ver sector",
     "noSpaces": "Esta asociación aún no tiene espacios publicados.",
     "noSubspaces": "Este espacio aún no tiene sectores publicados.",
-    "otherServices": "Alimentación, hospedaje y transporte"
+    "otherServices": "Alimentación, hospedaje y transporte",
+    "whatsappMessage": "Hola, vi a {{name}} en EcoRumbo y quiero coordinar una visita. ¿Qué fechas y tarifas tienen?"
   },
   "contact": {
     "whatsapp": "Consultar por WhatsApp",

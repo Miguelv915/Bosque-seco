@@ -17,6 +17,11 @@ describe('AssociationContact', () => {
     expect(link.getAttribute('href')).toBe('https://wa.me/51987654321');
   });
 
+  it('agrega el mensaje prellenado', () => {
+    render(<AssociationContact number="51987654321" message="Hola" />);
+    expect(screen.getByRole('link').getAttribute('href')).toBe('https://wa.me/51987654321?text=Hola');
+  });
+
   it('no muestra nada si la asociación no publicó número', () => {
     const { container } = render(<AssociationContact number={null} />);
     expect(container.firstChild).toBeNull();
