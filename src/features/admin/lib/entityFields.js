@@ -26,9 +26,9 @@ export const spaceFields = [
   f('province', 'province'),
   f('kind', 'kind'),
   f('location_es', 'locationEs', { required: true, hint: 'admin.hints.location' }),
-  locationField,
   f('signal_es', 'signal', { required: true, hint: 'admin.hints.signal' }),
   f('access_es', 'access', { required: true, hint: 'admin.hints.access' }),
+  locationField,
   f('description_es', 'descriptionEs', { type: 'textarea' }),
 ];
 

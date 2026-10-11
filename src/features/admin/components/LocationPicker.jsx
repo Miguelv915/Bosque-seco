@@ -74,7 +74,7 @@ export default function LocationPicker({ label, hint, error }) {
   return (
     <fieldset className={styles.picker}>
       <legend>{label}</legend>
-      {hint && <p className={styles.hint}>{hint}</p>}
+      {hint && <p className={`${styles.hint} ${styles.top}`}>{hint}</p>}
 
       <div className={styles.map}>
         <MapContainer center={DEFAULT_CENTER} zoom={DEFAULT_ZOOM} scrollWheelZoom={false}>
@@ -100,48 +100,50 @@ export default function LocationPicker({ label, hint, error }) {
         </MapContainer>
       </div>
 
-      <div className={styles.row}>
-        <label className={styles.coord}>
-          <span>{t('admin.location.lat')}</span>
-          <input
-            name="lat"
-            inputMode="decimal"
-            value={lat}
-            onChange={(event) => setLat(event.target.value)}
-            aria-invalid={error ? true : undefined}
-          />
-        </label>
-        <label className={styles.coord}>
-          <span>{t('admin.location.lon')}</span>
-          <input
-            name="lon"
-            inputMode="decimal"
-            value={lon}
-            onChange={(event) => setLon(event.target.value)}
-            aria-invalid={error ? true : undefined}
-          />
-        </label>
-      </div>
+      <div className={styles.side}>
+        <div className={styles.row}>
+          <label className={styles.coord}>
+            <span>{t('admin.location.lat')}</span>
+            <input
+              name="lat"
+              inputMode="decimal"
+              value={lat}
+              onChange={(event) => setLat(event.target.value)}
+              aria-invalid={error ? true : undefined}
+            />
+          </label>
+          <label className={styles.coord}>
+            <span>{t('admin.location.lon')}</span>
+            <input
+              name="lon"
+              inputMode="decimal"
+              value={lon}
+              onChange={(event) => setLon(event.target.value)}
+              aria-invalid={error ? true : undefined}
+            />
+          </label>
+        </div>
 
-      <div className={styles.actions}>
-        <button type="button" className={styles.action} onClick={useMyLocation}>
-          {gps === 'loading' ? t('admin.location.locating') : t('admin.location.useMine')}
-        </button>
-        {(lat || lon) && (
-          <button type="button" className={styles.action} onClick={clear}>
-            {t('admin.location.clear')}
+        <div className={styles.actions}>
+          <button type="button" className={styles.action} onClick={useMyLocation}>
+            {gps === 'loading' ? t('admin.location.locating') : t('admin.location.useMine')}
           </button>
+          {(lat || lon) && (
+            <button type="button" className={styles.action} onClick={clear}>
+              {t('admin.location.clear')}
+            </button>
+          )}
+        </div>
+
+        <p className={styles.hint}>{t('admin.location.help')}</p>
+        {gps === 'denied' && <p className={styles.error}>{t('admin.location.denied')}</p>}
+        {gps === 'unsupported' && <p className={styles.error}>{t('admin.location.unsupported')}</p>}
+        {error && (
+          <p className={styles.error} role="alert">
+            {t(error)}
+          </p>
         )}
       </div>
-
-      <p className={styles.hint}>{t('admin.location.help')}</p>
-      {gps === 'denied' && <p className={styles.error}>{t('admin.location.denied')}</p>}
-      {gps === 'unsupported' && <p className={styles.error}>{t('admin.location.unsupported')}</p>}
-      {error && (
-        <p className={styles.error} role="alert">
-          {t(error)}
-        </p>
-      )}
     </fieldset>
   );
 }

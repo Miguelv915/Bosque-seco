@@ -1,8 +1,16 @@
 .picker {
+  /* Ocupa toda la fila del formulario en lugar de una sola columna */
+  grid-column: 1 / -1;
+  min-width: 0;
   display: grid;
-  gap: 12px;
+  grid-template-columns: minmax(0, 1.6fr) minmax(220px, 1fr);
+  grid-template-areas:
+    'hint hint'
+    'map  side';
+  align-items: start;
+  gap: 14px 20px;
   margin: 0;
-  padding: 14px;
+  padding: 16px;
   border: 1px solid var(--color-line);
   border-radius: 14px;
   background: #fff;
@@ -16,7 +24,8 @@
 }
 
 .map {
-  height: 280px;
+  grid-area: map;
+  height: 300px;
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--color-line);
@@ -38,10 +47,27 @@
   transform: rotate(-45deg);
 }
 
+.side {
+  grid-area: side;
+  display: grid;
+  gap: 12px;
+}
+
 .row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
+}
+
+.coord input {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  font: inherit;
+  padding: 10px 12px;
+  border: 1px solid #c9c5b6;
+  border-radius: 10px;
+  background: #fff;
 }
 
 .coord {
@@ -78,6 +104,8 @@
   background: var(--color-soft);
 }
 
+.top { grid-area: hint; }
+
 .hint {
   margin: 0;
   font-size: 13px;
@@ -88,4 +116,15 @@
   margin: 0;
   font-size: 13px;
   color: #b3261e;
+}
+
+@media (max-width: 720px) {
+  .picker {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      'hint'
+      'map'
+      'side';
+  }
+  .map { height: 240px; }
 }
