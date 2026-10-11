@@ -1,16 +1,15 @@
 import { useTranslation } from 'react-i18next';
-import { demoVisits } from '../../lib/demoVisits';
 import { splitDuration } from '../../lib/analytics';
 import { BarList, Stat, StatGrid } from './Widgets';
 import styles from '../../admin.module.css';
 
 /**
- * Visitas, rangos de edad y tiempo de recorrido con datos de ejemplo. La app
- * móvil los registrará; hasta que sincronice se muestran marcados como ficticios.
+ * Visitas, rangos de edad, espacios visitados y tiempo de recorrido con datos de
+ * ejemplo (`data`, de demoVisits). La app móvil los registrará; hasta que
+ * sincronice se muestran marcados como ficticios.
  */
-export default function VisitsDemo({ seed, scale = 1 }) {
+export default function VisitsDemo({ data }) {
   const { t, i18n } = useTranslation();
-  const data = demoVisits(seed, { scale });
   const duration = splitDuration(data.avgMinutes / 60);
 
   const monthFormat = new Intl.DateTimeFormat(i18n.language, { month: 'short' });
@@ -18,6 +17,8 @@ export default function VisitsDemo({ seed, scale = 1 }) {
     const [year, number] = month.split('-').map(Number);
     return { label: monthFormat.format(new Date(year, number - 1, 1)), value };
   });
+
+  const spaceRows = [...data.bySpace].sort((a, b) => b.value - a.value).slice(0, 10);
 
   return (
     <section className={styles.demoBlock}>
@@ -48,6 +49,12 @@ export default function VisitsDemo({ seed, scale = 1 }) {
           empty={t('admin.analytics.noData')}
         />
       </div>
+
+      <BarList
+        title={t('admin.analytics.visitsBySpace')}
+        rows={spaceRows}
+        empty={t('admin.analytics.noData')}
+      />
     </section>
   );
 }

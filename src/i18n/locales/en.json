@@ -429,7 +429,9 @@
       "visitors": "Visitors",
       "avgDuration": "Average trip duration",
       "visitsByMonth": "Visits per month",
-      "visitorsByAge": "Visitors by age range"
+      "visitorsByAge": "Visitors by age range",
+      "visitsBySpace": "Most visited spaces",
+      "visitsDemoColumn": "Visits (sample)"
     },
     "readiness": {
       "title": "Is the app ready?",
