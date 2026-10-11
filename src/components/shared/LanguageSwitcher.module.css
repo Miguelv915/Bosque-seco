@@ -1,6 +1,6 @@
 .switcher {
   display: inline-flex;
-  border: 1px solid var(--color-line);
+  border: 1px solid var(--switcher-line, var(--color-line));
   border-radius: 999px;
   overflow: hidden;
   font-family: var(--font-mono);
@@ -11,12 +11,12 @@
 .option {
   border: 0;
   background: transparent;
-  color: var(--color-ink-soft);
+  color: var(--switcher-ink, var(--color-ink-soft));
   padding: 7px 11px;
   cursor: pointer;
 }
 
 .option[aria-pressed='true'] {
-  background: var(--color-green);
-  color: var(--color-ink);
+  background: var(--switcher-active-bg, var(--color-green));
+  color: var(--switcher-active-ink, var(--color-ink));
 }

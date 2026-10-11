@@ -18,7 +18,6 @@ export default function Hero() {
         />
       </div>
       <div className={styles.fade} />
-      <div className={styles.grid} />
 
       <div className={styles.coords}>
         <div>{t('hero.coords')}</div>
