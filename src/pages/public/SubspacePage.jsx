@@ -1,18 +1,18 @@
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { localized } from '../../lib/localized';
+import { esText } from '../../lib/esText';
 import { useAsync } from '../../lib/useAsync';
 import { getSubspaceById } from '../../services/associations.service';
 import ActivityList from '../../features/associations/components/ActivityList';
 import GuideContact from '../../features/associations/components/GuideContact';
 import MediaGallery from '../../features/associations/components/MediaGallery';
 import PaymentMethods from '../../features/associations/components/PaymentMethods';
+import TranslateHint from '../../components/shared/TranslateHint';
 import styles from './PublicPage.module.css';
 
 export default function SubspacePage() {
   const { id } = useParams();
-  const { t, i18n } = useTranslation();
-  const lang = i18n.resolvedLanguage;
+  const { t } = useTranslation();
   const { data, error, loading } = useAsync(() => getSubspaceById(id), [id]);
 
   if (loading) return <p className={styles.page}>{t('common.loading')}</p>;
@@ -20,9 +20,7 @@ export default function SubspacePage() {
   if (!data) return <p className={styles.page}>{t('associations.notFound')}</p>;
 
   const { subspace, association } = data;
-  const attractions = (lang?.startsWith('en') && subspace.attractions_en.length
-    ? subspace.attractions_en
-    : subspace.attractions_es);
+  const attractions = subspace.attractions_es;
 
   // Guías asignados al sector; si no hay, se ofrecen los de toda la asociación.
   const assigned = subspace.subspace_providers.map((link) => link.providers).filter(Boolean);
@@ -35,6 +33,8 @@ export default function SubspacePage() {
         ← {subspace.spaces.name}
       </Link>
 
+      <TranslateHint />
+
       <header className={styles.header}>
         <p className={styles.kicker}>{subspace.spaces.departments.join(' · ')}</p>
         <h1 className={styles.title}>{subspace.name}</h1>
@@ -44,7 +44,7 @@ export default function SubspacePage() {
             association: association.acronym || association.name,
           })}
         </p>
-        <p className={styles.summary}>{localized(subspace, 'description', lang)}</p>
+        <p className={styles.summary}>{esText(subspace, 'description')}</p>
       </header>
 
       {attractions.length > 0 && (

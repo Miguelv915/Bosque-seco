@@ -336,7 +336,8 @@
   "common": {
     "loading": "Loading…",
     "error": "Could not load the information. Please try again.",
-    "back": "Back"
+    "back": "Back",
+    "translateHint": "Descriptions are written in Spanish by each association. To read them in English, right-click the page and choose “Translate to English”."
   },
   "associations": {
     "eyebrow": "ASSOCIATIONS",

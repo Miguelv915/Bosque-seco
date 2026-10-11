@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { localized } from '../../../lib/localized';
+import { esText } from '../../../lib/esText';
 import { whatsappLink } from '../../../lib/whatsapp';
 import styles from './OfferBlocks.module.css';
 
@@ -8,8 +8,7 @@ import styles from './OfferBlocks.module.css';
  * Solo los prestadores de tipo `guide` publican WhatsApp (nunca el líder).
  */
 export default function GuideContact({ guides }) {
-  const { t, i18n } = useTranslation();
-  const lang = i18n.resolvedLanguage;
+  const { t } = useTranslation();
   const reachable = guides.filter((g) => g.kind === 'guide' && whatsappLink(g.whatsapp));
 
   return (
@@ -24,7 +23,7 @@ export default function GuideContact({ guides }) {
             {reachable.map((guide) => (
               <li key={guide.id} className={styles.card}>
                 <h3>{guide.name}</h3>
-                <p>{localized(guide, 'specialty', lang)}</p>
+                <p>{esText(guide, 'specialty')}</p>
                 <a
                   className={styles.whatsapp}
                   href={whatsappLink(guide.whatsapp)}

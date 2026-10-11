@@ -1,17 +1,17 @@
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { localized } from '../../lib/localized';
+import { esText } from '../../lib/esText';
 import { useAsync } from '../../lib/useAsync';
 import { getAssociationBySlug } from '../../services/associations.service';
 import ActivityList from '../../features/associations/components/ActivityList';
 import GuideContact from '../../features/associations/components/GuideContact';
 import PaymentMethods from '../../features/associations/components/PaymentMethods';
+import TranslateHint from '../../components/shared/TranslateHint';
 import styles from './PublicPage.module.css';
 
 export default function AssociationPage() {
   const { slug } = useParams();
-  const { t, i18n } = useTranslation();
-  const lang = i18n.resolvedLanguage;
+  const { t } = useTranslation();
   const { data: association, error, loading } = useAsync(() => getAssociationBySlug(slug), [slug]);
 
   if (loading) return <p className={styles.page}>{t('common.loading')}</p>;
@@ -27,17 +27,19 @@ export default function AssociationPage() {
         ← {t('common.back')}
       </Link>
 
+      <TranslateHint />
+
       <header className={styles.header}>
         {association.acronym && <p className={styles.kicker}>{association.acronym}</p>}
         <h1 className={styles.title}>{association.name}</h1>
         <p className={styles.badge}>
           {t('associations.endorsed', { by: association.endorsed_by, association: association.acronym || association.name })}
         </p>
-        <p className={styles.summary}>{localized(association, 'summary', lang)}</p>
+        <p className={styles.summary}>{esText(association, 'summary')}</p>
       </header>
 
       {association.description_es && (
-        <p className={styles.description}>{localized(association, 'description', lang)}</p>
+        <p className={styles.description}>{esText(association, 'description')}</p>
       )}
 
       <section className={styles.block}>
@@ -51,7 +53,7 @@ export default function AssociationPage() {
                 <Link to={`/espacios/${space.id}`} className={styles.item}>
                   <h3>{space.name}</h3>
                   <p className={styles.meta}>{space.departments.join(' · ')}</p>
-                  <p>{localized(space, 'description', lang)}</p>
+                  <p>{esText(space, 'description')}</p>
                   <span className={styles.more}>{t('associations.viewSpace').toUpperCase()} →</span>
                 </Link>
               </li>

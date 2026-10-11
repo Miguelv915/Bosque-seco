@@ -16,4 +16,11 @@ i18n
     detection: { order: ['localStorage', 'navigator'], caches: ['localStorage'] },
   });
 
+// El atributo lang del documento permite al navegador ofrecer su traducción.
+const syncDocumentLanguage = (lng) => {
+  document.documentElement.lang = (lng || 'es').slice(0, 2);
+};
+i18n.on('languageChanged', syncDocumentLanguage);
+syncDocumentLanguage(i18n.resolvedLanguage);
+
 export default i18n;

@@ -1,11 +1,10 @@
 import { useTranslation } from 'react-i18next';
-import { localized } from '../../../lib/localized';
+import { esText } from '../../../lib/esText';
 import styles from './OfferBlocks.module.css';
 
 /** Actividades con tarifa, prestador, duración y capacidad. */
 export default function ActivityList({ activities, title }) {
-  const { t, i18n } = useTranslation();
-  const lang = i18n.resolvedLanguage;
+  const { t } = useTranslation();
   if (!activities.length) return null;
 
   return (
@@ -24,13 +23,13 @@ export default function ActivityList({ activities, title }) {
 
           return (
             <li key={activity.id} className={styles.card}>
-              <h3>{localized(activity, 'name', lang)}</h3>
-              {activity.description_es && <p>{localized(activity, 'description', lang)}</p>}
+              <h3>{esText(activity, 'name')}</h3>
+              {activity.description_es && <p>{esText(activity, 'description')}</p>}
               {activity.price != null && (
                 <p className={styles.price}>
                   {activity.currency} {Number(activity.price).toFixed(2)}
                   {' · '}
-                  {localized(activity, 'price_unit', lang)}
+                  {esText(activity, 'price_unit')}
                 </p>
               )}
               {details.length > 0 && <p className={styles.meta}>{details.join(' · ')}</p>}

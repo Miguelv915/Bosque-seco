@@ -336,7 +336,8 @@
   "common": {
     "loading": "Cargando…",
     "error": "No se pudo cargar la información. Intenta de nuevo.",
-    "back": "Volver"
+    "back": "Volver",
+    "translateHint": "Las descripciones las escribe cada asociación en español."
   },
   "associations": {
     "eyebrow": "ASOCIACIONES",
