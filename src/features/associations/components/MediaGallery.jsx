@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import ImagePlaceholder from '../../../components/shared/ImagePlaceholder';
-import { localized } from '../../../lib/localized';
+import { esText } from '../../../lib/esText';
 import { mediaUrl } from '../../../services/associations.service';
 import styles from './MediaGallery.module.css';
 
@@ -9,8 +9,7 @@ const ALL = 'all';
 
 /** Galería filtrable por categoría (flora, fauna, paisaje, instalaciones). */
 export default function MediaGallery({ media, fallbackAlt }) {
-  const { t, i18n } = useTranslation();
-  const lang = i18n.resolvedLanguage;
+  const { t } = useTranslation();
   const [category, setCategory] = useState(ALL);
 
   if (!media.length) return null;
@@ -39,7 +38,7 @@ export default function MediaGallery({ media, fallbackAlt }) {
           <li key={item.id} className={styles.shot}>
             <ImagePlaceholder
               src={mediaUrl(item.storage_path)}
-              alt={localized(item, 'alt', lang) || fallbackAlt}
+              alt={esText(item, 'alt') || fallbackAlt}
               label={fallbackAlt}
             />
           </li>

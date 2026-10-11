@@ -1,16 +1,16 @@
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import ImagePlaceholder from '../../components/shared/ImagePlaceholder';
-import { localized } from '../../lib/localized';
+import { esText } from '../../lib/esText';
 import { useAsync } from '../../lib/useAsync';
 import { getSpaceById, mediaUrl, pickCover } from '../../services/associations.service';
 import MediaGallery from '../../features/associations/components/MediaGallery';
+import TranslateHint from '../../components/shared/TranslateHint';
 import styles from './PublicPage.module.css';
 
 export default function SpacePage() {
   const { id } = useParams();
-  const { t, i18n } = useTranslation();
-  const lang = i18n.resolvedLanguage;
+  const { t } = useTranslation();
   const { data: space, error, loading } = useAsync(() => getSpaceById(id), [id]);
 
   if (loading) return <p className={styles.page}>{t('common.loading')}</p>;
@@ -29,6 +29,8 @@ export default function SpacePage() {
         ← {association.name}
       </Link>
 
+      <TranslateHint />
+
       <header className={styles.header}>
         <p className={styles.kicker}>{space.departments.join(' · ')}</p>
         <h1 className={styles.title}>{space.name}</h1>
@@ -38,8 +40,8 @@ export default function SpacePage() {
             association: association.acronym || association.name,
           })}
         </p>
-        {localized(space, 'location', lang) && (
-          <p className={styles.meta}>{localized(space, 'location', lang)}</p>
+        {esText(space, 'location') && (
+          <p className={styles.meta}>{esText(space, 'location')}</p>
         )}
       </header>
 
@@ -47,7 +49,7 @@ export default function SpacePage() {
         <div className={styles.cover}>
           <ImagePlaceholder
             src={mediaUrl(cover.storage_path)}
-            alt={localized(cover, 'alt', lang) || space.name}
+            alt={esText(cover, 'alt') || space.name}
             label={space.name}
             priority
           />
@@ -55,7 +57,7 @@ export default function SpacePage() {
       )}
 
       {space.description_es && (
-        <p className={styles.description}>{localized(space, 'description', lang)}</p>
+        <p className={styles.description}>{esText(space, 'description')}</p>
       )}
 
       <section className={styles.block}>
@@ -68,7 +70,7 @@ export default function SpacePage() {
               <li key={subspace.id}>
                 <Link to={`/subespacios/${subspace.id}`} className={styles.item}>
                   <h3>{subspace.name}</h3>
-                  <p>{localized(subspace, 'description', lang)}</p>
+                  <p>{esText(subspace, 'description')}</p>
                   <span className={styles.more}>
                     {t('associations.viewSubspace').toUpperCase()} →
                   </span>

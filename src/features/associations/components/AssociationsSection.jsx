@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import ImagePlaceholder from '../../../components/shared/ImagePlaceholder';
 import SectionHeader from '../../../components/shared/SectionHeader';
-import { localized } from '../../../lib/localized';
+import { esText } from '../../../lib/esText';
 import { useAsync } from '../../../lib/useAsync';
 import { listAssociations, mediaUrl, pickCover } from '../../../services/associations.service';
+import TranslateHint from '../../../components/shared/TranslateHint';
 import styles from './AssociationsSection.module.css';
 
 const ALL = 'all';
@@ -13,7 +14,7 @@ const ALL = 'all';
 const departmentsOf = (association) => association.spaces.flatMap((s) => s.departments);
 
 export default function AssociationsSection() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const { data, error, loading } = useAsync(listAssociations);
   const [department, setDepartment] = useState(ALL);
 
@@ -31,6 +32,8 @@ export default function AssociationsSection() {
         titleB={t('associations.titleB')}
         lead={t('associations.lead')}
       />
+
+      <TranslateHint />
 
       {departments.length > 0 && (
         <div className={styles.filters} role="group" aria-label={t('associations.departmentLabel')}>
@@ -70,7 +73,7 @@ export default function AssociationsSection() {
                     <h3 className={styles.name}>{association.name}</h3>
                     <p className={styles.regions}>{[...new Set(departmentsOf(association))].join(' · ')}</p>
                     <p className={styles.summary}>
-                      {localized(association, 'summary', i18n.resolvedLanguage)}
+                      {esText(association, 'summary')}
                     </p>
                     <span className={styles.more}>{t('associations.view').toUpperCase()} →</span>
                   </div>
