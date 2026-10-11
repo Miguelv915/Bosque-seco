@@ -4,7 +4,7 @@
   padding: 110px var(--gutter) 80px;
 }
 
-.back { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.1em; }
+.back { display: inline-flex; align-items: center; min-height: var(--tap); font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.1em; }
 
 .header { margin: 24px 0 32px; }
 
@@ -45,12 +45,13 @@
 .cover {
   position: relative;
   aspect-ratio: 16 / 7;
-  border-radius: 24px;
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  margin-bottom: 32px;
+  margin-bottom: var(--space-xl);
+  box-shadow: var(--shadow-md);
 }
 
-.block { margin-top: 56px; }
+.block { margin-top: var(--space-3xl); }
 
 .heading {
   font-family: var(--font-display);
@@ -74,13 +75,14 @@
   gap: 8px;
   height: 100%;
   border: 1px solid var(--color-line);
-  border-radius: 16px;
+  border-radius: var(--radius-md);
   padding: 20px 22px;
-  background: var(--color-sand);
+  background: var(--color-sand-soft);
   color: var(--color-ink);
-  transition: border-color 0.2s;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--duration) var(--ease), transform var(--duration) var(--ease), border-color var(--duration) var(--ease);
 }
-.item:hover { border-color: var(--color-forest); }
+.item:hover { color: var(--color-ink); border-color: var(--color-forest); box-shadow: var(--shadow-md); transform: translateY(-2px); }
 .item h3 { font-family: var(--font-display); font-weight: 500; font-size: 20px; }
 .item p { color: var(--color-ink-soft); line-height: 1.55; font-size: 15px; }
 

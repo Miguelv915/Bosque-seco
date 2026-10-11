@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import ImagePlaceholder from '../../../components/shared/ImagePlaceholder';
+import { buttonClass } from '../../../components/shared/buttonClass';
 import { OFFERS } from '../data/offers';
 import styles from './CommunitySection.module.css';
 
@@ -36,8 +37,8 @@ export default function CommunitySection() {
               </li>
             ))}
           </ol>
-          <a href="#visita" className={styles.cta}>
-            {t('community.cta').toUpperCase()}
+          <a href="#visita" className={`${buttonClass('dark', { size: 'lg' })} ${styles.cta}`}>
+            {t('community.cta')}
           </a>
         </div>
       </div>

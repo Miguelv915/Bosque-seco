@@ -1,4 +1,4 @@
-.section { padding: 120px var(--gutter) 80px; }
+.section { padding: var(--section-y) var(--gutter); }
 
 .eyebrow {
   font-family: var(--font-mono);
@@ -27,7 +27,7 @@
   margin-bottom: 80px;
 }
 
-.season { border-radius: 24px; padding: 36px; }
+.season { border-radius: var(--radius-lg); padding: clamp(24px, 4vw, 36px); box-shadow: var(--shadow-sm); }
 
 .green {
   border: 1px solid #00a55099;
@@ -64,7 +64,8 @@
   gap: 32px;
   padding: clamp(32px, 5vw, 72px);
   border: 1px solid var(--color-line);
-  border-radius: 28px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
   background: radial-gradient(circle at 90% 10%, #00a55026, #f4f1e0 60%);
 }
 
@@ -77,13 +78,3 @@
   letter-spacing: -0.02em;
 }
 
-.button {
-  font-family: var(--font-mono);
-  font-size: 14px;
-  letter-spacing: 0.08em;
-  background: var(--color-green);
-  color: var(--color-ink);
-  padding: 20px 32px;
-  border-radius: 999px;
-}
-.button:hover { background: var(--color-sky); color: var(--color-ink); }

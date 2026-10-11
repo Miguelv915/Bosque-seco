@@ -1,10 +1,10 @@
 .switcher {
   display: inline-flex;
   border: 1px solid var(--switcher-line, var(--color-line));
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   overflow: hidden;
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.08em;
 }
 
@@ -12,7 +12,9 @@
   border: 0;
   background: transparent;
   color: var(--switcher-ink, var(--color-ink-soft));
-  padding: 7px 11px;
+  min-width: var(--tap);
+  min-height: var(--tap);
+  padding: 0 12px;
   cursor: pointer;
 }
 
