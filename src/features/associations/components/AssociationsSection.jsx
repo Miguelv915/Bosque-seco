@@ -5,7 +5,8 @@ import ImagePlaceholder from '../../../components/shared/ImagePlaceholder';
 import SectionHeader from '../../../components/shared/SectionHeader';
 import { esText } from '../../../lib/esText';
 import { useAsync } from '../../../lib/useAsync';
-import { listAssociations, mediaUrl, pickCover } from '../../../services/associations.service';
+import { pickCover } from '../../../lib/media';
+import { listAssociations, mediaUrl } from '../../../services/associations.service';
 import TranslateHint from '../../../components/shared/TranslateHint';
 import styles from './AssociationsSection.module.css';
 
