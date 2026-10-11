@@ -662,5 +662,34 @@
     "ctaTitle": "Plan your route with a community guide.",
     "ctaText": "Message us and we will connect you with local guides for dates, rates and the meeting point.",
     "whatsappMessage": "Hi, I'd like to visit the Piura dry forest with EcoRumbo. What routes, dates and rates do you have with a local guide?"
+  },
+  "appPromo": {
+    "eyebrow": "EcoRumbo app",
+    "title": "Take EcoRumbo into the forest.",
+    "lead": "The website helps you choose; the app walks the route with you. Download it before you leave and use it where there is no signal.",
+    "features": {
+      "offline": {
+        "title": "Works without signal",
+        "text": "Download the map while you have signal and use it offline for the whole route."
+      },
+      "gps": {
+        "title": "GPS map",
+        "text": "See where you are on the route even without mobile coverage."
+      },
+      "stamps": {
+        "title": "A stamp at every point",
+        "text": "Collect a stamp at each point of the route you visit."
+      },
+      "discounts": {
+        "title": "Community discounts",
+        "text": "Redeem your stamps for discounts on products made by forest families."
+      }
+    },
+    "askLink": "Ask your guide or the association for the download link before you travel.",
+    "whatsappMessage": "Hi, I'd like to download the EcoRumbo app before my visit to the dry forest. Could you send me the link?",
+    "mock": {
+      "offline": "Offline · map ready",
+      "stamp": "Stamp collected"
+    }
   }
 }

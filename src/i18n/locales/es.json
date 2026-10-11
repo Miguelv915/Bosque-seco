@@ -662,5 +662,34 @@
     "ctaTitle": "Arma tu ruta con un guía de la comunidad.",
     "ctaText": "Escríbenos y te ponemos en contacto con los guías locales para fechas, tarifas y punto de encuentro.",
     "whatsappMessage": "Hola, quiero visitar el bosque seco de Piura con EcoRumbo. ¿Qué rutas, fechas y tarifas tienen con guía local?"
+  },
+  "appPromo": {
+    "eyebrow": "App EcoRumbo",
+    "title": "Lleva EcoRumbo al bosque.",
+    "lead": "La web te ayuda a elegir; la app te acompaña en la ruta. Descárgala antes de salir y úsala donde no llega la señal.",
+    "features": {
+      "offline": {
+        "title": "Funciona sin señal",
+        "text": "Descarga el mapa con señal y úsalo en todo el recorrido sin conexión."
+      },
+      "gps": {
+        "title": "Mapa con GPS",
+        "text": "Mira dónde estás en la ruta aunque no haya cobertura móvil."
+      },
+      "stamps": {
+        "title": "Sellos en cada punto",
+        "text": "Consigue un sello en cada punto de la ruta que visitas."
+      },
+      "discounts": {
+        "title": "Descuentos en la comunidad",
+        "text": "Canjea tus sellos por descuentos en productos de las familias del bosque."
+      }
+    },
+    "askLink": "Pide el enlace de descarga a tu guía o a la asociación antes de viajar.",
+    "whatsappMessage": "Hola, quiero descargar la app EcoRumbo antes de mi visita al bosque seco. ¿Me pasan el enlace?",
+    "mock": {
+      "offline": "Sin conexión · mapa listo",
+      "stamp": "Sello conseguido"
+    }
   }
 }
