@@ -1,5 +1,6 @@
 .title {
   font-family: var(--font-display);
+  color: var(--color-forest);
   font-weight: 500;
   font-size: clamp(24px, 3vw, 36px);
   letter-spacing: -0.02em;
@@ -15,13 +16,14 @@
   padding: 24px;
   margin-bottom: 24px;
   border: 1px solid var(--color-line);
-  border-radius: 20px;
+  border-radius: 18px;
   background: var(--color-sand);
+  box-shadow: 0 1px 2px #1d4a3410;
 }
 
 .narrow { max-width: 440px; margin-inline: auto; }
 
-.cardTitle { font-family: var(--font-display); font-weight: 500; font-size: 18px; }
+.cardTitle { font-family: var(--font-display); font-weight: 500; font-size: 17px; color: var(--color-forest); }
 
 .hint { font-size: 13px; color: var(--color-muted); }
 
@@ -32,7 +34,7 @@
 .field textarea {
   font: inherit;
   padding: 10px 12px;
-  border: 1px solid #201e1e44;
+  border: 1px solid #c9c5b6;
   border-radius: 10px;
   background: #fff;
 }
@@ -56,9 +58,10 @@
   cursor: pointer;
 }
 
-.primary { border: 0; background: var(--color-green); color: var(--color-ink); }
+.primary { border: 0; background: var(--color-accent); color: #fff; }
+.primary:hover:not(:disabled) { background: #76594a; }
 .primary:disabled { opacity: 0.6; cursor: wait; }
-.secondary { border: 1px solid #201e1e66; background: transparent; color: var(--color-ink); }
+.secondary { border: 1px solid var(--color-accent); background: transparent; color: var(--color-accent); }
 
 .error { color: #b3261e; font-size: 14px; }
 .ok { color: var(--color-forest); font-size: 14px; }
@@ -130,9 +133,9 @@
   align-items: center;
   gap: 8px;
   padding: 9px 14px;
-  border: 1px solid #201e1e33;
+  border: 1px solid var(--color-line);
   border-radius: 999px;
-  background: transparent;
+  background: #fff;
   color: var(--color-ink-soft);
   font-family: var(--font-mono);
   font-size: 12px;
@@ -141,8 +144,8 @@
 }
 .sectionTab:hover { border-color: var(--color-forest); }
 .sectionTab[aria-current='page'] {
-  background: var(--color-ink);
-  border-color: var(--color-ink);
+  background: var(--color-forest);
+  border-color: var(--color-forest);
   color: #fff;
 }
 
@@ -150,8 +153,8 @@
   min-width: 20px;
   padding: 1px 6px;
   border-radius: 999px;
-  background: var(--color-green);
-  color: var(--color-ink);
+  background: var(--color-accent);
+  color: #fff;
   font-size: 11px;
   text-align: center;
 }
@@ -160,7 +163,7 @@
 .progress {
   height: 8px;
   border-radius: 999px;
-  background: #201e1e14;
+  background: var(--color-soft);
   overflow: hidden;
 }
 .progress span { display: block; height: 100%; background: var(--color-green); transition: width 0.3s; }
@@ -173,7 +176,7 @@
   gap: 10px;
   padding: 10px 12px;
   border-radius: 10px;
-  background: #fff;
+  background: var(--color-bg);
   font-size: 14px;
 }
 .checklist li[data-ok='true'] { color: var(--color-forest); }
@@ -197,7 +200,7 @@
 .field abbr { color: #b3261e; text-decoration: none; }
 
 /* ---- puntos de ruta y QR ---- */
-.points { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 10px; }
+.points { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 12px; }
 .points code, .qr code {
   padding: 2px 6px;
   border-radius: 6px;
@@ -218,3 +221,67 @@
 }
 .qr img { border-radius: 8px; }
 .qr figcaption { display: grid; gap: 8px; justify-items: start; }
+
+/* ---- lo ya registrado: tarjetas y tabla ---- */
+.cardHeader { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+
+.counter {
+  min-width: 28px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--color-soft);
+  color: var(--color-forest);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-align: center;
+}
+
+.cardGrid,
+.routeList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+}
+.cardGrid { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+
+.itemCard {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  border: 1px solid var(--color-line);
+  border-radius: 14px;
+  background: var(--color-bg);
+}
+.itemTitle { color: var(--color-forest); font-size: 15px; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag {
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid var(--color-line);
+  color: var(--color-ink-soft);
+  font-size: 12px;
+}
+.tag[data-tone='ok'] { background: var(--color-soft); border-color: transparent; color: var(--color-forest); }
+.tag[data-tone='warn'] { background: #fbefe6; border-color: transparent; color: #9a4a1a; }
+
+.pointInfo { display: grid; gap: 6px; }
+
+.tableWrap { overflow-x: auto; border: 1px solid var(--color-line); border-radius: 14px; }
+.table { width: 100%; border-collapse: collapse; font-size: 14px; background: #fff; }
+.table th {
+  padding: 10px 14px;
+  text-align: left;
+  background: var(--color-soft);
+  color: var(--color-forest);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+.table td { padding: 12px 14px; border-top: 1px solid var(--color-line); vertical-align: middle; }
+.table tbody tr:hover { background: var(--color-bg); }

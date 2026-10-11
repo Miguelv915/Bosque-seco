@@ -1,11 +1,33 @@
+/* Tema del panel: la paleta de la app móvil EcoRumbo (verde bosque + crema + marrón).
+   Se define como variables para que los componentes del panel no cambien. */
+.shell {
+  --color-bg: #f6f4ec;
+  --color-sand: #ffffff;
+  --color-line: #e3dfd2;
+  --color-ink: #1f2a24;
+  --color-ink-soft: #3b4640;
+  --color-muted: #6f766f;
+  --color-forest: #1d4a34;
+  --color-green: #0f9d58;
+  --color-accent: #8a6a53;
+  --color-soft: #e6efe9;
+
+  min-height: 100vh;
+  background: var(--color-bg);
+  color: var(--color-ink);
+}
+
 .header {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 16px var(--gutter);
-  border-bottom: 1px solid var(--color-line);
+  padding: 18px var(--gutter);
+  background: var(--color-forest);
+  color: #fff;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
 }
 
 .brand {
@@ -13,25 +35,33 @@
   font-weight: 500;
   font-size: 13px;
   letter-spacing: 0.14em;
-  color: var(--color-ink);
+  color: #fff;
 }
 
 .actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
 
-.user { font-family: var(--font-mono); font-size: 12px; color: var(--color-muted); }
+.user { font-family: var(--font-mono); font-size: 12px; color: #cfe3d6; }
 
 .signOut {
-  border: 1px solid var(--color-line);
+  border: 1px solid #ffffff55;
   background: transparent;
+  color: #fff;
   border-radius: 999px;
   padding: 7px 14px;
   font-family: var(--font-mono);
   font-size: 11px;
   cursor: pointer;
 }
+.signOut:hover { background: #ffffff1f; }
 
 .main {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 40px var(--gutter) 80px;
+  padding: 36px var(--gutter) 80px;
 }
+
+/* El selector de idioma vive sobre el encabezado oscuro. */
+.actions > div { border-color: #ffffff55; }
+
+.actions > div button { color: #fff; }
+.actions > div button[aria-pressed='true'] { background: #fff; color: var(--color-forest); }

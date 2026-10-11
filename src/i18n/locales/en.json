@@ -276,6 +276,12 @@
       "from": "Association"
     },
     "sections": {
+      "noSignal": "no signal info",
+      "noAccess": "no access info",
+      "subspacesCount_one": "{{count}} subspace",
+      "subspacesCount_other": "{{count}} subspaces",
+      "pointsCount_one": "{{count}} point",
+      "pointsCount_other": "{{count}} points",
       "spaces": "My areas",
       "noSpaces": "You have no areas yet. Add the first one.",
       "addSpace": "Add area",
@@ -301,6 +307,17 @@
       "points": "points",
       "addReward": "Add reward",
       "rewardRule": "Points must be greater than 0 and the discount between 1 and 100."
+    },
+    "table": {
+      "name": "Name",
+      "kind": "Type",
+      "whatsapp": "WhatsApp",
+      "rate": "Rate",
+      "status": "Status"
+    },
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive"
     },
     "kind": {
       "guide": "Guide",

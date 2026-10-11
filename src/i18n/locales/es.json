@@ -276,6 +276,12 @@
       "from": "Asociación"
     },
     "sections": {
+      "noSignal": "sin señal registrada",
+      "noAccess": "sin acceso registrado",
+      "subspacesCount_one": "{{count}} subespacio",
+      "subspacesCount_other": "{{count}} subespacios",
+      "pointsCount_one": "{{count}} punto",
+      "pointsCount_other": "{{count}} puntos",
       "spaces": "Mis espacios",
       "noSpaces": "Aún no tienes espacios. Agrega el primero.",
       "addSpace": "Agregar espacio",
@@ -301,6 +307,17 @@
       "points": "puntos",
       "addReward": "Agregar producto",
       "rewardRule": "Los puntos deben ser mayores que 0 y el descuento estar entre 1 y 100."
+    },
+    "table": {
+      "name": "Nombre",
+      "kind": "Tipo",
+      "whatsapp": "WhatsApp",
+      "rate": "Tarifa",
+      "status": "Estado"
+    },
+    "status": {
+      "active": "Activo",
+      "inactive": "Inactivo"
     },
     "kind": {
       "guide": "Guía",
