@@ -197,7 +197,13 @@
     "viewOnMap": "Ver en el mapa",
     "whatsappMessage": "Hola, vi EcoRumbo y quiero visitar {{name}}. ¿Qué fechas y tarifas tienen con guía local?",
     "ctaTitle": "¿Listo para salir al bosque?",
-    "ctaText": "Revisa cómo llegar, qué llevar y cómo moverte sin señal antes de viajar."
+    "ctaText": "Revisa cómo llegar, qué llevar y cómo moverte sin señal antes de viajar.",
+    "back": "Todos los destinos",
+    "gallery": "Galería",
+    "planTitle": "Planifica tu visita",
+    "guideNote": "Un guía local te confirma fechas, tarifas y punto de encuentro por WhatsApp.",
+    "moreTitle": "Otros destinos del bosque seco",
+    "details": "Ver detalles"
   },
   "routes": {
     "title": "Rutas ecoturísticas",

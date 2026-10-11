@@ -197,7 +197,13 @@
     "viewOnMap": "View on the map",
     "whatsappMessage": "Hi, I found EcoRumbo and I'd like to visit {{name}}. What dates and rates do you have with a local guide?",
     "ctaTitle": "Ready to head into the forest?",
-    "ctaText": "Check how to get there, what to bring and how to get around without signal before you travel."
+    "ctaText": "Check how to get there, what to bring and how to get around without signal before you travel.",
+    "back": "All destinations",
+    "gallery": "Gallery",
+    "planTitle": "Plan your visit",
+    "guideNote": "A local guide confirms dates, rates and meeting point on WhatsApp.",
+    "moreTitle": "More dry forest destinations",
+    "details": "See details"
   },
   "routes": {
     "title": "Ecotourism routes",
