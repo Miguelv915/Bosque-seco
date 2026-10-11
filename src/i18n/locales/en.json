@@ -3,11 +3,16 @@
     "name": "EcoRumbo"
   },
   "nav": {
-    "explore": "Explore",
     "ecosystem": "Ecosystem",
-    "communities": "Communities",
-    "plan": "Plan your trip",
-    "associations": "Associations"
+    "associations": "Associations",
+    "label": "Main",
+    "skip": "Skip to content",
+    "destinations": "Destinations",
+    "routes": "Routes",
+    "beforeYouGo": "Before you go",
+    "app": "Get the app",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu"
   },
   "hero": {
     "lead": "Set your course toward nature",
@@ -169,8 +174,17 @@
     "whatsapp": "Message us on WhatsApp"
   },
   "footer": {
-    "left": "ECORUMBO / PIURA — SULLANA · MÁNCORA",
-    "right": "TRAVEL WITH RESPECT · LEAVE NO TRACE"
+    "tagline": "Community ecotourism in the dry forest of northern Piura. Every visit is hosted and guided by the families who look after it.",
+    "motto": "Travel with respect · Leave no trace",
+    "explore": "Explore",
+    "contact": "Contact",
+    "whatsapp": "Message us on WhatsApp",
+    "contactGuides": "Contact a local guide",
+    "aider": "AIDER · Challenge 12",
+    "appTitle": "Take the app",
+    "appText": "Offline map, GPS and a stamp at every point of the route.",
+    "rights": "© {{year}} EcoRumbo · Piura, Peru",
+    "photos": "Some photos: Wikimedia Commons (Creative Commons licenses and public domain)."
   },
   "places": {
     "title": "Places"

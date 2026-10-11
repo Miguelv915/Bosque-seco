@@ -3,11 +3,16 @@
     "name": "EcoRumbo"
   },
   "nav": {
-    "explore": "Explorar",
     "ecosystem": "Ecosistema",
-    "communities": "Comunidades",
-    "plan": "Planifica",
-    "associations": "Asociaciones"
+    "associations": "Asociaciones",
+    "label": "Principal",
+    "skip": "Saltar al contenido",
+    "destinations": "Destinos",
+    "routes": "Rutas",
+    "beforeYouGo": "Antes de ir",
+    "app": "Descarga la app",
+    "menuOpen": "Abrir menú",
+    "menuClose": "Cerrar menú"
   },
   "hero": {
     "lead": "Marca tu rumbo hacia la naturaleza",
@@ -169,8 +174,17 @@
     "whatsapp": "Escríbenos por WhatsApp"
   },
   "footer": {
-    "left": "ECORUMBO / PIURA — SULLANA · MÁNCORA",
-    "right": "VIAJA CON RESPETO · NO DEJES HUELLA"
+    "tagline": "Ecoturismo comunitario en el bosque seco del norte de Piura. Cada visita la reciben y guían las familias que lo cuidan.",
+    "motto": "Viaja con respeto · No dejes huella",
+    "explore": "Explora",
+    "contact": "Contacto",
+    "whatsapp": "Escríbenos por WhatsApp",
+    "contactGuides": "Contacta a un guía local",
+    "aider": "AIDER · Reto 12",
+    "appTitle": "Lleva la app",
+    "appText": "Mapa sin conexión, GPS y sellos en cada punto de la ruta.",
+    "rights": "© {{year}} EcoRumbo · Piura, Perú",
+    "photos": "Algunas fotos: Wikimedia Commons (licencias Creative Commons y dominio público)."
   },
   "places": {
     "title": "Lugares"
