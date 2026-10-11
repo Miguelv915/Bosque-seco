@@ -709,5 +709,56 @@
       "offline": "Sin conexión · mapa listo",
       "stamp": "Sello conseguido"
     }
+  },
+  "chatbot": {
+    "title": "Asistente EcoRumbo",
+    "subtitle": "Respuestas rápidas para tu visita",
+    "toggle": "Ayuda",
+    "open": "Abrir el asistente de ayuda",
+    "close": "Cerrar el asistente",
+    "log": "Conversación con el asistente",
+    "typing": "El asistente está escribiendo",
+    "suggestions": "Preguntas rápidas",
+    "inputLabel": "Escribe tu pregunta",
+    "placeholder": "Escribe tu pregunta…",
+    "send": "Enviar",
+    "welcome": "¡Hola! Soy el asistente de EcoRumbo. Elige una pregunta o escribe la tuya.",
+    "whatsappMessage": "Hola, tengo una consulta sobre mi visita al bosque seco de Piura.",
+    "chips": {
+      "destinations": "¿Qué lugares visitar?",
+      "access": "¿Cómo llego?",
+      "season": "¿Cuándo ir?",
+      "app": "La app sin señal",
+      "pack": "¿Qué llevar?",
+      "guides": "Hablar con un guía"
+    },
+    "links": {
+      "destinations": "Ver destinos",
+      "access": "Ver rutas",
+      "season": "Ver temporadas",
+      "signal": "Conocer la app",
+      "app": "Conocer la app",
+      "payments": "Ver «Antes de ir»",
+      "pack": "Ver «Antes de ir»",
+      "guides": "Ver asociaciones",
+      "about": "Conocer a las comunidades",
+      "whatsapp": "Escribir por WhatsApp"
+    },
+    "answers": {
+      "greeting": "¡Hola! ¿En qué podemos ayudarte?",
+      "destinations": "Tenemos {{count}} destinos entre Sullana y Máncora: {{names}}. Cada uno tiene su ficha con qué hacer, cómo llegar y la mejor época.",
+      "access": "Cada destino tiene su acceso:\n{{list}}\nCoordina el traslado con la asociación: el guiado es obligatorio.",
+      "season": "Hay dos temporadas. Verde (ene–abr): lluvias, quebradas con agua y follaje intenso; algunos caminos pueden cerrarse. Seca (may–dic): accesos más fáciles, cielos despejados y la mejor época para caminatas y rutas en 4×4.",
+      "signal": "En gran parte del bosque no hay señal. Descarga la app EcoRumbo y su mapa antes de salir, mientras tengas señal: después funciona sin conexión.",
+      "app": "La app EcoRumbo funciona sin señal: mapa con GPS, sellos en cada punto de la ruta y descuentos en productos de la comunidad. Descárgala antes de viajar.",
+      "payments": "Cada asociación indica en su ficha los medios de pago que acepta (efectivo o Yape). En el bosque no hay señal, así que lleva efectivo en soles.",
+      "pack": "Lleva agua suficiente, sombrero, lentes y bloqueador, ropa ligera de manga larga, calzado cerrado, repelente y una bolsa para traer tu basura.",
+      "prices": "Las tarifas las define cada guía o asociación y aparecen en su ficha. Escríbeles por WhatsApp para confirmar fechas y precios.",
+      "guides": "El guiado es obligatorio. Coordina tu visita por WhatsApp con un guía de la asociación antes de llegar. Sus contactos están en la ficha de cada asociación.",
+      "about": "EcoRumbo reúne a las asociaciones comunitarias que cuidan el bosque seco del norte de Piura. Con tu visita sostienes a las familias que lo cuidan. Es parte del Reto 12 de AIDER.",
+      "thanks": "¡Con gusto! Si tienes otra duda, aquí estamos.",
+      "bye": "¡Hasta pronto! Que disfrutes el bosque seco.",
+      "fallback": "No tengo una respuesta para eso. Prueba con una de las preguntas de abajo o escribe a un guía de la comunidad: ellos te confirman cualquier detalle."
+    }
   }
 }

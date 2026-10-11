@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Menu, MessageCircle, Smartphone, X } from 'lucide-react';
 import LanguageSwitcher from '../components/shared/LanguageSwitcher';
 import { buttonClass } from '../components/shared/buttonClass';
+import ChatWidget from '../features/chatbot/components/ChatWidget';
 import logo from '../assets/images/logo-ecorumbo.png';
 import { AIDER_URL, APP_URL, WHATSAPP_URL } from '../lib/contact';
 import styles from './PublicLayout.module.css';
@@ -194,6 +195,8 @@ export default function PublicLayout() {
           <span>{t('footer.photos')}</span>
         </div>
       </footer>
+
+      <ChatWidget />
     </>
   );
 }

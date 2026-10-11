@@ -709,5 +709,56 @@
       "offline": "Offline · map ready",
       "stamp": "Stamp collected"
     }
+  },
+  "chatbot": {
+    "title": "EcoRumbo assistant",
+    "subtitle": "Quick answers for your visit",
+    "toggle": "Help",
+    "open": "Open the help assistant",
+    "close": "Close the assistant",
+    "log": "Conversation with the assistant",
+    "typing": "The assistant is typing",
+    "suggestions": "Quick questions",
+    "inputLabel": "Type your question",
+    "placeholder": "Type your question…",
+    "send": "Send",
+    "welcome": "Hello! I'm the EcoRumbo assistant. Pick a question or type your own.",
+    "whatsappMessage": "Hi, I have a question about my visit to the Piura dry forest.",
+    "chips": {
+      "destinations": "Where can I go?",
+      "access": "How do I get there?",
+      "season": "When to visit?",
+      "app": "The app without signal",
+      "pack": "What to bring?",
+      "guides": "Talk to a guide"
+    },
+    "links": {
+      "destinations": "See destinations",
+      "access": "See routes",
+      "season": "See seasons",
+      "signal": "About the app",
+      "app": "About the app",
+      "payments": "See “Before you go”",
+      "pack": "See “Before you go”",
+      "guides": "See associations",
+      "about": "Meet the communities",
+      "whatsapp": "Message on WhatsApp"
+    },
+    "answers": {
+      "greeting": "Hello! How can we help you?",
+      "destinations": "We have {{count}} destinations between Sullana and Máncora: {{names}}. Each has its own page with what to do, how to get there and the best season.",
+      "access": "Each destination has its own access:\n{{list}}\nArrange transport with the association: a guide is required.",
+      "season": "There are two seasons. Green (Jan–Apr): rain, streams with water and lush foliage; some roads may close. Dry (May–Dec): easier access, clear skies and the best time for hikes and 4×4 routes.",
+      "signal": "Most of the forest has no signal. Download the EcoRumbo app and its map before you leave, while you still have signal: afterwards it works offline.",
+      "app": "The EcoRumbo app works without signal: a GPS map, a stamp at every point of the route and discounts on community products. Download it before you travel.",
+      "payments": "Each association lists on its page the payment methods it accepts (cash or Yape). There is no signal in the forest, so bring cash in soles.",
+      "pack": "Bring enough water, a hat, sunglasses and sunscreen, light long-sleeved clothing, closed shoes, insect repellent and a bag to carry your trash back.",
+      "prices": "Rates are set by each guide or association and appear on their page. Message them on WhatsApp to confirm dates and prices.",
+      "guides": "A guide is required. Arrange your visit on WhatsApp with an association guide before you arrive. Their contacts are on each association's page.",
+      "about": "EcoRumbo brings together the community associations that look after the dry forest of northern Piura. Your visit supports the families who care for it. It is part of AIDER's Challenge 12.",
+      "thanks": "You're welcome! If you have another question, we're here.",
+      "bye": "See you soon! Enjoy the dry forest.",
+      "fallback": "I don't have an answer for that. Try one of the questions below or message a community guide: they can confirm any detail."
+    }
   }
 }
